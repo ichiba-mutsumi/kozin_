@@ -5,6 +5,7 @@
 std::random_device rnd;
 std::default_random_engine eng(rnd());
 std::uniform_int_distribution<int> Ran(0, 4);
+//コンストラクタ
 Notes::Notes(int area,int time,int speed) :Base(eType_Notes) {
 	ImageSet();
 	m_time = time + 180;
@@ -39,6 +40,7 @@ Notes::Notes(int area,int time,int speed) :Base(eType_Notes) {
 		RArea(0, 0);
 		m_img = CircleNotes;*/
 	}
+
 }
 Notes::Notes(int area, int time, int x,int y) :Base(eType_Notes) {
 	ImageSet();
