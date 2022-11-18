@@ -22,6 +22,6 @@ void Title::Update()
 void Title::Draw()
 {
 	m_img.Draw();
-	m_title_text.Draw(750, 256, 0, 0, 0, "Mya-!!");
-	title_text.Draw(100, 512, 0, 0, 0, "pushA");
+	m_title_text.Draw(380, 256, 1, 1, 1, "music game");
+	title_text.Draw(200, 650, 1, 1, 1, "push A");
 }

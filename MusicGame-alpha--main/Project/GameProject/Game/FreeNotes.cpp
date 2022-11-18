@@ -4,7 +4,7 @@
 #include <iostream>
 #include <random>
 #define PI 3.14159265359
-FreeNotes::FreeNotes(/*int time*/):Base(eType_FreeNotes) {
+FreeNotes::FreeNotes(/*int time*/) :Base(eType_FreeNotes) {
 	ImageSet();
 	//m_time = time + 216;
 	//if (m_time <= 0) {
@@ -12,13 +12,13 @@ FreeNotes::FreeNotes(/*int time*/):Base(eType_FreeNotes) {
 	//}
 	//NotesCount = 0;
 	//NotesCountToDelete = 20;
-	m_pos=CVector2D(1000, 500);
+	m_pos = CVector2D(1000, 500);
 	RandomArea();
 	TimeLimit = 0;
 }
 void FreeNotes::ImageSet() {
-	CircleNotes = COPY_RESOURCE("Notes", CImage);
-	CircleNotesFrame = COPY_RESOURCE("Notes", CImage);
+	CircleNotes = COPY_RESOURCE("Note", CImage);
+	CircleNotesFrame = COPY_RESOURCE("Note", CImage);
 	CircleNotes.SetRect(263, 157, 596, 493);
 	CircleNotesFrame.SetRect(1595, 0, 1920, 325);
 	CircleNotes.SetSize(120, 120);
@@ -37,7 +37,7 @@ void FreeNotes::SizeSet() {
 		NotesCount++;
 	}
 	CircleNotes.SetSize(120, 120);
-	CircleNotesFrame.SetSize(180 - NotesCount/2, 180 - NotesCount/2);
+	CircleNotesFrame.SetSize(180 - NotesCount / 2, 180 - NotesCount / 2);
 	CircleNotes.SetPos(m_pos);
 	CircleNotesFrame.SetPos(m_pos.x - 30 + NotesCount / 4, m_pos.y - 30 + NotesCount / 4);
 }

@@ -30,14 +30,18 @@ public:
 	CImage TapA;
 	CImage TapS;
 	CImage TapD;
-	CImage TapF;
+	CImage TapE;
+	CImage TapQ;
+	CImage TapW;
+	CImage TapZ;
+	CImage TapX;
 	CVector2D Right_pos;
 	CVector2D CenterRight_pos;
 	CVector2D CenterLeft_pos;
 	CVector2D Left_pos;
 	CVector2D m_pos;
 public:
-	Notes(int area,int time,int speed);
+	Notes(int area, int time, int speed);
 	Notes(int area, int time, int x, int y);
 	void Draw();
 	void Update();
@@ -47,7 +51,7 @@ public:
 	void LCheckHitNotes();
 	void RSizeSet();
 	void RCheckHitNotes();
-	void RArea(int x,int y);
+	void RArea(int x, int y);
 	void CountDownToDelete();
 	void LNotesDelete();
 };

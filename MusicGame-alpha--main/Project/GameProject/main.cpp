@@ -5,8 +5,8 @@
 #include "Game/ScoreScene.h"
 #include "Game/SelectScene/SelectScene.h"
 #include"Title/Title.h"
-#define SCREEN_WIDTH 1920
-#define SCREEN_HEIGHT 1080
+#define SCREEN_WIDTH 1579
+#define SCREEN_HEIGHT 1118
 
 
 

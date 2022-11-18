@@ -4,11 +4,11 @@
 class Play :public Base {
 private:
 	enum {
-		eNum_LeanOn,
-		eNum_Baby,
+		eNum_Gothic,
+		eNum_Tir,
 		eNum_Bones,
 	};
-	CImage Lane;
+	CImage gamen;
 	CImage m_NotesBar;
 	CImage NotesBar;
 	CImage NotesBarBlue[4];
@@ -28,8 +28,8 @@ public:
 	void ImageSet();
 	void Draw();
 	void Update();
-	void LeanOn();
-	void Baby();
+	void Gothic();
+	void Tir();
 	void Bones();
 	void NotesSet();
 	void NotesPreSet(int SetNum);

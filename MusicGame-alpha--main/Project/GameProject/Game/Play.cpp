@@ -10,21 +10,21 @@
 #include <fstream>
 #include "../Base/Base.h"
 Play::Play(int ChoiceSound) : Base(eType_Play),
-score_text("C:\\Windows\\Fonts\\msgothic.ttc", 64){
+score_text("C:\\Windows\\Fonts\\msgothic.ttc", 64) {
 	glClearColor(0, 0, 0, 0);
 	CountDownToStart = 190;
 	CountUpToEnd = 0;
 	SoundNum = ChoiceSound;
 	ImageSet();
 	switch (ChoiceSound) {
-	case eNum_LeanOn:
-		video = new CVideo("Movie/LeanOn.mp4");
+	case eNum_Gothic:
+		//video = new CVideo("Movie/LeanOn.mp4");
 		break;
-	case eNum_Baby:
-		video = new CVideo("Movie/Baby.mp4");
+	case eNum_Tir:
+		//video = new CVideo("Movie/Baby.mp4");
 		break;
 	case eNum_Bones:
-		video = new CVideo("Movie/Bones.mp4");
+		//video = new CVideo("Movie/Bones.mp4");
 		break;
 	}
 	for (int i = 0; i < 4; i++) {
@@ -35,7 +35,7 @@ void Play::Draw() {
 	if (CountDownToStart <= 0) {
 		video->Draw();
 	}
-	Lane.Draw();
+	gamen.Draw();
 	NotesBar.Draw();
 	LeftClick.Draw();
 	for (int i = 0; i < 4; i++) {
@@ -48,17 +48,17 @@ void Play::Update() {
 	CountDownToStart--;
 	CountUpToEnd++;
 	switch (ShareNum::GameNum) {
-	case eNum_LeanOn:
+	case eNum_Gothic:
 		if (CountDownToStart == 0) {
-			LeanOn();
+			Gothic();
 		}
 		if (CountUpToEnd >= 7080) {
 			m_kill = true;
 		}
 		break;
-	case eNum_Baby:
+	case eNum_Tir:
 		if (CountDownToStart == 0) {
-			Baby();
+			Tir();
 		}
 		if (CountUpToEnd >= 9480) {
 			m_kill = true;
@@ -101,16 +101,16 @@ void Play::Update() {
 		PushCount[3] = 0;
 	}
 	//std::cout << ShareNum::HitCount << std::endl;
-}	
+}
 Play::~Play() {
 	std::ofstream Lfile("Score/LeanOn.txt", std::ios_base::app | std::ios_base::in);
 	std::ofstream Bfile("Score/Baby.txt", std::ios_base::app | std::ios_base::in);
 	std::ofstream Bofile("Score/Baby.txt", std::ios_base::app | std::ios_base::in);
 	switch (ShareNum::GameNum) {
-	case eNum_LeanOn:
+	case eNum_Gothic:
 		Lfile << ShareNum::score << std::endl;
 		break;
-	case eNum_Baby:
+	case eNum_Tir:
 		Bfile << ShareNum::score << std::endl;
 		break;
 	case eNum_Bones:
@@ -122,7 +122,7 @@ Play::~Play() {
 	Base::Add(new ScoreScene());
 }
 void Play::ImageSet() {
-	Lane = COPY_RESOURCE("Lane", CImage);
+	gamen = COPY_RESOURCE("gamen", CImage);
 	NotesBar = COPY_RESOURCE("NotesBar", CImage);
 	for (int i = 0; i < 4; i++) {
 		NotesBarBlue[i] = COPY_RESOURCE("NotesBarBlue", CImage);
@@ -139,17 +139,17 @@ void Play::ImageSet() {
 	NotesBarBlue[1].SetSize(240, 1080);
 	NotesBarBlue[2].SetSize(240, 1080);
 	NotesBarBlue[3].SetSize(257, 1080);
-	LeftClick= COPY_RESOURCE("LeftClick", CImage);
+	LeftClick = COPY_RESOURCE("LeftClick", CImage);
 	//m_NotesBar = NotesBar;
 }
-void Play::Baby() {
+void Play::Tir() {
 	video->Play();
 	OneNotes = 13.6;
 	Base::Add(new SoundBar(1));
 	Base::Add(new Score());
 	NotesSet();
 }
-void Play::LeanOn() {
+void Play::Gothic() {
 	video->Play();
 	OneNotes = 18.125;
 	Base::Add(new SoundBar(0));
@@ -166,7 +166,7 @@ void Play::Bones() {
 void Play::NotesPreSet(int SetNum) {
 	switch (SetNum) {
 	case 0:
-		Base::Add(new Notes(4, OneNotes * 0 + NotesCount,2,6));
+		Base::Add(new Notes(4, OneNotes * 0 + NotesCount, 2, 6));
 		Base::Add(new Notes(4, OneNotes * 4 + NotesCount, 0, 7));
 		Base::Add(new Notes(4, OneNotes * 15 + NotesCount, 6, 0));
 		Base::Add(new Notes(4, OneNotes * 23 + NotesCount, 1, 3));
@@ -208,12 +208,12 @@ void Play::NotesPreSet(int SetNum) {
 		Base::Add(new Notes(2, OneNotes * 0 + NotesCount, 8));
 		break;
 	case 2:
-		Base::Add(new Notes(1, OneNotes * 1.9+ NotesCount, 8));
+		Base::Add(new Notes(1, OneNotes * 1.9 + NotesCount, 8));
 		Base::Add(new Notes(3, OneNotes * 1.9 + NotesCount, 8));
 		break;
 	case 3:
 		Base::Add(new Notes(0, OneNotes * 3.5 + NotesCount, 8));
-		Base::Add(new Notes(3, OneNotes * 3.5+ NotesCount, 8));
+		Base::Add(new Notes(3, OneNotes * 3.5 + NotesCount, 8));
 		break;
 	case 4:
 		Base::Add(new Notes(1, OneNotes * 5 + NotesCount, 8));
@@ -224,7 +224,7 @@ void Play::NotesPreSet(int SetNum) {
 		Base::Add(new Notes(1, OneNotes * 7.3 + NotesCount, 8));
 		break;
 	case 6:
-		
+
 		Base::Add(new Notes(0, OneNotes * 8.2 + NotesCount, 8));
 		break;
 	case 7:
@@ -261,15 +261,15 @@ void Play::NotesPreSet(int SetNum) {
 		Base::Add(new Notes(1, OneNotes * 8 + NotesCount, 8));
 		break;
 	case 15:
-		
+
 		Base::Add(new Notes(1, OneNotes * 5.6 + NotesCount, 8));
 		break;
 	case 16:
-		
+
 		Base::Add(new Notes(2, OneNotes * 9.6 + NotesCount, 9));
 		break;
 	case 17:
-		
+
 		Base::Add(new Notes(3, OneNotes * 4.6 + NotesCount, 9));
 		break;
 	case 18:
@@ -311,11 +311,11 @@ void Play::NotesPreSet(int SetNum) {
 		break;
 	case 26:
 		Base::Add(new Notes(1, OneNotes * 0 + NotesCount, 8));
-		
+
 		Base::Add(new Notes(2, OneNotes * 2 + NotesCount, 8));
-		
+
 		Base::Add(new Notes(1, OneNotes * 4 + NotesCount, 8));
-		
+
 		Base::Add(new Notes(3, OneNotes * 6 + NotesCount, 8));
 		break;
 	case 27:
@@ -396,7 +396,7 @@ void Play::NotesPreSet(int SetNum) {
 		Base::Add(new Notes(3, OneNotes * 5 + NotesCount, 8));
 		break;
 	case 41:
-		Base::Add(new Notes(1, OneNotes * 0 + NotesCount,8));
+		Base::Add(new Notes(1, OneNotes * 0 + NotesCount, 8));
 		Base::Add(new Notes(2, OneNotes * 3 + NotesCount, 8));
 		break;
 	case 42:
@@ -460,9 +460,9 @@ void Play::NotesPreSet(int SetNum) {
 		Base::Add(new Notes(4, OneNotes * 2.5 + NotesCount, 2, 8));
 		break;
 	case 53:
-			Base::Add(new Notes(4, OneNotes * 3 + NotesCount, 0, 3));
-			Base::Add(new Notes(4, OneNotes * 6 + NotesCount, 5, 4));
-		break; 
+		Base::Add(new Notes(4, OneNotes * 3 + NotesCount, 0, 3));
+		Base::Add(new Notes(4, OneNotes * 6 + NotesCount, 5, 4));
+		break;
 	case 54:
 		Base::Add(new Notes(1, OneNotes * 0 + NotesCount, 8));
 		Base::Add(new Notes(1, OneNotes * 0.5 + NotesCount, 8));
@@ -498,7 +498,7 @@ void Play::NotesPreSet(int SetNum) {
 		Base::Add(new Notes(2, OneNotes * 2 + NotesCount, 11));
 		Base::Add(new Notes(1, OneNotes * 3 + NotesCount, 11));
 		Base::Add(new Notes(3, OneNotes * 4 + NotesCount, 11));
-		
+
 		Base::Add(new Notes(0, OneNotes * 6 + NotesCount, 11));
 		Base::Add(new Notes(1, OneNotes * 7 + NotesCount, 11));
 		break;
@@ -644,7 +644,7 @@ void Play::NotesPreSet(int SetNum) {
 		Base::Add(new Notes(2, OneNotes * 4 + NotesCount, 11));
 		Base::Add(new Notes(3, OneNotes * 5.5 + NotesCount, 12));
 		Base::Add(new Notes(3, OneNotes * 6 + NotesCount, 12));
-		Base::Add(new Notes(2, OneNotes * 6.5 + NotesCount, 12)); 
+		Base::Add(new Notes(2, OneNotes * 6.5 + NotesCount, 12));
 		Base::Add(new Notes(1, OneNotes * 6.5 + NotesCount, 12));
 		Base::Add(new Notes(4, OneNotes * 7 + NotesCount, 3, 2));
 		break;
@@ -734,7 +734,7 @@ void Play::NotesPreSet(int SetNum) {
 		Base::Add(new Notes(0, OneNotes * 3 + NotesCount, 11));
 
 		Base::Add(new Notes(4, OneNotes * 4.5 + NotesCount, 1, 1));
-		
+
 		Base::Add(new Notes(4, OneNotes * 6 + NotesCount, 5, 5));
 		break;
 	case 82:
@@ -810,7 +810,7 @@ void Play::NotesPreSet(int SetNum) {
 		Base::Add(new Notes(2, OneNotes * 1 + NotesCount, 11));
 		Base::Add(new Notes(0, OneNotes * 1 + NotesCount, 11));
 		Base::Add(new Notes(2, OneNotes * 2 + NotesCount, 11));
-		Base::Add(new Notes(3, OneNotes * 3+ NotesCount, 11));
+		Base::Add(new Notes(3, OneNotes * 3 + NotesCount, 11));
 		Base::Add(new Notes(1, OneNotes * 3 + NotesCount, 11));
 		Base::Add(new Notes(1, OneNotes * 4 + NotesCount, 11));
 		Base::Add(new Notes(2, OneNotes * 5 + NotesCount, 11));
@@ -868,7 +868,7 @@ void Play::NotesPreSet(int SetNum) {
 		Base::Add(new Notes(2, OneNotes * 2 + NotesCount, 11));
 		Base::Add(new Notes(3, OneNotes * 2.5 + NotesCount, 11));
 		Base::Add(new Notes(1, OneNotes * 3 + NotesCount, 11));
-		
+
 		Base::Add(new Notes(1, OneNotes * 5 + NotesCount, 11));
 		Base::Add(new Notes(2, OneNotes * 5 + NotesCount, 11));
 		break;
@@ -1001,12 +1001,12 @@ void Play::NotesPreSet(int SetNum) {
 		Base::Add(new FreeNotes());
 		break;
 	}
-	
+
 	switch (SoundNum) {
-	case eNum_LeanOn:
+	case eNum_Gothic:
 		NotesCount += 145.1;
 		break;
-	case eNum_Baby:
+	case eNum_Tir:
 		NotesCount += 108.8;
 		break;
 	case eNum_Bones:
@@ -1016,8 +1016,8 @@ void Play::NotesPreSet(int SetNum) {
 }
 void Play::NotesSet() {
 	switch (SoundNum) {
-	case eNum_LeanOn:
-		NotesCount = -117.75; 
+	case eNum_Gothic:
+		NotesCount = -117.75;
 		/*Base::Add(new FreeNotes());
 		Base::Add(new FreeNotes());
 		Base::Add(new FreeNotes());
@@ -1074,7 +1074,7 @@ void Play::NotesSet() {
 		NotesPreSet(0);
 		NotesPreSet(0);
 		break;
-	case eNum_Baby:
+	case eNum_Tir:
 		NotesCount = -54.4;
 		NotesPreSet(30);
 		NotesPreSet(7);
@@ -1191,7 +1191,7 @@ void Play::NotesSet() {
 		NotesPreSet(70);
 		NotesPreSet(71);
 		NotesPreSet(72);
-		NotesPreSet(73); 
+		NotesPreSet(73);
 		NotesPreSet(74);
 		NotesPreSet(75);
 		NotesPreSet(76);
