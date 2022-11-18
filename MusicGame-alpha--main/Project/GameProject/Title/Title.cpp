@@ -14,7 +14,7 @@ Title::~Title()
 
 void Title::Update()
 {
-	if (PUSH(CInput::eButton1)) {
+	if (PUSH(CInput::eButton4)) {
 		SetKill();
 	}
 }

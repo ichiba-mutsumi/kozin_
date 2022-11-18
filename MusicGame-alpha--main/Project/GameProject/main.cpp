@@ -43,11 +43,15 @@ void Init(void)
 	CFPS::Init();
 	//ƒ{ƒ^ƒ“‚ÌÝ’è
 	CInput::Init();
-	CInput::SetButton(0, CInput::eButton1, 'A');
-	CInput::SetButton(0, CInput::eButton2, 'S');
-	CInput::SetButton(0, CInput::eButton3, 'D');
-	CInput::SetButton(0, CInput::eButton4, 'F');
-	CInput::SetButton(0, CInput::eButton5, VK_SPACE);
+	CInput::SetButton(0, CInput::eButton1, 'Q');
+	CInput::SetButton(0, CInput::eButton2, 'W');
+	CInput::SetButton(0, CInput::eButton3, 'E');
+	CInput::SetButton(0, CInput::eButton4, 'A');
+	CInput::SetButton(0, CInput::eButton5, 'S');
+	CInput::SetButton(0, CInput::eButton6, 'D');
+	CInput::SetButton(0, CInput::eButton7, 'Z');
+	CInput::SetButton(0, CInput::eButton8, 'X');
+	CInput::SetButton(0, CInput::eButton9, VK_SPACE);
 	CInput::SetButton(0, CInput::eButton10, VK_RETURN);
 	CInput::SetButton(0, CInput::eUp, VK_UP);
 	CInput::SetButton(0, CInput::eDown, VK_DOWN);
@@ -91,33 +95,43 @@ void Init(void)
 	//-----------------------------------------------------
 
 	//Base::Add(new Title());
-	ADD_RESOURCE("Notes",CImage::CreateImage("Image/Notes.png"));;
+	/*
 	ADD_RESOURCE("Lane", CImage::CreateImage("Image/Lane.png"));
+	ADD_RESOURCE("Notes",CImage::CreateImage("Image/Notes.png"));
 	ADD_RESOURCE("SoundBar", CImage::CreateImage("Image/SoundBar.png"));
 	ADD_RESOURCE("NotesBar", CImage::CreateImage("Image/NotesBar.png"));
-	//ADD_RESOURCE("Number", CImage::CreateImage("Image/UI.png"));
-	ADD_RESOURCE("Number", CImage::CreateImage("Image/Number.png"));
-	ADD_RESOURCE("BNumber", CImage::CreateImage("Image/BNumber.png"));
-	ADD_RESOURCE("Title", CImage::CreateImage("Image/my.png"));
-	ADD_RESOURCE("Forest1", CImage::CreateImage("Image/forest1.png"));
-	ADD_RESOURCE("Forest2", CImage::CreateImage("Image/forest2.png"));
-	ADD_RESOURCE("Winter", CImage::CreateImage("Image/winter.png"));
-	ADD_RESOURCE("Circle4", CImage::CreateImage("Image/Circle4.png"));
-	ADD_RESOURCE("CircleFrame", CImage::CreateImage("Image/CircleFrame.png"));
-	ADD_RESOURCE("Square4", CImage::CreateImage("Image/Square4.png"));
-	ADD_RESOURCE("FoxLandcape", CImage::CreateImage("Image/landscape2.png"));
-	ADD_RESOURCE("TapA", CImage::CreateImage("Image/A.png"));
-	ADD_RESOURCE("TapS", CImage::CreateImage("Image/S.png"));
-	ADD_RESOURCE("TapD", CImage::CreateImage("Image/D.png"));
-	ADD_RESOURCE("TapF", CImage::CreateImage("Image/F.png"));
-	ADD_RESOURCE("LeftClick", CImage::CreateImage("Image/LeftClick.png"));
-	ADD_RESOURCE("DarkCircle", CImage::CreateImage("Image/DarkCircle.png"));
-	ADD_RESOURCE("DarkCircle4", CImage::CreateImage("Image/DarkCircle4.png"));
-	ADD_RESOURCE("NotesBarBlue", CImage::CreateImage("Image/NotesBarBlue.png"));
-	SOUND("Tap")->Load("Sound/TapSound.wav", 10);
+
 	SOUND("LeanOn")->Load("Sound/LeanOn.wav");
 	SOUND("Baby")->Load("Sound/Baby.wav");
+	*/
 	SOUND("Bones")->Load("Sound/Bones.wav");
+
+
+	ADD_RESOURCE("Note", CImage::CreateImage("Image/note.png"));
+	ADD_RESOURCE("Note2", CImage::CreateImage("Image/criticalnote.png"));
+	ADD_RESOURCE("Note3", CImage::CreateImage("Image/doublenote.png"));
+	ADD_RESOURCE("Note4", CImage::CreateImage("Image/note_long.png"));
+	ADD_RESOURCE("Note5", CImage::CreateImage("Image/slide.png"));
+	ADD_RESOURCE("Note6", CImage::CreateImage("Image/slide2.png"));
+	ADD_RESOURCE("Number", CImage::CreateImage("Image/Number.png"));
+	ADD_RESOURCE("number", CImage::CreateImage("Image/scorenumber.png"));
+	ADD_RESOURCE("Title", CImage::CreateImage("Image/tile.png"));
+	ADD_RESOURCE("gothic", CImage::CreateImage("Image/gothic.png"));
+	ADD_RESOURCE("Fantastical", CImage::CreateImage("Image/fantastical.png"));
+	ADD_RESOURCE("fullcombo", CImage::CreateImage("Image/FULLCOMBO.png"));
+	ADD_RESOURCE("gamen", CImage::CreateImage("Image/gamen.png"));
+	ADD_RESOURCE("TapA", CImage::CreateImage("Image/A.png"));
+	ADD_RESOURCE("TapQ", CImage::CreateImage("Image/Q.png"));
+	ADD_RESOURCE("TapW", CImage::CreateImage("Image/W.png"));
+	ADD_RESOURCE("TapE", CImage::CreateImage("Image/E.png"));
+	ADD_RESOURCE("TapS", CImage::CreateImage("Image/S.png"));
+	ADD_RESOURCE("TapD", CImage::CreateImage("Image/D.png"));
+	ADD_RESOURCE("TapZ", CImage::CreateImage("Image/Z.png"));
+	ADD_RESOURCE("TapX", CImage::CreateImage("Image/X.png"));
+	ADD_RESOURCE("select", CImage::CreateImage("Image/select.png"));
+	SOUND("Gothic")->Load("Sound/PerituneMaterial_Gothic_Cute (online-audio-converter.com).wav");
+	SOUND("Tir")->Load("Sound/PerituneMaterial_Tir_sonas (online-audio-converter.com).wav");
+	SOUND("Tap")->Load("Sound/TapSound.wav", 10);
 	Base::Add(new Title());
 	
 }
