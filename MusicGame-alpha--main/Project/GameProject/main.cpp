@@ -79,8 +79,8 @@ void Init(void)
 
 	//ƒJƒƒ‰‰Šú‰»
 	CCamera::GetCamera()->LookAt(CVector3D(5, 5, 5),
-	CVector3D(0, 0, 0),
-	CVector3D(0.0, 1.0, 0.0));
+		CVector3D(0, 0, 0),
+		CVector3D(0.0, 1.0, 0.0));
 
 	SetCurrentDirectory("data");
 
@@ -133,7 +133,7 @@ void Init(void)
 	SOUND("Tir")->Load("Sound/PerituneMaterial_Tir_sonas (online-audio-converter.com).wav");
 	SOUND("Tap")->Load("Sound/TapSound.wav", 10);
 	Base::Add(new Title());
-	
+
 }
 void Release()
 {

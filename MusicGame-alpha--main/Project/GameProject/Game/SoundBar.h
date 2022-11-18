@@ -4,8 +4,8 @@
 class SoundBar :public Base {
 public:
 	enum {
-		LeanOn,
-		Baby,
+		Gothic,
+		Tir,
 		Bones,
 	};
 	int SongCount;

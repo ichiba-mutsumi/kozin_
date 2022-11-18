@@ -2,7 +2,7 @@
 #include "../Base/Base.h"
 
 class Title :public Base {
-	CImage m_img; 
+	CImage m_img;
 	CFont m_title_text;
 	CFont title_text;
 public:
@@ -11,4 +11,4 @@ public:
 	void Update();
 	void Draw();
 
-	};
+};
