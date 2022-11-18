@@ -32,7 +32,7 @@ void ScoreScene::ImageSet() {
 		m_img[i].SetRect(i * 39, 0, (i + 1) * 39, 77);
 		m_img[i].SetSize(100, 200);
 	}
-	//BackGround = COPY_RESOURCE("Forest1", CImage);
+	BackGround = COPY_RESOURCE("select", CImage);
 	BackGround.SetRect(0, 0, 2048, 1500);
 	BackGround.SetSize(1920, 1080);
 }

@@ -48,11 +48,11 @@ void SelectScene::Update() {
 	if (PUSH(CInput::eButton10)) {
 		Base::KillAll();
 		switch (ShareNum::GameNum) {
-		case LeanOn:
-			Base::Add(new Play(LeanOn));
+		case Gothic:
+			Base::Add(new Play(Gothic));
 			break;
-		case Baby:
-			Base::Add(new Play(Baby));
+		case Tir:
+			Base::Add(new Play(Tir));
 			break;
 		case Bones:
 			Base::Add(new Play(Bones));
@@ -62,11 +62,11 @@ void SelectScene::Update() {
 }
 void SelectScene::SoundPlay() {
 	switch (ShareNum::GameNum) {
-	case LeanOn:
-		SOUND("LeanOn")->Play();
+	case Gothic:
+		SOUND("Gothic")->Play();
 		break;
-	case Baby:
-		SOUND("Baby")->Play();
+	case Tir:
+		SOUND("Tir")->Play();
 		break;
 	case Bones:
 		SOUND("Bones")->Play();
@@ -74,12 +74,12 @@ void SelectScene::SoundPlay() {
 	}
 }
 void SelectScene::SoundStop() {
-		SOUND("LeanOn")->Stop();
-		SOUND("Baby")->Stop();
-		SOUND("Bones")->Stop();
+	SOUND("Gotic")->Stop();
+	SOUND("Tir")->Stop();
+	SOUND("Bones")->Stop();
 }
 void SelectScene::ImageSet() {
-	BackGround = COPY_RESOURCE("FoxLandcape", CImage);
+	BackGround = COPY_RESOURCE("select", CImage);
 	BackGround.SetRect(0, 300, 1024, 900);
 	BackGround.SetSize(1920, 1080);
 }
