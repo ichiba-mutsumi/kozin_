@@ -27,7 +27,7 @@ score_text("C:\\Windows\\Fonts\\msgothic.ttc", 64) {
 		//video = new CVideo("Movie/Bones.mp4");
 		break;
 	}
-	for (int i = 0; i < 4; i++) {
+	for (int i = 0; i < 7; i++) {
 		PushKey[i] = false;
 	}
 }
@@ -38,7 +38,7 @@ void Play::Draw() {
 	gamen.Draw();
 	NotesBar.Draw();
 	LeftClick.Draw();
-	for (int i = 0; i < 4; i++) {
+	for (int i = 0; i < 7; i++) {
 		if (PushKey[i] == true) {
 			NotesBarBlue[i].Draw();
 		}
@@ -73,7 +73,7 @@ void Play::Update() {
 		}
 		break;
 	}
-	for (int i = 0; i < 4; i++) {
+	for (int i = 0; i < 7; i++) {
 		if (PushKey[i] == true) {
 			//m_NotesBar = NotesBarBlue;
 			PushCount[i]++;
@@ -99,6 +99,22 @@ void Play::Update() {
 	if (HOLD(CInput::eButton4)) {
 		PushKey[3] = true;
 		PushCount[3] = 0;
+	}
+	if (HOLD(CInput::eButton5)) {
+		PushKey[4] = true;
+		PushCount[4] = 0;
+	}
+	if (HOLD(CInput::eButton6)) {
+		PushKey[5] = true;
+		PushCount[5] = 0;
+	}
+	if (HOLD(CInput::eButton7)) {
+		PushKey[6] = true;
+		PushCount[6] = 0;
+	}
+	if (HOLD(CInput::eButton8)) {
+		PushKey[7] = true;
+		PushCount[7] = 0;
 	}
 	//std::cout << ShareNum::HitCount << std::endl;
 }

@@ -18,10 +18,10 @@ private:
 	int CountDownToStart;
 	int CountUpToEnd;
 	int SoundNum;
-	int PushCount[4];
+	int PushCount[7];
 	float OneNotes;
 	float NotesCount;
-	bool PushKey[4];
+	bool PushKey[7];
 public:
 	Play(int ChoiceSound);
 	~Play();
