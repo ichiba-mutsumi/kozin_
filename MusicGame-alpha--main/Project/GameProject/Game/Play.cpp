@@ -27,7 +27,7 @@ score_text("C:\\Windows\\Fonts\\msgothic.ttc", 64) {
 		//video = new CVideo("Movie/Bones.mp4");
 		break;
 	}
-	for (int i = 0; i < 7; i++) {
+	for (int i = 0; i < 8; i++) {
 		PushKey[i] = false;
 	}
 }
@@ -38,7 +38,7 @@ void Play::Draw() {
 	gamen.Draw();
 	NotesBar.Draw();
 	LeftClick.Draw();
-	for (int i = 0; i < 7; i++) {
+	for (int i = 0; i < 8; i++) {
 		if (PushKey[i] == true) {
 			NotesBarBlue[i].Draw();
 		}
@@ -73,7 +73,7 @@ void Play::Update() {
 		}
 		break;
 	}
-	for (int i = 0; i < 7; i++) {
+	for (int i = 0; i < 8; i++) {
 		if (PushKey[i] == true) {
 			//m_NotesBar = NotesBarBlue;
 			PushCount[i]++;
