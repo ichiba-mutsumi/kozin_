@@ -173,6 +173,50 @@ void Notes::LCheckHitNotes() {
 			}
 		}
 	}
+	if (PUSH(CInput::eButton5)) {
+		if (-10 <= HitCountDown && HitCountDown <= 10 && m_pos.x == 965) {
+			//Base::Add(new Hit(m_pos));
+			SOUND("Tap")->Play();
+			m_kill = true;
+			ShareNum::score += 250;
+			if (HitCountDown == 0) {
+				ShareNum::score += 250;
+			}
+		}
+	}
+	if (PUSH(CInput::eButton6)) {
+		if (-10 <= HitCountDown && HitCountDown <= 10 && m_pos.x == 1205) {
+			//Base::Add(new Hit(m_pos));
+			SOUND("Tap")->Play();
+			m_kill = true;
+			ShareNum::score += 250;
+			if (HitCountDown == 0) {
+				ShareNum::score += 250;
+			}
+		}
+	}
+	if (PUSH(CInput::eButton7)) {
+		if (-10 <= HitCountDown && HitCountDown <= 10 && m_pos.x == 1445) {
+			//Base::Add(new Hit(m_pos));
+			SOUND("Tap")->Play();
+			m_kill = true;
+			ShareNum::score += 250;
+			if (HitCountDown == 0) {
+				ShareNum::score += 250;
+			}
+		}
+	}
+	if (PUSH(CInput::eButton8)) {
+		if (-10 <= HitCountDown && HitCountDown <= 10 && m_pos.x == 1685) {
+			//Base::Add(new Hit(m_pos));
+			SOUND("Tap")->Play();
+			m_kill = true;
+			ShareNum::score += 250;
+			if (HitCountDown == 0) {
+				ShareNum::score += 250;
+			}
+		}
+	}
 }
 void Notes::Timer() {
 	m_time--;
