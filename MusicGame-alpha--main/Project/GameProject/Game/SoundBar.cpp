@@ -21,10 +21,10 @@ void SoundBar::Update() {
 	SongCount++;
 }
 void SoundBar::ImageSet() {
-	//Bar = COPY_RESOURCE("SoundBar", CImage);
-	//BarFrame = COPY_RESOURCE("SoundBar", CImage);
-	//BarFrame.SetRect(0,0,1920,15);
-	//BarFrame.SetSize(1920, 15);
+	Bar = COPY_RESOURCE("SoundBar", CImage);
+	BarFrame = COPY_RESOURCE("SoundBar", CImage);
+	BarFrame.SetRect(0,0,1920,15);
+	BarFrame.SetSize(1920, 15);
 }
 void SoundBar::Draw() {
 	int BarPos = 1918 * SongCount / SongLen;

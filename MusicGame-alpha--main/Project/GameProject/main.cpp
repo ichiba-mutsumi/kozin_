@@ -98,7 +98,6 @@ void Init(void)
 	/*
 	ADD_RESOURCE("Lane", CImage::CreateImage("Image/Lane.png"));
 	ADD_RESOURCE("Notes",CImage::CreateImage("Image/Notes.png"));
-	ADD_RESOURCE("SoundBar", CImage::CreateImage("Image/SoundBar.png"));
 	ADD_RESOURCE("NotesBar", CImage::CreateImage("Image/NotesBar.png"));
 
 	SOUND("LeanOn")->Load("Sound/LeanOn.wav");
@@ -115,6 +114,7 @@ void Init(void)
 	ADD_RESOURCE("Note6", CImage::CreateImage("Image/slide2.png"));
 	ADD_RESOURCE("Number", CImage::CreateImage("Image/Number.png"));
 	ADD_RESOURCE("number", CImage::CreateImage("Image/scorenumber.png"));
+	ADD_RESOURCE("SoundBar", CImage::CreateImage("Image/SoundBar.png"));
 	ADD_RESOURCE("Title", CImage::CreateImage("Image/tile.png"));
 	ADD_RESOURCE("gothic", CImage::CreateImage("Image/gothic.png"));
 	ADD_RESOURCE("Fantastical", CImage::CreateImage("Image/fantastical.png"));
