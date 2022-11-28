@@ -128,7 +128,7 @@ void Init(void)
 	ADD_RESOURCE("TapD", CImage::CreateImage("Image/D.png"));
 	ADD_RESOURCE("TapZ", CImage::CreateImage("Image/Z.png"));
 	ADD_RESOURCE("TapX", CImage::CreateImage("Image/X.png"));
-	ADD_RESOURCE("select", CImage::CreateImage("Image/select.png"));
+	ADD_RESOURCE("select", CImage::CreateImage("Image/yozora.png"));
 	SOUND("Gothic")->Load("Sound/PerituneMaterial_Gothic_Cute (online-audio-converter.com).wav");
 	SOUND("Tir")->Load("Sound/PerituneMaterial_Tir_sonas (online-audio-converter.com).wav");
 	SOUND("Tap")->Load("Sound/TapSound.wav", 10);
