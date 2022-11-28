@@ -5,8 +5,8 @@
 #include "Game/ScoreScene.h"
 #include "Game/SelectScene/SelectScene.h"
 #include"Title/Title.h"
-#define SCREEN_WIDTH 1579
-#define SCREEN_HEIGHT 1118
+#define SCREEN_WIDTH 1920
+#define SCREEN_HEIGHT 1080
 
 
 
@@ -115,7 +115,7 @@ void Init(void)
 	ADD_RESOURCE("Number", CImage::CreateImage("Image/Number.png"));
 	ADD_RESOURCE("number", CImage::CreateImage("Image/scorenumber.png"));
 	ADD_RESOURCE("SoundBar", CImage::CreateImage("Image/SoundBar.png"));
-	ADD_RESOURCE("Title", CImage::CreateImage("Image/tile.png"));
+	ADD_RESOURCE("Title", CImage::CreateImage("Image/maru.png"));
 	ADD_RESOURCE("gothic", CImage::CreateImage("Image/gothic.png"));
 	ADD_RESOURCE("Fantastical", CImage::CreateImage("Image/fantastical.png"));
 	ADD_RESOURCE("fullcombo", CImage::CreateImage("Image/FULLCOMBO.png"));

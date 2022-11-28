@@ -24,7 +24,7 @@ score_text("C:\\Windows\\Fonts\\msgothic.ttc", 64) {
 		//video = new CVideo("Movie/Baby.mp4");
 		break;
 	case eNum_Bones:
-		//video = new CVideo("Movie/Bones.mp4");
+		video = new CVideo("Movie/Bones.mp4");
 		break;
 	}
 	for (int i = 0; i < 8; i++) {
