@@ -80,6 +80,6 @@ void SelectScene::SoundStop() {
 }
 void SelectScene::ImageSet() {
 	BackGround = COPY_RESOURCE("select", CImage);
-	BackGround.SetRect(0, 300, 1024, 900);
+	BackGround.SetRect(0, 200, 1050, 800);
 	BackGround.SetSize(1920, 1080);
 }
