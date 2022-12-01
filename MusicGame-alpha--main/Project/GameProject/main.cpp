@@ -104,7 +104,7 @@ void Init(void)
 	SOUND("Baby")->Load("Sound/Baby.wav");
 	*/
 	SOUND("Bones")->Load("Sound/Bones.wav");
-
+	
 
 	ADD_RESOURCE("Note", CImage::CreateImage("Image/note.png"));
 	ADD_RESOURCE("Note2", CImage::CreateImage("Image/criticalnote.png"));
@@ -118,7 +118,8 @@ void Init(void)
 	ADD_RESOURCE("Title", CImage::CreateImage("Image/maru.png"));
 	ADD_RESOURCE("gothic", CImage::CreateImage("Image/gothic.png"));
 	ADD_RESOURCE("Fantastical", CImage::CreateImage("Image/fantastical.png"));
-	ADD_RESOURCE("fullcombo", CImage::CreateImage("Image/FULLCOMBO.png"));
+	ADD_RESOURCE("fullcombo", CImage::CreateImage("Image/fullcomboo.png"));
+	ADD_RESOURCE("clear", CImage::CreateImage("Image/CLEAR.png"));
 	ADD_RESOURCE("gamen", CImage::CreateImage("Image/gamen.png"));
 	ADD_RESOURCE("TapA", CImage::CreateImage("Image/A.png"));
 	ADD_RESOURCE("TapQ", CImage::CreateImage("Image/Q.png"));

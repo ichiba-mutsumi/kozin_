@@ -13,7 +13,7 @@ public:
 	int m_score[10000];
 	CImage m_img[11];
 	CFont Ranking_text;
-	std::string data[9999+1];
+	std::string data[10000];
 public:
 	//データの読み取り、並び替え
 	Ranking(int state);

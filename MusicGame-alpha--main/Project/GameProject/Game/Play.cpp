@@ -18,13 +18,13 @@ score_text("C:\\Windows\\Fonts\\msgothic.ttc", 64) {
 	ImageSet();
 	switch (ChoiceSound) {
 	case eNum_Gothic:
-		//video = new CVideo("Movie/LeanOn.mp4");
+		COPY_RESOURCE("gothic", CImage);
 		break;
 	case eNum_Tir:
-		//video = new CVideo("Movie/Baby.mp4");
+		COPY_RESOURCE("Fantastical", CImage);
 		break;
 	case eNum_Bones:
-		video = new CVideo("Movie/Bones.mp4");
+		//video = new CVideo("Movie/Bones.mp4");
 		break;
 	}
 	for (int i = 0; i < 8; i++) {
@@ -140,7 +140,7 @@ Play::~Play() {
 void Play::ImageSet() {
 	gamen = COPY_RESOURCE("gamen", CImage);
 	NotesBar = COPY_RESOURCE("NotesBar", CImage);
-	for (int i = 0; i < 4; i++) {
+	/*for (int i = 0; i < 4; i++) {
 		NotesBarBlue[i] = COPY_RESOURCE("NotesBarBlue", CImage);
 	}
 	NotesBarBlue[0].SetRect(0, 0, 243, 1080);
@@ -154,7 +154,7 @@ void Play::ImageSet() {
 	NotesBarBlue[0].SetSize(243, 1080);
 	NotesBarBlue[1].SetSize(240, 1080);
 	NotesBarBlue[2].SetSize(240, 1080);
-	NotesBarBlue[3].SetSize(257, 1080);
+	NotesBarBlue[3].SetSize(257, 1080);*/
 	LeftClick = COPY_RESOURCE("LeftClick", CImage);
 	//m_NotesBar = NotesBar;
 }
