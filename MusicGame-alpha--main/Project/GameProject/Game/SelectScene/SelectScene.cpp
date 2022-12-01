@@ -73,6 +73,7 @@ void SelectScene::SoundPlay() {
 		break;
 	}
 }
+//Ø‚è‘Ö‚¦Žž‚É‰¹Šy‚ªŽ~‚Ü‚é‚Æ‚±‚ë
 void SelectScene::SoundStop() {
 	SOUND("Gotic")->Stop();
 	SOUND("Tir")->Stop();
