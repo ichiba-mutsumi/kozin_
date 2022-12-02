@@ -7,6 +7,7 @@ private:
 		eNum_Gothic,
 		eNum_Tir,
 		eNum_Bones,
+		eNum_Tutorial,
 	};
 	CImage gamen;
 	CImage m_NotesBar;
@@ -30,6 +31,7 @@ public:
 	void Update();
 	void Gothic();
 	void Tir();
+	void Tutorial();
 	void Bones();
 	void NotesSet();
 	void NotesPreSet(int SetNum);

@@ -132,6 +132,7 @@ void Init(void)
 	ADD_RESOURCE("select", CImage::CreateImage("Image/yozora.png"));
 	SOUND("Gothic")->Load("Sound/PerituneMaterial_Gothic_Cute (online-audio-converter.com).wav");
 	SOUND("Tir")->Load("Sound/PerituneMaterial_Tir_sonas (online-audio-converter.com).wav");
+	SOUND("Tutorial")->Load("Sound/suisounishizumutsuki (online-audio-converter.com).wav");
 	SOUND("Tap")->Load("Sound/TapSound.wav", 10);
 	Base::Add(new Title());
 

@@ -54,6 +54,9 @@ void SelectScene::Update() {
 		case Tir:
 			Base::Add(new Play(Tir));
 			break;
+		case Tutorial:
+			Base::Add(new Play(Tutorial));
+			break;
 		case Bones:
 			Base::Add(new Play(Bones));
 			break;
@@ -68,6 +71,9 @@ void SelectScene::SoundPlay() {
 	case Tir:
 		SOUND("Tir")->Play();
 		break;
+	case Tutorial:
+		SOUND("Tutorial")->Play();
+		break;
 	case Bones:
 		SOUND("Bones")->Play();
 		break;
@@ -75,8 +81,9 @@ void SelectScene::SoundPlay() {
 }
 //Ø‚è‘Ö‚¦Žž‚É‰¹Šy‚ªŽ~‚Ü‚é‚Æ‚±‚ë
 void SelectScene::SoundStop() {
-	SOUND("Gotic")->Stop();
+	SOUND("Gothic")->Stop();
 	SOUND("Tir")->Stop();
+	SOUND("Tutorial")->Stop();
 	SOUND("Bones")->Stop();
 }
 void SelectScene::ImageSet() {

@@ -23,6 +23,9 @@ score_text("C:\\Windows\\Fonts\\msgothic.ttc", 64) {
 	case eNum_Tir:
 		COPY_RESOURCE("Fantastical", CImage);
 		break;
+	case eNum_Tutorial:
+
+		break;
 	case eNum_Bones:
 		//video = new CVideo("Movie/Bones.mp4");
 		break;
@@ -127,6 +130,9 @@ Play::~Play() {
 		Lfile << ShareNum::score << std::endl;
 		break;
 	case eNum_Tir:
+		Bfile << ShareNum::score << std::endl;
+		break;
+	case eNum_Tutorial:
 		Bfile << ShareNum::score << std::endl;
 		break;
 	case eNum_Bones:

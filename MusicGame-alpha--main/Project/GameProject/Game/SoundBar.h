@@ -7,6 +7,7 @@ public:
 		Gothic,
 		Tir,
 		Bones,
+		Tutorial,
 	};
 	int SongCount;
 	int SongLen;
