@@ -16,11 +16,11 @@ private:
 	CImage LeftClick;
 	CVideo* video;
 	CFont score_text;
-	int CountDownToStart;
-	int CountUpToEnd;
-	int SoundNum;
+	int CountDownToStart;//このカウントが終わったら音楽が始まる
+	int CountUpToEnd;//曲の長さ、秒数＊６０でセレクト画面に戻る
+	int SoundNum;//選んだ曲名で因数を指定（代入）
 	int PushCount[8];
-	float OneNotes;
+	float OneNotes;//八分音符一個分のフレーム
 	float NotesCount;
 	bool PushKey[8];
 public:
@@ -33,6 +33,6 @@ public:
 	void Tir();
 	void Tutorial();
 	void Bones();
-	void NotesSet();
-	void NotesPreSet(int SetNum);
+	void NotesSet();//プリセットを配置している
+	void NotesPreSet(int SetNum);//一小節ごとのケース
 };

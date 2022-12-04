@@ -24,7 +24,7 @@ score_text("C:\\Windows\\Fonts\\msgothic.ttc", 64) {
 		COPY_RESOURCE("Fantastical", CImage);
 		break;
 	case eNum_Tutorial:
-
+		COPY_RESOURCE("tutorial", CImage);
 		break;
 	case eNum_Bones:
 		//video = new CVideo("Movie/Bones.mp4");
@@ -50,12 +50,13 @@ void Play::Draw() {
 void Play::Update() {
 	CountDownToStart--;
 	CountUpToEnd++;
+	//‰¹Šy‚ª—¬‚ê‚éŽžŠÔi•b”–‚U‚Oj
 	switch (ShareNum::GameNum) {
 	case eNum_Gothic:
 		if (CountDownToStart == 0) {
 			Gothic();
 		}
-		if (CountUpToEnd >= 7080) {
+		if (CountUpToEnd >= 10500) {
 			m_kill = true;
 		}
 		break;
@@ -63,7 +64,15 @@ void Play::Update() {
 		if (CountDownToStart == 0) {
 			Tir();
 		}
-		if (CountUpToEnd >= 9480) {
+		if (CountUpToEnd >= 9240) {
+			m_kill = true;
+		}
+		break;
+	case eNum_Tutorial:
+		if (CountDownToStart == 0) {
+			Tutorial();
+		}
+		if (CountUpToEnd >= 6840) {
 			m_kill = true;
 		}
 		break;
@@ -125,6 +134,7 @@ Play::~Play() {
 	std::ofstream Lfile("Score/LeanOn.txt", std::ios_base::app | std::ios_base::in);
 	std::ofstream Bfile("Score/Baby.txt", std::ios_base::app | std::ios_base::in);
 	std::ofstream Bofile("Score/Baby.txt", std::ios_base::app | std::ios_base::in);
+	std::ofstream Boofile("Score/Bomes.txt", std::ios_base::app | std::ios_base::in);
 	switch (ShareNum::GameNum) {
 	case eNum_Gothic:
 		Lfile << ShareNum::score << std::endl;
@@ -171,6 +181,15 @@ void Play::Tir() {
 	Base::Add(new Score());
 	NotesSet();
 }
+void Play::Tutorial()
+{
+	video->Play();
+	OneNotes = 18.125;
+	Base::Add(new SoundBar(0));
+	Base::Add(new Score());
+	NotesSet();
+
+}
 void Play::Gothic() {
 	video->Play();
 	OneNotes = 18.125;
@@ -178,6 +197,7 @@ void Play::Gothic() {
 	Base::Add(new Score());
 	NotesSet();
 }
+
 void Play::Bones() {
 	video->Play();
 	OneNotes = 15.725;
@@ -1030,6 +1050,9 @@ void Play::NotesPreSet(int SetNum) {
 		break;
 	case eNum_Tir:
 		NotesCount += 108.8;
+		break;
+	case eNum_Tutorial:
+		NotesCount += 108.1;
 		break;
 	case eNum_Bones:
 		NotesCount += 125.8;

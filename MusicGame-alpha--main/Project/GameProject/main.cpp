@@ -130,6 +130,7 @@ void Init(void)
 	ADD_RESOURCE("TapZ", CImage::CreateImage("Image/Z.png"));
 	ADD_RESOURCE("TapX", CImage::CreateImage("Image/X.png"));
 	ADD_RESOURCE("select", CImage::CreateImage("Image/yozora.png"));
+	ADD_RESOURCE("tutorial", CImage::CreateImage("Image/Rain.png"));
 	SOUND("Gothic")->Load("Sound/PerituneMaterial_Gothic_Cute (online-audio-converter.com).wav");
 	SOUND("Tir")->Load("Sound/PerituneMaterial_Tir_sonas (online-audio-converter.com).wav");
 	SOUND("Tutorial")->Load("Sound/suisounishizumutsuki (online-audio-converter.com).wav");
