@@ -8,12 +8,12 @@ class SelectScene :public Base {
 		//ゲームタイトルのstateを作る
 		Gothic,
 		Tir,
-		Bones,
 		Tutorial,
+		Bones,
 	};
 private:
 	CImage BackGround;
-	char game_title[10][100] = { "Gothic","Tir","Bones","Tutorial",/*,"ABC","ABC"*/};
+	char game_title[10][100] = { "Gothic","Tir","Tutorial","Bones",/*,"ABC","ABC"*/};
 	CFont title_text;
 	CFont select_title_text;
 	CFont PushEnter_Text;

@@ -11,41 +11,47 @@
 #include "../Base/Base.h"
 Play::Play(int ChoiceSound) : Base(eType_Play),
 score_text("C:\\Windows\\Fonts\\msgothic.ttc", 64) {
+	std::cout << "読み込み" << std::endl;
 	glClearColor(0, 0, 0, 0);
 	CountDownToStart = 190;
 	CountUpToEnd = 0;
 	SoundNum = ChoiceSound;
+	std::cout << "Image" << std::endl;
 	ImageSet();
+	std::cout << "Imagefin" << std::endl;
 	switch (ChoiceSound) {
 	case eNum_Gothic:
-		m_img=COPY_RESOURCE("gothic", CImage);
+		m_img = COPY_RESOURCE("gothic", CImage);
 		break;
 	case eNum_Tir:
-		m_img=COPY_RESOURCE("Fantastical", CImage);
+		m_img = COPY_RESOURCE("Fantastical", CImage);
 		break;
 	case eNum_Tutorial:
-		m_img=COPY_RESOURCE("tutorial", CImage);
+		m_img = COPY_RESOURCE("tutorial", CImage);
 		break;
 	case eNum_Bones:
-		//video = new CVideo("Movie/Bones.mp4");
+		m_img = COPY_RESOURCE("neko", CImage);
 		break;
 	}
 	for (int i = 0; i < 8; i++) {
 		PushKey[i] = false;
-	}
+	}std::cout << "コントラクタfin" << std::endl;
 }
 void Play::Draw() {
+	std::cout << "Drawstart" << std::endl;
 	m_img.Draw();
 	gamen.Draw();
-	NotesBar.Draw();
-	LeftClick.Draw();
-	for (int i = 0; i < 8; i++) {
+	//NotesBar.Draw();
+	//LeftClick.Draw();
+	/*for (int i = 0; i < 8; i++) {
 		if (PushKey[i] == true) {
 			NotesBarBlue[i].Draw();
 		}
-	}
+	}*/
+	std::cout << "Drawfin" << std::endl;
 }
 void Play::Update() {
+	std::cout << "update" << std::endl;
 	CountDownToStart--;
 	CountUpToEnd++;
 	//音楽が流れる時間（秒数＊６０）
@@ -83,18 +89,18 @@ void Play::Update() {
 		}
 		break;
 	}
-	for (int i = 0; i < 8; i++) {
-		if (PushKey[i] == true) {
-			//m_NotesBar = NotesBarBlue;
-			PushCount[i]++;
-		}
-		if (PushCount[i] >= 10) {
-			PushKey[i] = false;
-			//KeyNum = 4;
-			//m_NotesBar = NotesBar;
-		}
-	}
-	if (HOLD(CInput::eButton1)) {
+	//for (int i = 0; i < 8; i++) {
+	//	if (PushKey[i] == true) {
+	//		//m_NotesBar = NotesBarBlue;
+	//		PushCount[i]++;
+	//	}
+	//	if (PushCount[i] >= 10) {
+	//		PushKey[i] = false;
+	//		//KeyNum = 4;
+	//		//m_NotesBar = NotesBar;
+	//	}
+	//}/*
+	/*if (HOLD(CInput::eButton1)) {
 		PushKey[0] = true;
 		PushCount[0] = 0;
 	}
@@ -125,8 +131,9 @@ void Play::Update() {
 	if (HOLD(CInput::eButton8)) {
 		PushKey[7] = true;
 		PushCount[7] = 0;
-	}
+	}*/
 	//std::cout << ShareNum::HitCount << std::endl;
+	std::cout << "UpdateFin" << std::endl;
 }
 Play::~Play() {
 	std::ofstream Lfile("Score/LeanOn.txt", std::ios_base::app | std::ios_base::in);
@@ -147,13 +154,13 @@ Play::~Play() {
 		Bofile << ShareNum::score << std::endl;
 		break;
 	}
-	video->Stop();
+	//video->Stop();
 	Base::KillAll();
 	Base::Add(new ScoreScene());
 }
 void Play::ImageSet() {
 	gamen = COPY_RESOURCE("gamen", CImage);
-	NotesBar = COPY_RESOURCE("NotesBar", CImage);
+	//NotesBar = COPY_RESOURCE("NotesBar", CImage);
 	/*for (int i = 0; i < 4; i++) {
 		NotesBarBlue[i] = COPY_RESOURCE("NotesBarBlue", CImage);
 	}
@@ -169,24 +176,8 @@ void Play::ImageSet() {
 	NotesBarBlue[1].SetSize(240, 1080);
 	NotesBarBlue[2].SetSize(240, 1080);
 	NotesBarBlue[3].SetSize(257, 1080);*/
-	LeftClick = COPY_RESOURCE("LeftClick", CImage);
+	//LeftClick = COPY_RESOURCE("LeftClick", CImage);
 	//m_NotesBar = NotesBar;
-}
-void Play::Tir() {
-	SOUND("Tir")->Play();
-	OneNotes = 13.6;
-	//Base::Add(new SoundBar(1));
-	Base::Add(new Score());
-	NotesSet();
-}
-void Play::Tutorial()
-{
-	SOUND("Tutorial")->Play();
-	OneNotes = 18.125;
-	//Base::Add(new SoundBar(0));
-	Base::Add(new Score());
-	NotesSet();
-
 }
 void Play::Gothic() {
 	SOUND("Gothic")->Play();
@@ -196,6 +187,22 @@ void Play::Gothic() {
 	NotesSet();
 }
 
+void Play::Tir() {
+	SOUND("Tir")->Play();
+	OneNotes = 13.6;
+	//Base::Add(new SoundBar(1));
+	Base::Add(new Score());
+	NotesSet();
+}
+void Play::Tutorial(){
+
+	SOUND("Tutorial")->Play();
+	OneNotes = 18.125;
+	//Base::Add(new SoundBar(0));
+	Base::Add(new Score());
+	NotesSet();
+
+}
 void Play::Bones() {
 	SOUND("Bones")->Play();
 	OneNotes = 15.725;
@@ -1331,6 +1338,10 @@ void Play::NotesSet() {
 		NotesPreSet(100);
 		NotesPreSet(100);
 		NotesPreSet(100);
+		break;
+	case eNum_Tutorial:
+
+
 		break;
 	}
 }
