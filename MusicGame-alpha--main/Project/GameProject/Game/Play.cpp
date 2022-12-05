@@ -18,13 +18,13 @@ score_text("C:\\Windows\\Fonts\\msgothic.ttc", 64) {
 	ImageSet();
 	switch (ChoiceSound) {
 	case eNum_Gothic:
-		COPY_RESOURCE("gothic", CImage);
+		m_img=COPY_RESOURCE("gothic", CImage);
 		break;
 	case eNum_Tir:
-		COPY_RESOURCE("Fantastical", CImage);
+		m_img=COPY_RESOURCE("Fantastical", CImage);
 		break;
 	case eNum_Tutorial:
-		COPY_RESOURCE("tutorial", CImage);
+		m_img=COPY_RESOURCE("tutorial", CImage);
 		break;
 	case eNum_Bones:
 		//video = new CVideo("Movie/Bones.mp4");
@@ -35,9 +35,7 @@ score_text("C:\\Windows\\Fonts\\msgothic.ttc", 64) {
 	}
 }
 void Play::Draw() {
-	if (CountDownToStart <= 0) {
-		video->Draw();
-	}
+	m_img.Draw();
 	gamen.Draw();
 	NotesBar.Draw();
 	LeftClick.Draw();
@@ -134,7 +132,7 @@ Play::~Play() {
 	std::ofstream Lfile("Score/LeanOn.txt", std::ios_base::app | std::ios_base::in);
 	std::ofstream Bfile("Score/Baby.txt", std::ios_base::app | std::ios_base::in);
 	std::ofstream Bofile("Score/Baby.txt", std::ios_base::app | std::ios_base::in);
-	std::ofstream Boofile("Score/Bomes.txt", std::ios_base::app | std::ios_base::in);
+	std::ofstream Boofile("Score/Bones.txt", std::ios_base::app | std::ios_base::in);
 	switch (ShareNum::GameNum) {
 	case eNum_Gothic:
 		Lfile << ShareNum::score << std::endl;
@@ -175,33 +173,33 @@ void Play::ImageSet() {
 	//m_NotesBar = NotesBar;
 }
 void Play::Tir() {
-	video->Play();
+	SOUND("Tir")->Play();
 	OneNotes = 13.6;
-	Base::Add(new SoundBar(1));
+	//Base::Add(new SoundBar(1));
 	Base::Add(new Score());
 	NotesSet();
 }
 void Play::Tutorial()
 {
-	video->Play();
+	SOUND("Tutorial")->Play();
 	OneNotes = 18.125;
-	Base::Add(new SoundBar(0));
+	//Base::Add(new SoundBar(0));
 	Base::Add(new Score());
 	NotesSet();
 
 }
 void Play::Gothic() {
-	video->Play();
+	SOUND("Gothic")->Play();
 	OneNotes = 18.125;
-	Base::Add(new SoundBar(0));
+	//Base::Add(new SoundBar(3));
 	Base::Add(new Score());
 	NotesSet();
 }
 
 void Play::Bones() {
-	video->Play();
+	SOUND("Bones")->Play();
 	OneNotes = 15.725;
-	Base::Add(new SoundBar(2));
+	//Base::Add(new SoundBar(2));
 	Base::Add(new Score());
 	NotesSet();
 }

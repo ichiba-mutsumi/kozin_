@@ -9,6 +9,7 @@ private:
 		eNum_Bones,
 		eNum_Tutorial,
 	};
+	CImage m_img;
 	CImage gamen;
 	CImage m_NotesBar;
 	CImage NotesBar;
