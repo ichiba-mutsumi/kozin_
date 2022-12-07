@@ -248,28 +248,28 @@ void Notes::ImageSet() {
 		CircleNotes[i] = COPY_RESOURCE("Note3", CImage);
 		DarkCircleNotes[i] = COPY_RESOURCE("Note2", CImage);
 		SquareNotes[i] = COPY_RESOURCE("Note5", CImage);
-		CircleNotesFrame[i] = COPY_RESOURCE("Note4", CImage);
+		CircleNotesFrame[i] = COPY_RESOURCE("Note6", CImage);
 	}
 	//画像の切り取り
-	CircleNotes[0].SetRect(263, 157, 596, 493);
-	CircleNotesFrame[0].SetRect(1595, 0, 1920, 325);
-	SquareNotes[0].SetRect(767, 445, 1154, 636);
-	CircleNotes[1].SetRect(8, 7, 248, 249);
-	CircleNotes[2].SetRect(263, 6, 505, 250);
-	CircleNotes[3].SetRect(28, 275, 228, 475);
-	CircleNotes[4].SetRect(256, 256, 512, 512);
-	DarkCircleNotes[1].SetRect(8, 7, 248, 249);
-	DarkCircleNotes[2].SetRect(263, 6, 505, 250);
+	CircleNotes[0].SetRect(23, 56, 438, 472);
+	CircleNotesFrame[0].SetRect(63, 32, 497, 520);
+	SquareNotes[0].SetRect(112, 17, 528, 433);
+	//CircleNotes[1].SetRect(23, 226, 438, 225);
+	/*CircleNotes[2].SetRect(23, 226, 438, 225);
+	CircleNotes[3].SetRect(23, 226, 438, 225);
+	CircleNotes[4].SetRect(256, 256, 512, 512);*/
+	DarkCircleNotes[0].SetRect(10, 16, 428, 432);
+	/*DarkCircleNotes[2].SetRect(263, 6, 505, 250);
 	DarkCircleNotes[3].SetRect(28, 275, 228, 475);
-	DarkCircleNotes[4].SetRect(256, 256, 512, 512);
-	SquareNotes[1].SetRect(7, 8, 248, 248);
-	SquareNotes[2].SetRect(258, 2, 509, 255);
+	DarkCircleNotes[4].SetRect(256, 256, 512, 512);*/
+	SquareNotes[1].SetRect(159, 47, 528, 362);
+	/*SquareNotes[2].SetRect(258, 2, 509, 255);
 	SquareNotes[3].SetRect(21, 272, 235, 499);
-	SquareNotes[4].SetRect(271, 272, 495, 496);
-	CircleNotesFrame[1].SetRect(18, 19, 241, 237);
-	CircleNotesFrame[2].SetRect(270, 14, 499, 241);
+	SquareNotes[4].SetRect(271, 272, 495, 496);*/
+	CircleNotesFrame[1].SetRect(22, 21, 592, 495);
+	/*CircleNotesFrame[2].SetRect(270, 14, 499, 241);
 	CircleNotesFrame[3].SetRect(10, 268, 241, 500);
-	CircleNotesFrame[4].SetRect(266, 268, 501, 501);
+	CircleNotesFrame[4].SetRect(266, 268, 501, 501);*/
 	//サイズの指定
 	for (int i = 0; i < 5; i++) {
 		SquareNotes[i].SetSize(236, 118);

@@ -36,7 +36,7 @@ void Score::ImageSet() {
 	}*/
 	for (int i = 0; i < 10; i++) {
 		m_img[i] = COPY_RESOURCE("Number", CImage);
-		m_img[i].SetRect(i * 40, 0, (i + 1) * 35, 77);
+		m_img[i].SetRect(i * 39, 0, (i + 1) * 39, 77);
 		m_img[i].SetSize(40, 77);
 	}
 }

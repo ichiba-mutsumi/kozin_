@@ -132,7 +132,7 @@ void Init(void)
 	ADD_RESOURCE("select", CImage::CreateImage("Image/yozora.png"));
 	ADD_RESOURCE("tutorial", CImage::CreateImage("Image/Rain.png"));
 	ADD_RESOURCE("neko", CImage::CreateImage("Image/Neko.png"));
-	ADD_RESOURCE("score", CImage::CreateImage("Image/score.png"));
+	ADD_RESOURCE("score", CImage::CreateImage("Image/mahou.png"));
 	SOUND("Gothic")->Load("Sound/PerituneMaterial_Gothic_Cute (online-audio-converter.com).wav");
 	SOUND("Tir")->Load("Sound/PerituneMaterial_Tir_sonas (online-audio-converter.com).wav");
 	SOUND("Tutorial")->Load("Sound/suisounishizumutsuki (online-audio-converter.com).wav");
