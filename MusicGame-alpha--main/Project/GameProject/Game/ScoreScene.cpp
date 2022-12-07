@@ -23,8 +23,8 @@ void ScoreScene::Draw() {
 		m_img[k].Draw();
 		i++;
 	}
-	text.Draw(730, 400, 0, 0, 0, "YOUR SCORE!");
-	PushEnter_Text.Draw(1500, 1000, 0, 0, 0, "Push EnterKey");
+	text.Draw(730, 400, 1, 1, 1, "YOUR SCORE!");
+	PushEnter_Text.Draw(1500, 1000, 1, 1, 1, "Push EnterKey");
 }
 void ScoreScene::ImageSet() {
 	for (int i = 0; i < 10; i++) {
@@ -32,7 +32,7 @@ void ScoreScene::ImageSet() {
 		m_img[i].SetRect(i * 39, 0, (i + 1) * 39, 77);
 		m_img[i].SetSize(100, 200);
 	}
-	BackGround = COPY_RESOURCE("select", CImage);
+	BackGround = COPY_RESOURCE("score", CImage);
 	BackGround.SetRect(0, 0, 2048, 1500);
 	BackGround.SetSize(1920, 1080);
 }
