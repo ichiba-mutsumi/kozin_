@@ -27,14 +27,14 @@ public:
 	CImage DarkCircleNotes[5];
 	CImage SquareNotes[5];
 	CImage CircleNotesFrame[5];
-	CImage TapA;
+	/*CImage TapA;
 	CImage TapS;
 	CImage TapD;
 	CImage TapE;
 	CImage TapQ;
 	CImage TapW;
-	CImage TapZ;
-	CImage TapX;
+	CImage TapR;
+	CImage TapF;*/
 	CVector2D Right_pos;
 	CVector2D CenterRight_pos;
 	CVector2D CenterLeft_pos;

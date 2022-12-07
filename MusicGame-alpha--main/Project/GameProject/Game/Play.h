@@ -6,11 +6,19 @@ private:
 	enum {
 		eNum_Gothic,
 		eNum_Tir,
-		eNum_Bones,
 		eNum_Tutorial,
+		eNum_Bones,
 	};
 	CImage m_img;
 	CImage gamen;
+	CImage TapA;
+	CImage TapS;
+	CImage TapD;
+	CImage TapE;
+	CImage TapQ;
+	CImage TapW;
+	CImage TapR;
+	CImage TapF;
 	CImage m_NotesBar;
 	CImage NotesBar;
 	CImage NotesBarBlue[4];

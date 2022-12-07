@@ -127,8 +127,8 @@ void Init(void)
 	ADD_RESOURCE("TapE", CImage::CreateImage("Image/E.png"));
 	ADD_RESOURCE("TapS", CImage::CreateImage("Image/S.png"));
 	ADD_RESOURCE("TapD", CImage::CreateImage("Image/D.png"));
-	ADD_RESOURCE("TapZ", CImage::CreateImage("Image/Z.png"));
-	ADD_RESOURCE("TapX", CImage::CreateImage("Image/X.png"));
+	ADD_RESOURCE("TapR", CImage::CreateImage("Image/R.png"));
+	ADD_RESOURCE("TapF", CImage::CreateImage("Image/FF.png"));
 	ADD_RESOURCE("select", CImage::CreateImage("Image/yozora.png"));
 	ADD_RESOURCE("tutorial", CImage::CreateImage("Image/Rain.png"));
 	ADD_RESOURCE("neko", CImage::CreateImage("Image/Neko.png"));

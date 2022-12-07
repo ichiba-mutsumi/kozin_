@@ -66,7 +66,7 @@ void SelectScene::Update() {
 void SelectScene::SoundPlay() {
 	switch (ShareNum::GameNum) {
 	case Gothic:
-		SOUND("Gothic")->Play();
+		//SOUND("Gothic")->Play();
 		break;
 	case Tir:
 		SOUND("Tir")->Play();

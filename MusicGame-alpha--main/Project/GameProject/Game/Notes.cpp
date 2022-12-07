@@ -62,32 +62,32 @@ void Notes::Draw() {
 		if (state == true) {
 			m_img.SetPos(m_pos);
 			m_img.Draw();
-			TapA.SetPos(m_pos);
-			TapA.Draw();
+			/*TapA.SetPos(m_pos);
+			TapA.Draw();*/
 		}
 		break;
 	case eState_CenterLeft:
 		if (state == true) {
 			m_img.SetPos(m_pos);
 			m_img.Draw();
-			TapS.SetPos(m_pos);
-			TapS.Draw();
+			/*TapS.SetPos(m_pos);
+			TapS.Draw();*/
 		}
 		break;
 	case eState_CenterRight:
 		if (state == true) {
 			m_img.SetPos(m_pos);
 			m_img.Draw();
-			TapD.SetPos(m_pos);
-			TapD.Draw();
+			/*TapD.SetPos(m_pos);
+			TapD.Draw();*/
 		}
 		break;
 	case eState_Right:
 		if (state == true) {
 			m_img.SetPos(m_pos);
 			m_img.Draw();
-			TapE.SetPos(m_pos);
-			TapE.Draw();
+			/*TapE.SetPos(m_pos);
+			TapE.Draw();*/
 		}
 		break;
 	case  eState_RightSide:
@@ -232,14 +232,14 @@ void Notes::ImageSet() {
 	CenterRight_pos = CVector2D(485, 0);
 	Right_pos = CVector2D(725, 0);
 	//âÊëúÇê›íË
-	TapA = COPY_RESOURCE("TapA", CImage);
+	/*TapA = COPY_RESOURCE("TapA", CImage);
 	TapS = COPY_RESOURCE("TapS", CImage);
 	TapD = COPY_RESOURCE("TapD", CImage);
 	TapE = COPY_RESOURCE("TapE", CImage);
 	TapQ = COPY_RESOURCE("TapQ", CImage);
 	TapW = COPY_RESOURCE("TapW", CImage);
-	TapZ = COPY_RESOURCE("TapZ", CImage);
-	TapX = COPY_RESOURCE("TapX", CImage);
+	TapR = COPY_RESOURCE("TapR", CImage);
+	TapF = COPY_RESOURCE("TapF", CImage);*/
 	CircleNotes[0] = COPY_RESOURCE("Note", CImage);
 	DarkCircleNotes[0] = COPY_RESOURCE("Note2", CImage);
 	SquareNotes[0] = COPY_RESOURCE("Note3", CImage);
