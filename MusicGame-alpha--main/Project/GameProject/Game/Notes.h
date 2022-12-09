@@ -23,10 +23,12 @@ public:
 	double m_speed;
 	CImage m_img;
 	CImage Frame_img;
-	CImage CircleNotes[5];
-	CImage DarkCircleNotes[5];
-	CImage SquareNotes[5];
-	CImage CircleNotesFrame[5];
+	CImage note[5];
+	CImage criticalnote[5];
+	CImage doublenote[5];
+	CImage note_long[5];
+	CImage slide[5];
+	CImage slide2[5];
 	/*CImage TapA;
 	CImage TapS;
 	CImage TapD;

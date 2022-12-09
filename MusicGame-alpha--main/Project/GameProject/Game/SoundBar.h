@@ -6,8 +6,9 @@ public:
 	enum {
 		Gothic,
 		Tir,
-		Bones,
 		Tutorial,
+		Michikusa,
+		
 	};
 	int SongCount;
 	int SongLen;

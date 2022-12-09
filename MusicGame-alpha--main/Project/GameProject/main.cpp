@@ -102,9 +102,9 @@ void Init(void)
 
 	SOUND("LeanOn")->Load("Sound/LeanOn.wav");
 	SOUND("Baby")->Load("Sound/Baby.wav");
-	*/
-	SOUND("Bones")->Load("Sound/Bones.wav");
 	
+	SOUND("Bones")->Load("Sound/Bones.wav");
+	*/
 
 	ADD_RESOURCE("Note", CImage::CreateImage("Image/note.png"));
 	ADD_RESOURCE("Note2", CImage::CreateImage("Image/criticalnote.png"));
@@ -131,11 +131,12 @@ void Init(void)
 	ADD_RESOURCE("TapF", CImage::CreateImage("Image/FF.png"));
 	ADD_RESOURCE("select", CImage::CreateImage("Image/yozora.png"));
 	ADD_RESOURCE("tutorial", CImage::CreateImage("Image/Rain.png"));
-	ADD_RESOURCE("neko", CImage::CreateImage("Image/Neko.png"));
-	ADD_RESOURCE("score", CImage::CreateImage("Image/mahou.png"));
+	ADD_RESOURCE("wahuu", CImage::CreateImage("Image/wahuu.png"));
+	ADD_RESOURCE("score", CImage::CreateImage("Image/kira.png"));
 	SOUND("Gothic")->Load("Sound/PerituneMaterial_Gothic_Cute (online-audio-converter.com).wav");
 	SOUND("Tir")->Load("Sound/PerituneMaterial_Tir_sonas (online-audio-converter.com).wav");
 	SOUND("Tutorial")->Load("Sound/suisounishizumutsuki (online-audio-converter.com).wav");
+	SOUND("Michikusa")->Load("Sound/PerituneMaterial_Michikusa (online-audio-converter.com).wav");
 	SOUND("Tap")->Load("Sound/TapSound.wav", 10);
 	Base::Add(new Title());
 

@@ -7,7 +7,7 @@ private:
 		eNum_Gothic,
 		eNum_Tir,
 		eNum_Tutorial,
-		eNum_Bones,
+		eNum_Michikusa,
 	};
 	CImage m_img;
 	CImage gamen;
@@ -41,7 +41,7 @@ public:
 	void Gothic();
 	void Tir();
 	void Tutorial();
-	void Bones();
+	void Michikusa();
 	void NotesSet();//プリセットを配置している
 	void NotesPreSet(int SetNum);//一小節ごとのケース
 };

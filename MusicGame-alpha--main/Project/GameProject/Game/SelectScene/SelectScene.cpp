@@ -57,8 +57,8 @@ void SelectScene::Update() {
 		case Tutorial:
 			Base::Add(new Play(Tutorial));
 			break;
-		case Bones:
-			Base::Add(new Play(Bones));
+		case Michikusa:
+			Base::Add(new Play(Michikusa));
 			break;
 		}
 	}
@@ -74,8 +74,8 @@ void SelectScene::SoundPlay() {
 	case Tutorial:
 		SOUND("Tutorial")->Play();
 		break;
-	case Bones:
-		SOUND("Bones")->Play();
+	case Michikusa:
+		SOUND("Michikusa")->Play();
 		break;
 	}
 }
@@ -84,7 +84,7 @@ void SelectScene::SoundStop() {
 	SOUND("Gothic")->Stop();
 	SOUND("Tir")->Stop();
 	SOUND("Tutorial")->Stop();
-	SOUND("Bones")->Stop();
+	SOUND("Michikusa")->Stop();
 }
 void SelectScene::ImageSet() {
 	BackGround = COPY_RESOURCE("select", CImage);

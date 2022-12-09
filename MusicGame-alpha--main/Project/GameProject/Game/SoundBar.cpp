@@ -12,7 +12,7 @@ SoundBar::SoundBar(int SoundNum) :Base(eType_Bar) {
 	case Tir:
 		SongLen = 9480;
 		break;
-	case Bones:
+	case Michikusa:
 		SongLen = 6720;
 		break;
 	}

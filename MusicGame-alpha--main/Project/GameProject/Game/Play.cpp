@@ -29,8 +29,8 @@ score_text("C:\\Windows\\Fonts\\msgothic.ttc", 64) {
 	case eNum_Tutorial:
 		m_img = COPY_RESOURCE("tutorial", CImage);
 		break;
-	case eNum_Bones:
-		m_img = COPY_RESOURCE("neko", CImage);
+	case eNum_Michikusa:
+		m_img = COPY_RESOURCE("wahuu", CImage);
 		break;
 	}
 	for (int i = 0; i < 8; i++) {
@@ -84,15 +84,16 @@ void Play::Update() {
 		if (CountDownToStart == 0) {
 			Tutorial();
 		}
-		if (CountUpToEnd >= 6840) {
+		if (CountUpToEnd >= 6840 ){
+			
 			m_kill = true;
 		}
 		break;
-	case eNum_Bones:
+	case eNum_Michikusa:
 		if (CountDownToStart == 0) {
-			Bones();
+			Michikusa();
 		}
-		if (CountUpToEnd >= 6720) {
+		if (CountUpToEnd >= 7740) {
 			m_kill = true;
 		}
 		break;
@@ -158,7 +159,7 @@ Play::~Play() {
 	case eNum_Tutorial:
 		Bfile << ShareNum::score << std::endl;
 		break;
-	case eNum_Bones:
+	case eNum_Michikusa:
 		Bofile << ShareNum::score << std::endl;
 		break;
 	}
@@ -168,32 +169,32 @@ Play::~Play() {
 }
 void Play::ImageSet() {
 	gamen = COPY_RESOURCE("gamen", CImage);
-	gamen.SetSize(1920*0.9,1080*0.9 );
-	gamen.SetPos(90,40);
+	gamen.SetSize(1920*0.85,1080*0.85 );
+	gamen.SetPos(150,55);
 	//A
 	TapA = COPY_RESOURCE("TapA", CImage);
 	TapA.SetSize(361*0.2,363*0.2);
-	TapA.SetPos(475, 710);
+	TapA.SetPos(490, 680);
 	//S
 	TapS = COPY_RESOURCE("TapS", CImage);
 	TapS.SetSize(361 * 0.2, 363 * 0.2);
-	TapS.SetPos(1350, 710);
+	TapS.SetPos(1360, 680);
 	//D
 	TapD = COPY_RESOURCE("TapD", CImage);
 	TapD.SetSize(361 * 0.2, 363 * 0.2);
-	TapD.SetPos(700, 930);
+	TapD.SetPos(710, 900);
 	//E
 	TapE = COPY_RESOURCE("TapE", CImage);
 	TapE.SetSize(361 * 0.2, 363 * 0.2);
-	TapE.SetPos(475, 280);
+	TapE.SetPos(475, 300);
 	//Q
 	TapQ = COPY_RESOURCE("TapQ", CImage);
 	TapQ.SetSize(361 * 0.2, 363 * 0.2);
-	TapQ.SetPos(700, 40);
+	TapQ.SetPos(700, 50);
 	//W
 	TapW = COPY_RESOURCE("TapW", CImage);
 	TapW.SetSize(361 * 0.2, 363 * 0.2);
-	TapW.SetPos(1100, 40);
+	TapW.SetPos(1150, 50);
 	//R
 	TapR = COPY_RESOURCE("TapR", CImage);
 	TapR.SetSize(361 * 0.2, 363 * 0.2);
@@ -201,7 +202,7 @@ void Play::ImageSet() {
 	//F
 	TapF = COPY_RESOURCE("TapF", CImage);
 	TapF.SetSize(361 * 0.2, 363 * 0.2);
-	TapF.SetPos(1100, 935);
+	TapF.SetPos(1150, 910);
 	//NotesBar = COPY_RESOURCE("NotesBar", CImage);
 	/*for (int i = 0; i < 4; i++) {
 		NotesBarBlue[i] = COPY_RESOURCE("NotesBarBlue", CImage);
@@ -245,8 +246,8 @@ void Play::Tutorial(){
 	NotesSet();
 
 }
-void Play::Bones() {
-	SOUND("Bones")->Play();
+void Play::Michikusa() {
+	SOUND("Michikusa")->Play();
 	OneNotes = 15.725;
 	//Base::Add(new SoundBar(2));
 	Base::Add(new Score());
@@ -1101,7 +1102,7 @@ void Play::NotesPreSet(int SetNum) {
 	case eNum_Tutorial:
 		NotesCount += 108.1;
 		break;
-	case eNum_Bones:
+	case eNum_Michikusa:
 		NotesCount += 125.8;
 		break;
 	}
@@ -1265,7 +1266,7 @@ void Play::NotesSet() {
 		NotesPreSet(200);
 		NotesPreSet(200);
 		break;
-	case eNum_Bones:
+	case eNum_Michikusa:
 		NotesCount = -15;
 		NotesPreSet(200);
 		NotesPreSet(58);

@@ -18,27 +18,28 @@ Notes::Notes(int area, int time, int speed) :Base(eType_Notes) {
 	case eState_Left:
 		LSpeedSet();
 		m_pos = Left_pos;
-		m_img = SquareNotes[Ran(eng)];
+		m_img = doublenote[Ran(eng)];
 		break;
 	case eState_CenterLeft:
 		LSpeedSet();
 		m_pos = CenterLeft_pos;
-		m_img = SquareNotes[Ran(eng)];
+		m_img = doublenote[Ran(eng)];
 		break;
 	case eState_CenterRight:
 		LSpeedSet();
 		m_pos = CenterRight_pos;
-		m_img = SquareNotes[Ran(eng)];
+		m_img = doublenote[Ran(eng)];
 		break;
 	case eState_Right:
 		LSpeedSet();
 		m_pos = Right_pos;
-		m_img = SquareNotes[Ran(eng)];
+		m_img = doublenote[Ran(eng)];
 		break;
 		/*case eState_RightSide:
 			RNotesCount = 0;
 			RArea(0, 0);
 			m_img = CircleNotes;*/
+
 	}
 
 }
@@ -53,8 +54,8 @@ Notes::Notes(int area, int time, int x, int y) :Base(eType_Notes) {
 	RNotesCountToDelete = 20;
 	RArea(x, y);
 	ColorNum = Ran(eng);
-	m_img = CircleNotes[ColorNum];
-	Frame_img = CircleNotesFrame[Ran(eng)];
+	m_img = note[ColorNum];
+	Frame_img = note_long[Ran(eng)];
 }
 void Notes::Draw() {
 	switch (NotesArea) {
@@ -100,26 +101,11 @@ void Notes::Draw() {
 	}
 };
 void Notes::Update() {
-	switch (NotesArea) {
-	case eState_Left:
-	case eState_CenterLeft:
-	case eState_CenterRight:
-	case eState_Right:
-		if (m_time == 0) {
-			HitCountDown = ((900 - 118) / m_speed) + 1;
-		}
-		if (state == true) {
-			HitCountDown--;
-			LCheckHitNotes();
-			m_pos.y += m_speed;
-		}
-		break;
-	case  eState_RightSide:
-		if (state == true) {
-			RCheckHitNotes();
-			CountDownToDelete();
-		}
-		break;
+	if (state == true) {
+		float ang = DtoR(45) * NotesArea;
+		m_pos +=
+			CVector2D(sin(ang), cos(ang)) * m_speed;
+
 	}
 	LNotesDelete();
 	Timer();
@@ -240,41 +226,45 @@ void Notes::ImageSet() {
 	TapW = COPY_RESOURCE("TapW", CImage);
 	TapR = COPY_RESOURCE("TapR", CImage);
 	TapF = COPY_RESOURCE("TapF", CImage);*/
-	CircleNotes[0] = COPY_RESOURCE("Note", CImage);
-	DarkCircleNotes[0] = COPY_RESOURCE("Note2", CImage);
-	SquareNotes[0] = COPY_RESOURCE("Note3", CImage);
-	CircleNotesFrame[0] = COPY_RESOURCE("Note4", CImage);
+	note[0] = COPY_RESOURCE("Note", CImage);
+	criticalnote[0] = COPY_RESOURCE("Note2", CImage);
+	doublenote[0] = COPY_RESOURCE("Note3", CImage);
+	note_long[0] = COPY_RESOURCE("Note4", CImage);
+	slide[0] = COPY_RESOURCE("Note5", CImage);
+	slide2[0] = COPY_RESOURCE("Note6", CImage);
 	for (int i = 1; i < 5; i++) {
-		CircleNotes[i] = COPY_RESOURCE("Note3", CImage);
-		DarkCircleNotes[i] = COPY_RESOURCE("Note2", CImage);
-		SquareNotes[i] = COPY_RESOURCE("Note5", CImage);
-		CircleNotesFrame[i] = COPY_RESOURCE("Note6", CImage);
+		note[i] = COPY_RESOURCE("Note", CImage);
+		criticalnote[i] = COPY_RESOURCE("Note2", CImage);
+		doublenote[i] = COPY_RESOURCE("Note3", CImage);
+		note_long[i] = COPY_RESOURCE("Note4", CImage);
+		slide[i] = COPY_RESOURCE("Note5", CImage);
+		slide2[i] = COPY_RESOURCE("Note6", CImage);
 	}
 	//画像の切り取り
-	CircleNotes[0].SetRect(23, 56, 438, 472);
-	CircleNotesFrame[0].SetRect(63, 32, 497, 520);
-	SquareNotes[0].SetRect(112, 17, 528, 433);
-	//CircleNotes[1].SetRect(23, 226, 438, 225);
-	/*CircleNotes[2].SetRect(23, 226, 438, 225);
+	note[0].SetRect(23, 56, 438, 472);
+	note_long[0].SetRect(63, 32, 497, 520);
+	doublenote[0].SetRect(112, 17, 528, 433);
+	/*CircleNotes[1].SetRect(23, 226, 438, 225);
+	CircleNotes[2].SetRect(23, 226, 438, 225);
 	CircleNotes[3].SetRect(23, 226, 438, 225);
 	CircleNotes[4].SetRect(256, 256, 512, 512);*/
-	DarkCircleNotes[0].SetRect(10, 16, 428, 432);
+	criticalnote[0].SetRect(10, 16, 428, 432);
 	/*DarkCircleNotes[2].SetRect(263, 6, 505, 250);
 	DarkCircleNotes[3].SetRect(28, 275, 228, 475);
 	DarkCircleNotes[4].SetRect(256, 256, 512, 512);*/
-	SquareNotes[1].SetRect(159, 47, 528, 362);
+	doublenote[1].SetRect(159, 47, 528, 362);
 	/*SquareNotes[2].SetRect(258, 2, 509, 255);
 	SquareNotes[3].SetRect(21, 272, 235, 499);
 	SquareNotes[4].SetRect(271, 272, 495, 496);*/
-	CircleNotesFrame[1].SetRect(22, 21, 592, 495);
+	note_long[1].SetRect(22, 21, 592, 495);
 	/*CircleNotesFrame[2].SetRect(270, 14, 499, 241);
 	CircleNotesFrame[3].SetRect(10, 268, 241, 500);
 	CircleNotesFrame[4].SetRect(266, 268, 501, 501);*/
 	//サイズの指定
 	for (int i = 0; i < 5; i++) {
-		SquareNotes[i].SetSize(236, 118);
-		CircleNotes[i].SetSize(120, 120);
-		DarkCircleNotes[i].SetSize(120, 120);
+		doublenote[i].SetSize(236, 118);
+		note[i].SetSize(120, 120);
+		criticalnote[i].SetSize(120, 120);
 	}
 }
 void Notes::LSpeedSet() {
@@ -310,10 +300,10 @@ void Notes::RCheckHitNotes() {
 		}
 	}
 	if (std::pow((mouse_pos.x - m_pos.x - 60), 2.0) + std::pow((mouse_pos.y - m_pos.y - 60), 2.0) <= 3600 && RNotesCount >= 45) {
-		m_img = DarkCircleNotes[ColorNum];
+		m_img = criticalnote[ColorNum];
 	}
 	else {
-		m_img = CircleNotes[ColorNum];
+		m_img = note[ColorNum];
 	}
 }
 void Notes::RArea(int x, int y) {
