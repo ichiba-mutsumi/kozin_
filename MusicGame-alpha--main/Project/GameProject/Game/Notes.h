@@ -23,10 +23,10 @@ public:
 	double m_speed;
 	CImage m_img;
 	CImage Frame_img;
-	CImage note[5];
-	CImage criticalnote[5];
-	CImage doublenote[5];
-	CImage note_long[5];
+	CImage notes[5];
+	CImage criticalnotes[5];
+	CImage doublenotes[5];
+	CImage notes_long[5];
 	CImage slide[5];
 	CImage slide2[5];
 	/*CImage TapA;
@@ -44,7 +44,7 @@ public:
 	CVector2D m_pos;
 public:
 	Notes(int area, int time, int speed);
-	Notes(int area, int time, int x, int y);
+	//Notes(int area, int time, int x, int y);
 	void Draw();
 	void Update();
 	void Timer();

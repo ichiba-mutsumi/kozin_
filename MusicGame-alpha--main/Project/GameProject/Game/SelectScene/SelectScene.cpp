@@ -19,7 +19,7 @@ SelectScene::~SelectScene() {
 }
 void SelectScene::Draw() {
 	BackGround.Draw();
-	PushEnter_Text.Draw(1500, 1000, 1, 1, 1, "Push EnterKey");
+	PushEnter_Text.Draw(1500, 950, 1, 1, 1, "Push EnterKey");
 	//選択中のタイトルを大きく表示
 	for (int i = 0; i < ShareNum::MaxGame; i++) {
 		if (ShareNum::GameNum != i) {
@@ -88,6 +88,6 @@ void SelectScene::SoundStop() {
 }
 void SelectScene::ImageSet() {
 	BackGround = COPY_RESOURCE("select", CImage);
-	BackGround.SetRect(0, 300, 1024, 900);
+	BackGround.SetRect(0, 0, 1918, 1078);
 	BackGround.SetSize(1920, 1080);
 }
