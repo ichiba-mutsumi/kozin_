@@ -69,6 +69,7 @@ void Play::Update() {
 			Gothic();
 		}
 		if (CountUpToEnd >= 10500) {
+			//10500
 			m_kill = true;
 		}
 		break;
@@ -77,6 +78,7 @@ void Play::Update() {
 			Tir();
 		}
 		if (CountUpToEnd >= 9240) {
+			//9240
 			m_kill = true;
 		}
 		break;
@@ -85,7 +87,7 @@ void Play::Update() {
 			Tutorial();
 		}
 		if (CountUpToEnd >= 6840 ){
-			
+			//6840
 			m_kill = true;
 		}
 		break;
@@ -94,6 +96,7 @@ void Play::Update() {
 			Michikusa();
 		}
 		if (CountUpToEnd >= 7740) {
+			//7740
 			m_kill = true;
 		}
 		break;
