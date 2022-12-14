@@ -69,13 +69,13 @@ void SelectScene::SoundPlay() {
 		//SOUND("Gothic")->Play();
 		break;
 	case Tir:
-		SOUND("Tir")->Play();
+		//SOUND("Tir")->Play();
 		break;
 	case Tutorial:
-		SOUND("Tutorial")->Play();
+		//SOUND("Tutorial")->Play();
 		break;
 	case Michikusa:
-		SOUND("Michikusa")->Play();
+		//SOUND("Michikusa")->Play();
 		break;
 	}
 }

@@ -493,15 +493,15 @@ void Play::NotesPreSet(int SetNum) {
 	//	Base::Add(new Notes(3, OneNotes * 3.5 + NotesCount, 8));
 	//	Base::Add(new Notes(1, OneNotes * 4 + NotesCount, 8));
 	//	break;
-	//case 49:
-	//	Base::Add(new Notes(1, OneNotes * 0 + NotesCount, 8));
-	//	Base::Add(new Notes(2, OneNotes * 0.5 + NotesCount, 8));
-	//	Base::Add(new Notes(3, OneNotes * 1 + NotesCount, 8));
-	//	Base::Add(new Notes(1, OneNotes * 2 + NotesCount, 8));
-	//	Base::Add(new Notes(2, OneNotes * 2.5 + NotesCount, 8));
-	//	Base::Add(new Notes(3, OneNotes * 3 + NotesCount, 8));
-	//	Base::Add(new Notes(2, OneNotes * 3.5 + NotesCount, 8));
-	//	break;
+	case 49:
+		Base::Add(new Notes(1, OneNotes * 0 + NotesCount, 8));
+		Base::Add(new Notes(2, OneNotes * 0.5 + NotesCount, 8));
+		Base::Add(new Notes(3, OneNotes * 1 + NotesCount, 8));
+		Base::Add(new Notes(1, OneNotes * 2 + NotesCount, 8));
+		Base::Add(new Notes(2, OneNotes * 2.5 + NotesCount, 8));
+		Base::Add(new Notes(3, OneNotes * 3 + NotesCount, 8));
+		Base::Add(new Notes(2, OneNotes * 3.5 + NotesCount, 8));
+		break;
 	//case 50:
 	//	Base::Add(new Notes(0, OneNotes * 0 + NotesCount, 8));
 	//	Base::Add(new Notes(1, OneNotes * 1.5 + NotesCount, 8));
@@ -575,123 +575,123 @@ void Play::NotesPreSet(int SetNum) {
 	//	Base::Add(new Notes(4, OneNotes * 4 + NotesCount, 2, 3));
 	//	Base::Add(new Notes(4, OneNotes * 6 + NotesCount, 1, 1));
 	//	break;
-	//case 62:
-	//	Base::Add(new Notes(1, OneNotes * 0 + NotesCount, 11));
-	//	Base::Add(new Notes(3, OneNotes * 0 + NotesCount, 11));
-	//	Base::Add(new Notes(2, OneNotes * 1 + NotesCount, 11));
-	//	Base::Add(new Notes(2, OneNotes * 2 + NotesCount, 11));
-	//	Base::Add(new Notes(0, OneNotes * 3 + NotesCount, 11));
-	//	Base::Add(new Notes(3, OneNotes * 4 + NotesCount, 11));
-	//	Base::Add(new Notes(1, OneNotes * 5 + NotesCount, 11));
-	//	Base::Add(new Notes(0, OneNotes * 6 + NotesCount, 11));
-	//	Base::Add(new Notes(1, OneNotes * 7 + NotesCount, 11));
-	//	break;
-	//case 63:
-	//	Base::Add(new Notes(0, OneNotes * 0 + NotesCount, 11));
-	//	Base::Add(new Notes(1, OneNotes * 0 + NotesCount, 11));
-	//	Base::Add(new Notes(3, OneNotes * 2 + NotesCount, 11));
-	//	Base::Add(new Notes(3, OneNotes * 3 + NotesCount, 11));
-	//	Base::Add(new Notes(2, OneNotes * 4 + NotesCount, 11));
+	case 62:
+		Base::Add(new Notes(1, OneNotes * 0 + NotesCount, 11));
+		Base::Add(new Notes(3, OneNotes * 0 + NotesCount, 11));
+		Base::Add(new Notes(2, OneNotes * 1 + NotesCount, 11));
+		Base::Add(new Notes(2, OneNotes * 2 + NotesCount, 11));
+		Base::Add(new Notes(0, OneNotes * 3 + NotesCount, 11));
+		Base::Add(new Notes(3, OneNotes * 4 + NotesCount, 11));
+		Base::Add(new Notes(1, OneNotes * 5 + NotesCount, 11));
+		Base::Add(new Notes(0, OneNotes * 6 + NotesCount, 11));
+		Base::Add(new Notes(1, OneNotes * 7 + NotesCount, 11));
+		break;
+	case 63:
+		Base::Add(new Notes(0, OneNotes * 0 + NotesCount, 11));
+		Base::Add(new Notes(1, OneNotes * 0 + NotesCount, 11));
+		Base::Add(new Notes(3, OneNotes * 2 + NotesCount, 11));
+		Base::Add(new Notes(3, OneNotes * 3 + NotesCount, 11));
+		Base::Add(new Notes(2, OneNotes * 4 + NotesCount, 11));
 
-	//	Base::Add(new Notes(1, OneNotes * 6 + NotesCount, 11));
-	//	Base::Add(new Notes(2, OneNotes * 7 + NotesCount, 11));
-	//	break;
-	//case 64:
-	//	Base::Add(new Notes(3, OneNotes * 0 + NotesCount, 11));
-	//	Base::Add(new Notes(2, OneNotes * 0 + NotesCount, 11));
-	//	Base::Add(new Notes(1, OneNotes * 1 + NotesCount, 11));
-	//	Base::Add(new Notes(1, OneNotes * 2 + NotesCount, 11));
-	//	Base::Add(new Notes(2, OneNotes * 3 + NotesCount, 11));
-	//	Base::Add(new Notes(2, OneNotes * 4 + NotesCount, 11));
-	//	Base::Add(new Notes(3, OneNotes * 5 + NotesCount, 11));
-	//	Base::Add(new Notes(2, OneNotes * 6 + NotesCount, 11));
-	//	Base::Add(new Notes(0, OneNotes * 7 + NotesCount, 11));
-	//	break;
-	//case 65:
-	//	Base::Add(new Notes(0, OneNotes * 0 + NotesCount, 11));
-	//	Base::Add(new Notes(2, OneNotes * 0 + NotesCount, 11));
-	//	Base::Add(new Notes(1, OneNotes * 2 + NotesCount, 11));
-	//	Base::Add(new Notes(0, OneNotes * 3 + NotesCount, 11));
-	//	Base::Add(new Notes(3, OneNotes * 4 + NotesCount, 11));
+		Base::Add(new Notes(1, OneNotes * 6 + NotesCount, 11));
+		Base::Add(new Notes(2, OneNotes * 7 + NotesCount, 11));
+		break;
+	case 64:
+		Base::Add(new Notes(3, OneNotes * 0 + NotesCount, 11));
+		Base::Add(new Notes(2, OneNotes * 0 + NotesCount, 11));
+		Base::Add(new Notes(1, OneNotes * 1 + NotesCount, 11));
+		Base::Add(new Notes(1, OneNotes * 2 + NotesCount, 11));
+		Base::Add(new Notes(2, OneNotes * 3 + NotesCount, 11));
+		Base::Add(new Notes(2, OneNotes * 4 + NotesCount, 11));
+		Base::Add(new Notes(3, OneNotes * 5 + NotesCount, 11));
+		Base::Add(new Notes(2, OneNotes * 6 + NotesCount, 11));
+		Base::Add(new Notes(0, OneNotes * 7 + NotesCount, 11));
+		break;
+	case 65:
+		Base::Add(new Notes(0, OneNotes * 0 + NotesCount, 11));
+		Base::Add(new Notes(2, OneNotes * 0 + NotesCount, 11));
+		Base::Add(new Notes(1, OneNotes * 2 + NotesCount, 11));
+		Base::Add(new Notes(0, OneNotes * 3 + NotesCount, 11));
+		Base::Add(new Notes(3, OneNotes * 4 + NotesCount, 11));
 
-	//	Base::Add(new Notes(0, OneNotes * 6 + NotesCount, 11));
-	//	Base::Add(new Notes(1, OneNotes * 7 + NotesCount, 11));
-	//	break;
-	//case 66:
-	//	Base::Add(new Notes(2, OneNotes * 0 + NotesCount, 11));
-	//	Base::Add(new Notes(0, OneNotes * 0 + NotesCount, 11));
-	//	Base::Add(new Notes(2, OneNotes * 2 + NotesCount, 11));
-	//	Base::Add(new Notes(3, OneNotes * 2 + NotesCount, 11));
-	//	Base::Add(new Notes(1, OneNotes * 4 + NotesCount, 11));
-	//	Base::Add(new Notes(0, OneNotes * 4 + NotesCount, 11));
-	//	Base::Add(new Notes(3, OneNotes * 6 + NotesCount, 11));
-	//	Base::Add(new Notes(2, OneNotes * 6 + NotesCount, 11));
-	//	break;
-	//case 67:
-	//	Base::Add(new Notes(2, OneNotes * 0 + NotesCount, 11));
-	//	Base::Add(new Notes(3, OneNotes * 0 + NotesCount, 11));
-	//	Base::Add(new Notes(0, OneNotes * 2 + NotesCount, 11));
-	//	Base::Add(new Notes(1, OneNotes * 2 + NotesCount, 11));
-	//	Base::Add(new Notes(3, OneNotes * 4 + NotesCount, 11));
-	//	Base::Add(new Notes(0, OneNotes * 4 + NotesCount, 11));
-	//	Base::Add(new Notes(3, OneNotes * 6 + NotesCount, 11));
-	//	Base::Add(new Notes(2, OneNotes * 6 + NotesCount, 11));
-	//	break;
-	//case 68:
-	//	Base::Add(new Notes(2, OneNotes * 0 + NotesCount, 11));
-	//	Base::Add(new Notes(3, OneNotes * 0 + NotesCount, 11));
-	//	Base::Add(new Notes(0, OneNotes * 2 + NotesCount, 11));
-	//	Base::Add(new Notes(1, OneNotes * 2 + NotesCount, 11));
-	//	Base::Add(new Notes(3, OneNotes * 4 + NotesCount, 11));
-	//	Base::Add(new Notes(0, OneNotes * 4 + NotesCount, 11));
-	//	Base::Add(new Notes(3, OneNotes * 6 + NotesCount, 11));
-	//	Base::Add(new Notes(2, OneNotes * 6 + NotesCount, 11));
-	//	break;
-	//case 69:
-	//	Base::Add(new Notes(0, OneNotes * 0 + NotesCount, 11));
-	//	Base::Add(new Notes(0, OneNotes * 1.5 + NotesCount, 11));
-	//	Base::Add(new Notes(1, OneNotes * 1.5 + NotesCount, 11));
-	//	Base::Add(new Notes(0, OneNotes * 3 + NotesCount, 11));
-	//	Base::Add(new Notes(1, OneNotes * 3 + NotesCount, 11));
-	//	Base::Add(new Notes(2, OneNotes * 3 + NotesCount, 11));
-	//	Base::Add(new Notes(3, OneNotes * 4.5 + NotesCount, 11));
-	//	Base::Add(new Notes(3, OneNotes * 6 + NotesCount, 11));
-	//	Base::Add(new Notes(2, OneNotes * 6 + NotesCount, 11));
-	//	Base::Add(new Notes(3, OneNotes * 7 + NotesCount, 11));
-	//	Base::Add(new Notes(2, OneNotes * 7 + NotesCount, 11));
-	//	Base::Add(new Notes(1, OneNotes * 7 + NotesCount, 11));
-	//	break;
-	//case 70:
-	//	Base::Add(new Notes(3, OneNotes * 0 + NotesCount, 11));
-	//	Base::Add(new Notes(1, OneNotes * 1 + NotesCount, 11));
-	//	Base::Add(new Notes(2, OneNotes * 2 + NotesCount, 11));
-	//	Base::Add(new Notes(0, OneNotes * 3 + NotesCount, 11));
-	//	Base::Add(new Notes(2, OneNotes * 4 + NotesCount, 11));
-	//	Base::Add(new Notes(3, OneNotes * 4 + NotesCount, 11));
-	//	Base::Add(new Notes(0, OneNotes * 6 + NotesCount, 11));
-	//	Base::Add(new Notes(1, OneNotes * 7 + NotesCount, 11));
-	//	break;
-	//case 71:
-	//	Base::Add(new Notes(3, OneNotes * 0 + NotesCount, 11));
-	//	Base::Add(new Notes(1, OneNotes * 0 + NotesCount, 11));
-	//	Base::Add(new Notes(1, OneNotes * 1 + NotesCount, 11));
-	//	Base::Add(new Notes(2, OneNotes * 2 + NotesCount, 11));
-	//	Base::Add(new Notes(0, OneNotes * 3 + NotesCount, 11));
-	//	Base::Add(new Notes(2, OneNotes * 4 + NotesCount, 11));
-	//	Base::Add(new Notes(3, OneNotes * 4 + NotesCount, 11));
-	//	Base::Add(new Notes(0, OneNotes * 6 + NotesCount, 11));
-	//	Base::Add(new Notes(1, OneNotes * 7 + NotesCount, 11));
-	//	break;
-	//case 72:
-	//	Base::Add(new Notes(1, OneNotes * 0 + NotesCount, 11));
-	//	Base::Add(new Notes(1, OneNotes * 1 + NotesCount, 11));
-	//	Base::Add(new Notes(2, OneNotes * 2 + NotesCount, 11));
-	//	Base::Add(new Notes(0, OneNotes * 3 + NotesCount, 11));
-	//	Base::Add(new Notes(3, OneNotes * 4 + NotesCount, 11));
-	//	Base::Add(new Notes(2, OneNotes * 4 + NotesCount, 11));
-	//	Base::Add(new Notes(3, OneNotes * 6 + NotesCount, 11));
-	//	Base::Add(new Notes(1, OneNotes * 7 + NotesCount, 11));
-	//	break;
+		Base::Add(new Notes(0, OneNotes * 6 + NotesCount, 11));
+		Base::Add(new Notes(1, OneNotes * 7 + NotesCount, 11));
+		break;
+	case 66:
+		Base::Add(new Notes(2, OneNotes * 0 + NotesCount, 11));
+		Base::Add(new Notes(0, OneNotes * 0 + NotesCount, 11));
+		Base::Add(new Notes(2, OneNotes * 2 + NotesCount, 11));
+		Base::Add(new Notes(3, OneNotes * 2 + NotesCount, 11));
+		Base::Add(new Notes(1, OneNotes * 4 + NotesCount, 11));
+		Base::Add(new Notes(0, OneNotes * 4 + NotesCount, 11));
+		Base::Add(new Notes(3, OneNotes * 6 + NotesCount, 11));
+		Base::Add(new Notes(2, OneNotes * 6 + NotesCount, 11));
+		break;
+	case 67:
+		Base::Add(new Notes(2, OneNotes * 0 + NotesCount, 11));
+		Base::Add(new Notes(3, OneNotes * 0 + NotesCount, 11));
+		Base::Add(new Notes(0, OneNotes * 2 + NotesCount, 11));
+		Base::Add(new Notes(1, OneNotes * 2 + NotesCount, 11));
+		Base::Add(new Notes(3, OneNotes * 4 + NotesCount, 11));
+		Base::Add(new Notes(0, OneNotes * 4 + NotesCount, 11));
+		Base::Add(new Notes(3, OneNotes * 6 + NotesCount, 11));
+		Base::Add(new Notes(2, OneNotes * 6 + NotesCount, 11));
+		break;
+	case 68:
+		Base::Add(new Notes(2, OneNotes * 0 + NotesCount, 11));
+		Base::Add(new Notes(3, OneNotes * 0 + NotesCount, 11));
+		Base::Add(new Notes(0, OneNotes * 2 + NotesCount, 11));
+		Base::Add(new Notes(1, OneNotes * 2 + NotesCount, 11));
+		Base::Add(new Notes(3, OneNotes * 4 + NotesCount, 11));
+		Base::Add(new Notes(0, OneNotes * 4 + NotesCount, 11));
+		Base::Add(new Notes(3, OneNotes * 6 + NotesCount, 11));
+		Base::Add(new Notes(2, OneNotes * 6 + NotesCount, 11));
+		break;
+	case 69:
+		Base::Add(new Notes(0, OneNotes * 0 + NotesCount, 11));
+		Base::Add(new Notes(0, OneNotes * 1.5 + NotesCount, 11));
+		Base::Add(new Notes(1, OneNotes * 1.5 + NotesCount, 11));
+		Base::Add(new Notes(0, OneNotes * 3 + NotesCount, 11));
+		Base::Add(new Notes(1, OneNotes * 3 + NotesCount, 11));
+		Base::Add(new Notes(2, OneNotes * 3 + NotesCount, 11));
+		Base::Add(new Notes(3, OneNotes * 4.5 + NotesCount, 11));
+		Base::Add(new Notes(3, OneNotes * 6 + NotesCount, 11));
+		Base::Add(new Notes(2, OneNotes * 6 + NotesCount, 11));
+		Base::Add(new Notes(3, OneNotes * 7 + NotesCount, 11));
+		Base::Add(new Notes(2, OneNotes * 7 + NotesCount, 11));
+		Base::Add(new Notes(1, OneNotes * 7 + NotesCount, 11));
+		break;
+	case 70:
+		Base::Add(new Notes(3, OneNotes * 0 + NotesCount, 11));
+		Base::Add(new Notes(1, OneNotes * 1 + NotesCount, 11));
+		Base::Add(new Notes(2, OneNotes * 2 + NotesCount, 11));
+		Base::Add(new Notes(0, OneNotes * 3 + NotesCount, 11));
+		Base::Add(new Notes(2, OneNotes * 4 + NotesCount, 11));
+		Base::Add(new Notes(3, OneNotes * 4 + NotesCount, 11));
+		Base::Add(new Notes(0, OneNotes * 6 + NotesCount, 11));
+		Base::Add(new Notes(1, OneNotes * 7 + NotesCount, 11));
+		break;
+	case 71:
+		Base::Add(new Notes(3, OneNotes * 0 + NotesCount, 11));
+		Base::Add(new Notes(1, OneNotes * 0 + NotesCount, 11));
+		Base::Add(new Notes(1, OneNotes * 1 + NotesCount, 11));
+		Base::Add(new Notes(2, OneNotes * 2 + NotesCount, 11));
+		Base::Add(new Notes(0, OneNotes * 3 + NotesCount, 11));
+		Base::Add(new Notes(2, OneNotes * 4 + NotesCount, 11));
+		Base::Add(new Notes(3, OneNotes * 4 + NotesCount, 11));
+		Base::Add(new Notes(0, OneNotes * 6 + NotesCount, 11));
+		Base::Add(new Notes(1, OneNotes * 7 + NotesCount, 11));
+		break;
+	case 72:
+		Base::Add(new Notes(1, OneNotes * 0 + NotesCount, 11));
+		Base::Add(new Notes(1, OneNotes * 1 + NotesCount, 11));
+		Base::Add(new Notes(2, OneNotes * 2 + NotesCount, 11));
+		Base::Add(new Notes(0, OneNotes * 3 + NotesCount, 11));
+		Base::Add(new Notes(3, OneNotes * 4 + NotesCount, 11));
+		Base::Add(new Notes(2, OneNotes * 4 + NotesCount, 11));
+		Base::Add(new Notes(3, OneNotes * 6 + NotesCount, 11));
+		Base::Add(new Notes(1, OneNotes * 7 + NotesCount, 11));
+		break;
 	//case 73:
 	//	Base::Add(new Notes(3, OneNotes * 0 + NotesCount, 11));
 	//	Base::Add(new Notes(1, OneNotes * 0 + NotesCount, 11));

@@ -131,12 +131,12 @@ void Init(void)
 	ADD_RESOURCE("TapR", CImage::CreateImage("Image/R.png"));
 	ADD_RESOURCE("TapF", CImage::CreateImage("Image/FF.png"));
 	ADD_RESOURCE("select", CImage::CreateImage("Image/yozora.png"));
-	ADD_RESOURCE("tutorial", CImage::CreateImage("Image/Rain.png"));
+	ADD_RESOURCE("tutorial", CImage::CreateImage("Image/snow.png"));
 	ADD_RESOURCE("wahuu", CImage::CreateImage("Image/wahuu.png"));
 	ADD_RESOURCE("score", CImage::CreateImage("Image/kira.png"));
 	SOUND("Gothic")->Load("Sound/PerituneMaterial_Gothic_Cute (online-audio-converter.com).wav");
 	SOUND("Tir")->Load("Sound/PerituneMaterial_Tir_sonas (online-audio-converter.com).wav");
-	SOUND("Tutorial")->Load("Sound/suisounishizumutsuki (online-audio-converter.com).wav");
+	SOUND("Tutorial")->Load("Sound/MusMus-BGM-077 (online-audio-converter.com).wav");
 	SOUND("Michikusa")->Load("Sound/PerituneMaterial_Michikusa (online-audio-converter.com).wav");
 	SOUND("Tap")->Load("Sound/TapSound.wav", 10);
 	Base::Add(new Title());
