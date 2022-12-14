@@ -1310,7 +1310,21 @@ void Play::NotesSet() {
 		NotesPreSet(100);
 		break;
 	case eNum_Tutorial:
-
+		NotesPreSet(0);
+		NotesPreSet(0);
+		NotesPreSet(0);
+		NotesPreSet(0);
+		NotesPreSet(0);
+		NotesPreSet(0);
+		NotesPreSet(0);
+		NotesPreSet(0);
+		NotesPreSet(0);
+		NotesPreSet(0);
+		NotesPreSet(0);
+		NotesPreSet(0);
+		NotesPreSet(0);
+		NotesPreSet(0);
+		NotesPreSet(0);
 
 		break;
 	}

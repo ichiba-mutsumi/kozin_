@@ -21,22 +21,22 @@ Notes::Notes(int area, int time, int speed) :Base(eType_Notes) {
 	case eState_Left:
 		LSpeedSet();
 
-		m_img = doublenotes[Ran(eng)];
+		m_img = notes[Ran(eng)];
 		break;
 	case eState_CenterLeft:
 		LSpeedSet();
 		
-		m_img = doublenotes[Ran(eng)];
+		m_img = notes[Ran(eng)];
 		break;
 	case eState_CenterRight:
 		LSpeedSet();
 		
-		m_img = doublenotes[Ran(eng)];
+		m_img = notes[Ran(eng)];
 		break;
 	case eState_Right:
 		LSpeedSet();
 		
-		m_img = doublenotes[Ran(eng)];
+		m_img = notes[Ran(eng)];
 		break;
 		/*case eState_RightSide:
 			RNotesCount = 0;
@@ -218,14 +218,6 @@ void Notes::ImageSet() {
 	//座標設定
 	m_pos = CVector2D(SCREEN_WIDTH / 2, SCREEN_HEIGHT / 2);
 	//画像を設定
-	/*TapA = COPY_RESOURCE("TapA", CImage);
-	TapS = COPY_RESOURCE("TapS", CImage);
-	TapD = COPY_RESOURCE("TapD", CImage);
-	TapE = COPY_RESOURCE("TapE", CImage);
-	TapQ = COPY_RESOURCE("TapQ", CImage);
-	TapW = COPY_RESOURCE("TapW", CImage);
-	TapR = COPY_RESOURCE("TapR", CImage);
-	TapF = COPY_RESOURCE("TapF", CImage);*/
 	notes[0] = COPY_RESOURCE("Note", CImage);
 	criticalnotes[0] = COPY_RESOURCE("Note2", CImage);
 	doublenotes[0] = COPY_RESOURCE("Note3", CImage);
@@ -244,29 +236,33 @@ void Notes::ImageSet() {
 	notes[0].SetRect(23, 56, 438, 472);
 	notes_long[0].SetRect(63, 32, 497, 520);
 	doublenotes[0].SetRect(112, 17, 528, 433);
+	criticalnotes[0].SetRect(10, 16, 428, 432);
+	slide[0].SetRect(159, 47, 362, 528);
+	slide2[0].SetRect(115, 30, 536, 430);
 	/*CircleNotes[1].SetRect(23, 226, 438, 225);
 	CircleNotes[2].SetRect(23, 226, 438, 225);
 	CircleNotes[3].SetRect(23, 226, 438, 225);
-	CircleNotes[4].SetRect(256, 256, 512, 512);*/
-	criticalnotes[0].SetRect(10, 16, 428, 432);
-	/*DarkCircleNotes[2].SetRect(263, 6, 505, 250);
+	CircleNotes[4].SetRect(256, 256, 512, 512);
+	DarkCircleNotes[2].SetRect(263, 6, 505, 250);
 	DarkCircleNotes[3].SetRect(28, 275, 228, 475);
-	DarkCircleNotes[4].SetRect(256, 256, 512, 512);*/
+	DarkCircleNotes[4].SetRect(256, 256, 512, 512);
 	doublenotes[1].SetRect(159, 47, 528, 362);
-	/*SquareNotes[2].SetRect(258, 2, 509, 255);
+	SquareNotes[2].SetRect(258, 2, 509, 255);
 	SquareNotes[3].SetRect(21, 272, 235, 499);
-	SquareNotes[4].SetRect(271, 272, 495, 496);*/
+	SquareNotes[4].SetRect(271, 272, 495, 496);
 	notes_long[1].SetRect(22, 21, 592, 495);
-	/*CircleNotesFrame[2].SetRect(270, 14, 499, 241);
+	CircleNotesFrame[2].SetRect(270, 14, 499, 241);
 	CircleNotesFrame[3].SetRect(10, 268, 241, 500);
 	CircleNotesFrame[4].SetRect(266, 268, 501, 501);*/
-	slide[0].SetRect(159,47,362,528);
-	slide2[0].SetRect(22,21,594,496);
+	
 	//サイズの指定
 	for (int i = 0; i < 5; i++) {
-		doublenotes[i].SetSize(236, 118);
-		notes[i].SetSize(120, 120);
-		criticalnotes[i].SetSize(120, 120);
+		notes[i].SetSize(140, 130);
+		doublenotes[i].SetSize(140, 130);
+		criticalnotes[i].SetSize(140, 130);
+		notes_long[i].SetSize(140, 130);
+		slide[i].SetSize(140, 130);
+		slide2[i].SetSize(140, 130);
 	}
 }
 void Notes::LSpeedSet() {
