@@ -5,11 +5,14 @@
 class Notes :public Base {
 public:
 	enum {
-		eState_Left,
-		eState_CenterLeft,
-		eState_CenterRight,
-		eState_Right,
-		eState_RightSide,
+		eState_Q,
+		eState_W,
+		eState_E,
+		eState_R,
+		eState_A,
+		eState_S,
+		eState_D,
+		eState_F,
 	};
 	//falseÇÃèÍçátimeÇ™0Ç…Ç»ÇÈÇ‹Ç≈ë“ã@
 	bool state = false;
@@ -23,12 +26,12 @@ public:
 	double m_speed;
 	CImage m_img;
 	CImage Frame_img;
-	CImage notes[5];
-	CImage criticalnotes[5];
-	CImage doublenotes[5];
-	CImage notes_long[5];
-	CImage slide[5];
-	CImage slide2[5];
+	CImage notes[9];
+	CImage criticalnotes[9];
+	CImage doublenotes[9];
+	CImage notes_long[9];
+	CImage slide[9];
+	CImage slide2[9];
 	/*CImage TapA;
 	CImage TapS;
 	CImage TapD;
@@ -37,10 +40,14 @@ public:
 	CImage TapW;
 	CImage TapR;
 	CImage TapF;*/
-	CVector2D Right_pos;
-	CVector2D CenterRight_pos;
-	CVector2D CenterLeft_pos;
-	CVector2D Left_pos;
+	CVector2D Q_pos;
+	CVector2D W_pos;
+	CVector2D E_pos;
+	CVector2D R_pos;
+	CVector2D A_pos;
+	CVector2D S_pos;
+	CVector2D D_pos;
+	CVector2D F_pos;
 	CVector2D m_pos;
 public:
 	Notes(int area, int time, int speed);

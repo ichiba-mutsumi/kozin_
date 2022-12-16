@@ -12,7 +12,7 @@ void Score::Draw() {
 		int k;
 		k = Temp % 10;
 		Temp = Temp / 10;
-		m_img[k].SetPos(1020 - i * 40, 40);
+		m_img[k].SetPos(1020 - i * 40, 30);
 		m_img[k].Draw();
 		i++;
 	}
@@ -36,7 +36,7 @@ void Score::ImageSet() {
 	}*/
 	for (int i = 0; i < 10; i++) {
 		m_img[i] = COPY_RESOURCE("Number", CImage);
-		m_img[i].SetRect(i * 20, 15, (i + 1) * 39, 77);
+		m_img[i].SetRect(i * 20, 0, (i + 1) * 39, 77);
 		m_img[i].SetSize(40, 77);
 	}
 }

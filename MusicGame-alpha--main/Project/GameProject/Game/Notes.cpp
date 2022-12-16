@@ -18,26 +18,47 @@ Notes::Notes(int area, int time, int speed) :Base(eType_Notes) {
 		state = true;
 	}
 	switch (area) {
-	case eState_Left:
+	case eState_Q:
 		LSpeedSet();
 
 		m_img = notes[Ran(eng)];
 		break;
-	case eState_CenterLeft:
+	case eState_W:
 		LSpeedSet();
 		
 		m_img = notes[Ran(eng)];
 		break;
-	case eState_CenterRight:
+	case eState_E:
 		LSpeedSet();
 		
 		m_img = notes[Ran(eng)];
 		break;
-	case eState_Right:
+	case eState_R:
 		LSpeedSet();
 		
 		m_img = notes[Ran(eng)];
 		break;
+	case eState_A:
+		LSpeedSet();
+
+		m_img = notes[Ran(eng)];
+		break;
+	case eState_S:
+		LSpeedSet();
+
+		m_img = notes[Ran(eng)];
+		break;
+	case eState_D:
+		LSpeedSet();
+
+		m_img = notes[Ran(eng)];
+		break;
+	case eState_F:
+		LSpeedSet();
+
+		m_img = notes[Ran(eng)];
+		break;
+	
 		/*case eState_RightSide:
 			RNotesCount = 0;
 			RArea(0, 0);
@@ -62,7 +83,7 @@ Notes::Notes(int area, int time, int speed) :Base(eType_Notes) {
 //}
 void Notes::Draw() {
 	switch (NotesArea) {
-	case eState_Left:
+	case eState_Q:
 		if (state == true) {
 			m_img.SetPos(m_pos);
 			m_img.Draw();
@@ -70,7 +91,7 @@ void Notes::Draw() {
 			TapA.Draw();*/
 		}
 		break;
-	case eState_CenterLeft:
+	case eState_W:
 		if (state == true) {
 			m_img.SetPos(m_pos);
 			m_img.Draw();
@@ -78,7 +99,7 @@ void Notes::Draw() {
 			TapS.Draw();*/
 		}
 		break;
-	case eState_CenterRight:
+	case eState_E:
 		if (state == true) {
 			m_img.SetPos(m_pos);
 			m_img.Draw();
@@ -86,7 +107,7 @@ void Notes::Draw() {
 			TapD.Draw();*/
 		}
 		break;
-	case eState_Right:
+	case eState_R:
 		if (state == true) {
 			m_img.SetPos(m_pos);
 			m_img.Draw();
@@ -94,21 +115,42 @@ void Notes::Draw() {
 			TapE.Draw();*/
 		}
 		break;
-	case  eState_RightSide:
+	case  eState_A:
 		if (state == true) {
-			RSizeSet();
+			//RSizeSet();
 			m_img.SetPos(m_pos);
 			m_img.Draw();
 		}
 		break;
-	}
-};
+	case  eState_S:
+		if (state == true) {
+			//RSizeSet();
+			m_img.SetPos(m_pos);
+			m_img.Draw();
+		}
+		break;
+	case  eState_D:
+		if (state == true) {
+			//RSizeSet();
+			m_img.SetPos(m_pos);
+			m_img.Draw();
+		}
+		break;
+	case  eState_F:
+		if (state == true) {
+			//RSizeSet();
+			m_img.SetPos(m_pos);
+			m_img.Draw();
+		}
+		break;
+
+	};
+}
 void Notes::Update() {
 	if (state == true) {
-		float ang = DtoR(45) * NotesArea;
-		m_pos +=
-			CVector2D(sin(ang), cos(ang)) * m_speed;
-
+		switch (NotesArea) {
+		
+		}
 	}
 	LNotesDelete();
 	Timer();
@@ -256,7 +298,7 @@ void Notes::ImageSet() {
 	CircleNotesFrame[4].SetRect(266, 268, 501, 501);*/
 	
 	//サイズの指定
-	for (int i = 0; i < 5; i++) {
+	for (int i = 0; i < 9; i++) {
 		notes[i].SetSize(140, 130);
 		doublenotes[i].SetSize(140, 130);
 		criticalnotes[i].SetSize(140, 130);
