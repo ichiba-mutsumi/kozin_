@@ -26,12 +26,12 @@ public:
 	double m_speed;
 	CImage m_img;
 	CImage Frame_img;
-	CImage notes[9];
-	CImage criticalnotes[9];
-	CImage doublenotes[9];
-	CImage notes_long[9];
-	CImage slide[9];
-	CImage slide2[9];
+	CImage notes;
+	CImage criticalnotes;
+	CImage doublenotes;
+	CImage notes_long;
+	CImage slide;
+	CImage slide2;
 	/*CImage TapA;
 	CImage TapS;
 	CImage TapD;
@@ -40,15 +40,25 @@ public:
 	CImage TapW;
 	CImage TapR;
 	CImage TapF;*/
-	CVector2D Q_pos;
-	CVector2D W_pos;
-	CVector2D E_pos;
-	CVector2D R_pos;
-	CVector2D A_pos;
-	CVector2D S_pos;
-	CVector2D D_pos;
-	CVector2D F_pos;
+	CVector2D Q_vec;
+	CVector2D W_vec;
+	CVector2D E_vec;
+	CVector2D R_vec;
+	CVector2D A_vec;
+	CVector2D S_vec;
+	CVector2D D_vec;
+	CVector2D F_vec;
+	CVector2D Qend;
+	CVector2D Wend;
+	CVector2D Eend;
+	CVector2D Rend;
+	CVector2D Aend;
+	CVector2D Send;
+	CVector2D Dend;
+	CVector2D Fend;
 	CVector2D m_pos;
+	CVector2D m_vec;
+	CVector2D gamen;
 public:
 	Notes(int area, int time, int speed);
 	//Notes(int area, int time, int x, int y);
@@ -63,4 +73,5 @@ public:
 	void RArea(int x, int y);
 	void CountDownToDelete();
 	void LNotesDelete();
+	void VecSet();
 };

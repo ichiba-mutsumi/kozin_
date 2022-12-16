@@ -14,49 +14,50 @@ Notes::Notes(int area, int time, int speed) :Base(eType_Notes) {
 	m_time = time + 180;
 	m_speed = speed;
 	NotesArea = area;
+	VecSet();
 	if (m_time <= 0) {
 		state = true;
 	}
 	switch (area) {
 	case eState_Q:
 		LSpeedSet();
-
-		m_img = notes[Ran(eng)];
+		m_vec = Q_vec;
+		m_img = notes;
 		break;
 	case eState_W:
 		LSpeedSet();
-		
-		m_img = notes[Ran(eng)];
+		m_vec = W_vec;
+		m_img = notes;
 		break;
 	case eState_E:
 		LSpeedSet();
-		
-		m_img = notes[Ran(eng)];
+		m_vec = E_vec;
+		m_img = notes;
 		break;
 	case eState_R:
 		LSpeedSet();
-		
-		m_img = notes[Ran(eng)];
+		m_vec = R_vec;
+		m_img = notes;
 		break;
 	case eState_A:
 		LSpeedSet();
-
-		m_img = notes[Ran(eng)];
+		m_vec = A_vec;
+		m_img = notes;
 		break;
 	case eState_S:
 		LSpeedSet();
-
-		m_img = notes[Ran(eng)];
+		m_vec = S_vec;
+		m_img = notes;
 		break;
 	case eState_D:
 		LSpeedSet();
-
-		m_img = notes[Ran(eng)];
+		m_vec = D_vec;
+		m_img = notes;
 		break;
 	case eState_F:
 		LSpeedSet();
-
-		m_img = notes[Ran(eng)];
+		m_vec = F_vec;
+		m_img = notes;
 		break;
 	
 		/*case eState_RightSide:
@@ -147,11 +148,14 @@ void Notes::Draw() {
 	};
 }
 void Notes::Update() {
-	if (state == true) {
-		switch (NotesArea) {
-		
-		}
-	}
+			if (m_time == 0) {
+				HitCountDown = ((900 - 118) / m_speed) + 1;
+			}
+			if (state == true) {
+				HitCountDown--;
+				LCheckHitNotes();
+				m_pos += m_vec;
+			}
 	LNotesDelete();
 	Timer();
 }
@@ -260,27 +264,28 @@ void Notes::ImageSet() {
 	//座標設定
 	m_pos = CVector2D(SCREEN_WIDTH / 2, SCREEN_HEIGHT / 2);
 	//画像を設定
-	notes[0] = COPY_RESOURCE("Note", CImage);
-	criticalnotes[0] = COPY_RESOURCE("Note2", CImage);
-	doublenotes[0] = COPY_RESOURCE("Note3", CImage);
-	notes_long[0] = COPY_RESOURCE("Note4", CImage);
-	slide[0] = COPY_RESOURCE("Note5", CImage);
-	slide2[0] = COPY_RESOURCE("Note6", CImage);
-	for (int i = 1; i < 5; i++) {
+	notes = COPY_RESOURCE("Note", CImage);
+	criticalnotes = COPY_RESOURCE("Note2", CImage);
+	doublenotes = COPY_RESOURCE("Note3", CImage);
+	notes_long = COPY_RESOURCE("Note4", CImage);
+	slide = COPY_RESOURCE("Note5", CImage);
+	slide2 = COPY_RESOURCE("Note6", CImage);
+	/*for (int i = 1; i < 5; i++) {
 		notes[i] = COPY_RESOURCE("Note", CImage);
 		criticalnotes[i] = COPY_RESOURCE("Note2", CImage);
 		doublenotes[i] = COPY_RESOURCE("Note3", CImage);
 		notes_long[i] = COPY_RESOURCE("Note4", CImage);
 		slide[i] = COPY_RESOURCE("Note5", CImage);
 		slide2[i] = COPY_RESOURCE("Note6", CImage);
-	}
+	}*/
+	
 	//画像の切り取り
-	notes[0].SetRect(23, 56, 438, 472);
-	notes_long[0].SetRect(63, 32, 497, 520);
-	doublenotes[0].SetRect(112, 17, 528, 433);
-	criticalnotes[0].SetRect(10, 16, 428, 432);
-	slide[0].SetRect(159, 47, 362, 528);
-	slide2[0].SetRect(115, 30, 536, 430);
+	notes.SetRect(23, 56, 438, 472);
+	notes_long.SetRect(63, 32, 497, 520);
+	doublenotes.SetRect(112, 17, 528, 433);
+	criticalnotes.SetRect(10, 16, 428, 432);
+	slide.SetRect(159, 47, 362, 528);
+	slide2.SetRect(115, 30, 536, 430);
 	/*CircleNotes[1].SetRect(23, 226, 438, 225);
 	CircleNotes[2].SetRect(23, 226, 438, 225);
 	CircleNotes[3].SetRect(23, 226, 438, 225);
@@ -296,16 +301,16 @@ void Notes::ImageSet() {
 	CircleNotesFrame[2].SetRect(270, 14, 499, 241);
 	CircleNotesFrame[3].SetRect(10, 268, 241, 500);
 	CircleNotesFrame[4].SetRect(266, 268, 501, 501);*/
-	
+	//中心位置の設定
+	notes.SetCenter(70,65);
 	//サイズの指定
-	for (int i = 0; i < 9; i++) {
-		notes[i].SetSize(140, 130);
-		doublenotes[i].SetSize(140, 130);
-		criticalnotes[i].SetSize(140, 130);
-		notes_long[i].SetSize(140, 130);
-		slide[i].SetSize(140, 130);
-		slide2[i].SetSize(140, 130);
-	}
+	notes.SetSize(140, 130);
+	doublenotes.SetSize(140, 130);
+	criticalnotes.SetSize(140, 130);
+	notes_long.SetSize(140, 130);
+	slide.SetSize(140, 130);
+	slide2.SetSize(140, 130);
+	
 }
 void Notes::LSpeedSet() {
 	//基準をspeed = 8とする
@@ -340,10 +345,10 @@ void Notes::RCheckHitNotes() {
 		}
 	}
 	if (std::pow((mouse_pos.x - m_pos.x - 60), 2.0) + std::pow((mouse_pos.y - m_pos.y - 60), 2.0) <= 3600 && RNotesCount >= 45) {
-		m_img = criticalnotes[ColorNum];
+		m_img = criticalnotes;
 	}
 	else {
-		m_img = notes[ColorNum];
+		m_img = notes;
 	}
 }
 void Notes::RArea(int x, int y) {
@@ -362,4 +367,27 @@ void Notes::LNotesDelete() {
 	if (m_pos.y >= 1150) {
 		m_kill = true;
 	}
+}
+
+void Notes::VecSet()
+{
+	//終わりの座標設定
+	Qend = CVector2D(780,79);
+	Wend = CVector2D(1195, 80);
+	Eend = CVector2D(521, 361);
+	Rend = CVector2D(1453, 366);
+	Aend = CVector2D(532, 726);
+	Send = CVector2D(1438, 728);
+	Dend = CVector2D(776, 975);
+	Fend = CVector2D(1197, 976);
+	//画面の中央の座標
+	gamen = CVector2D(1280 / 2, 1080 / 2);
+	Q_vec = (Qend - gamen) / 60;
+	W_vec = (Wend - gamen) / 60;
+	E_vec = (Eend - gamen) / 60;
+	R_vec = (Rend - gamen) / 60;
+	A_vec = (Aend - gamen) / 60;
+	S_vec = (Send - gamen) / 60;
+	D_vec = (Dend - gamen) / 60;
+	F_vec = (Fend - gamen) / 60;
 }

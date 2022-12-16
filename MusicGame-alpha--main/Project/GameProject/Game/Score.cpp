@@ -12,7 +12,7 @@ void Score::Draw() {
 		int k;
 		k = Temp % 10;
 		Temp = Temp / 10;
-		m_img[k].SetPos(1020 - i * 40, 30);
+		m_img[k].SetPos(1040 - i * 45, 20);
 		m_img[k].Draw();
 		i++;
 	}

@@ -172,40 +172,42 @@ Play::~Play() {
 }
 void Play::ImageSet() {
 	gamen = COPY_RESOURCE("gamen", CImage);
-	gamen.SetSize(1920*0.85,1080*0.85 );
-	gamen.SetPos(150,55);
+	gamen.SetSize(1920*0.45,1080*0.8 );
+	gamen.SetPos(530,90);
+	gamen.SetRect(487,28,1485,1026);
+	
 	//A
 	TapA = COPY_RESOURCE("TapA", CImage);
 	TapA.SetSize(361*0.2,363*0.2);
-	TapA.SetPos(490, 680);
+	TapA.SetPos(490, 660);
 	//S
 	TapS = COPY_RESOURCE("TapS", CImage);
 	TapS.SetSize(361 * 0.2, 363 * 0.2);
-	TapS.SetPos(1360, 680);
+	TapS.SetPos(1370, 680);
 	//D
 	TapD = COPY_RESOURCE("TapD", CImage);
 	TapD.SetSize(361 * 0.2, 363 * 0.2);
-	TapD.SetPos(710, 900);
+	TapD.SetPos(740, 920);
 	//E
 	TapE = COPY_RESOURCE("TapE", CImage);
 	TapE.SetSize(361 * 0.2, 363 * 0.2);
-	TapE.SetPos(475, 300);
+	TapE.SetPos(490, 300);
 	//Q
 	TapQ = COPY_RESOURCE("TapQ", CImage);
 	TapQ.SetSize(361 * 0.2, 363 * 0.2);
-	TapQ.SetPos(700, 50);
+	TapQ.SetPos(740, 50);
 	//W
 	TapW = COPY_RESOURCE("TapW", CImage);
-	TapW.SetSize(361 * 0.2, 363 * 0.2);
-	TapW.SetPos(1150, 50);
+	TapW.SetSize(361 * 0.23, 363 * 0.23);
+	TapW.SetPos(1140, 45);
 	//R
 	TapR = COPY_RESOURCE("TapR", CImage);
 	TapR.SetSize(361 * 0.2, 363 * 0.2);
-	TapR.SetPos(455*3, 300);
+	TapR.SetPos(1380, 300);
 	//F
 	TapF = COPY_RESOURCE("TapF", CImage);
 	TapF.SetSize(361 * 0.2, 363 * 0.2);
-	TapF.SetPos(1150, 910);
+	TapF.SetPos(1140, 920);
 	//NotesBar = COPY_RESOURCE("NotesBar", CImage);
 	/*for (int i = 0; i < 4; i++) {
 		NotesBarBlue[i] = COPY_RESOURCE("NotesBarBlue", CImage);
