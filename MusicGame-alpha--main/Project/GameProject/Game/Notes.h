@@ -58,7 +58,7 @@ public:
 	CVector2D Fend;
 	CVector2D m_pos;
 	CVector2D m_vec;
-	CVector2D gamen;
+	CVector2D Center;
 public:
 	Notes(int area, int time, int speed);
 	//Notes(int area, int time, int x, int y);

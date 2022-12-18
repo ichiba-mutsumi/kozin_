@@ -172,9 +172,9 @@ Play::~Play() {
 }
 void Play::ImageSet() {
 	gamen = COPY_RESOURCE("gamen", CImage);
+	gamen.SetRect(489, 31, 1484, 1026);
 	gamen.SetSize(1920*0.45,1080*0.8 );
-	gamen.SetPos(530,90);
-	gamen.SetRect(487,28,1485,1026);
+	gamen.SetPos(528,90);
 	
 	//A
 	TapA = COPY_RESOURCE("TapA", CImage);
@@ -261,6 +261,13 @@ void Play::NotesPreSet(int SetNum) {
 	switch (SetNum) {
 	case 0:
 		Base::Add(new Notes(0, OneNotes * 0 + NotesCount, 8));
+		Base::Add(new Notes(1, OneNotes * 0 + NotesCount, 8));
+		Base::Add(new Notes(2, OneNotes * 0 + NotesCount, 8));
+		Base::Add(new Notes(3, OneNotes * 0 + NotesCount, 8));
+		Base::Add(new Notes(4, OneNotes * 0 + NotesCount, 8));
+		Base::Add(new Notes(5, OneNotes * 0 + NotesCount, 8));
+		Base::Add(new Notes(6, OneNotes * 0 + NotesCount, 8));
+		Base::Add(new Notes(7, OneNotes * 0 + NotesCount, 8));
 		break;
 	case 1:
 		Base::Add(new Notes(0, OneNotes * 0 + NotesCount, 8));
@@ -1087,6 +1094,9 @@ void Play::NotesSet() {
 	switch (SoundNum) {
 	case eNum_Gothic:
 		NotesCount = -117.75;
+		NotesPreSet(0);
+		NotesPreSet(0);
+		NotesPreSet(0);
 		NotesPreSet(0);
 		NotesPreSet(0);
 		NotesPreSet(0);

@@ -278,13 +278,13 @@ void Notes::ImageSet() {
 		slide[i] = COPY_RESOURCE("Note5", CImage);
 		slide2[i] = COPY_RESOURCE("Note6", CImage);
 	}*/
-	
+
 	//画像の切り取り
 	notes.SetRect(23, 56, 438, 472);
 	notes_long.SetRect(63, 32, 497, 520);
 	doublenotes.SetRect(112, 17, 528, 433);
 	criticalnotes.SetRect(10, 16, 428, 432);
-	slide.SetRect(159, 47, 362, 528);
+	slide.SetRect(159, 49, 530, 362);
 	slide2.SetRect(115, 30, 536, 430);
 	/*CircleNotes[1].SetRect(23, 226, 438, 225);
 	CircleNotes[2].SetRect(23, 226, 438, 225);
@@ -302,7 +302,12 @@ void Notes::ImageSet() {
 	CircleNotesFrame[3].SetRect(10, 268, 241, 500);
 	CircleNotesFrame[4].SetRect(266, 268, 501, 501);*/
 	//中心位置の設定
-	notes.SetCenter(70,65);
+	notes.SetCenter(70, 65);
+	doublenotes.SetCenter(70, 65);
+	criticalnotes.SetCenter(70, 65);
+	notes_long.SetCenter(70, 65);
+	slide.SetCenter(70, 65);
+	slide2.SetCenter(70, 65);
 	//サイズの指定
 	notes.SetSize(140, 130);
 	doublenotes.SetSize(140, 130);
@@ -310,7 +315,7 @@ void Notes::ImageSet() {
 	notes_long.SetSize(140, 130);
 	slide.SetSize(140, 130);
 	slide2.SetSize(140, 130);
-	
+
 }
 void Notes::LSpeedSet() {
 	//基準をspeed = 8とする
@@ -372,22 +377,22 @@ void Notes::LNotesDelete() {
 void Notes::VecSet()
 {
 	//終わりの座標設定
-	Qend = CVector2D(780,79);
-	Wend = CVector2D(1195, 80);
-	Eend = CVector2D(521, 361);
-	Rend = CVector2D(1453, 366);
-	Aend = CVector2D(532, 726);
-	Send = CVector2D(1438, 728);
-	Dend = CVector2D(776, 975);
-	Fend = CVector2D(1197, 976);
+	Qend = CVector2D(791, 144);
+	Wend = CVector2D(1149, 145);
+	Eend = CVector2D(565, 388);
+	Rend = CVector2D(1373, 392);
+	Aend = CVector2D(575, 705);
+	Send = CVector2D(1362, 706);
+	Dend = CVector2D(787, 922);
+	Fend = CVector2D(1152, 923);
 	//画面の中央の座標
-	gamen = CVector2D(1280 / 2, 1080 / 2);
-	Q_vec = (Qend - gamen) / 60;
-	W_vec = (Wend - gamen) / 60;
-	E_vec = (Eend - gamen) / 60;
-	R_vec = (Rend - gamen) / 60;
-	A_vec = (Aend - gamen) / 60;
-	S_vec = (Send - gamen) / 60;
-	D_vec = (Dend - gamen) / 60;
-	F_vec = (Fend - gamen) / 60;
+	Center = CVector2D(1920 / 2, 1080 / 2);
+	Q_vec = (Qend - Center) / 60;
+	W_vec = (Wend - Center) / 60;
+	E_vec = (Eend - Center) / 60;
+	R_vec = (Rend - Center) / 60;
+	A_vec = (Aend - Center) / 60;
+	S_vec = (Send - Center) / 60;
+	D_vec = (Dend - Center) / 60;
+	F_vec = (Fend - Center) / 60;
 }
