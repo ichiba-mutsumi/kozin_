@@ -169,9 +169,9 @@ void Notes::LCheckHitNotes() {
 			//Base::Add(new Hit(m_pos));
 			SOUND("Tap")->Play();
 			m_kill = true;
-			ShareNum::score += 250;
+			ShareNum::score += 100;
 			if (HitCountDown == 0) {
-				ShareNum::score += 250;
+				ShareNum::score += 100;
 			}
 		}
 	}
@@ -180,9 +180,9 @@ void Notes::LCheckHitNotes() {
 			//Base::Add(new Hit(m_pos));
 			SOUND("Tap")->Play();
 			m_kill = true;
-			ShareNum::score += 250;
+			ShareNum::score += 100;
 			if (HitCountDown == 0) {
-				ShareNum::score += 250;
+				ShareNum::score += 100;
 			}
 		}
 	}
@@ -191,9 +191,9 @@ void Notes::LCheckHitNotes() {
 			//Base::Add(new Hit(m_pos));
 			SOUND("Tap")->Play();
 			m_kill = true;
-			ShareNum::score += 250;
+			ShareNum::score += 100;
 			if (HitCountDown == 0) {
-				ShareNum::score += 250;
+				ShareNum::score += 100;
 			}
 		}
 	}
@@ -202,9 +202,9 @@ void Notes::LCheckHitNotes() {
 			//Base::Add(new Hit(m_pos));
 			SOUND("Tap")->Play();
 			m_kill = true;
-			ShareNum::score += 250;
+			ShareNum::score += 100;
 			if (HitCountDown == 0) {
-				ShareNum::score += 250;
+				ShareNum::score += 100;
 			}
 		}
 	}
@@ -213,9 +213,9 @@ void Notes::LCheckHitNotes() {
 			//Base::Add(new Hit(m_pos));
 			SOUND("Tap")->Play();
 			m_kill = true;
-			ShareNum::score += 250;
+			ShareNum::score += 100;
 			if (HitCountDown == 0) {
-				ShareNum::score += 250;
+				ShareNum::score += 100;
 			}
 		}
 	}
@@ -224,9 +224,9 @@ void Notes::LCheckHitNotes() {
 			//Base::Add(new Hit(m_pos));
 			SOUND("Tap")->Play();
 			m_kill = true;
-			ShareNum::score += 250;
+			ShareNum::score += 100;
 			if (HitCountDown == 0) {
-				ShareNum::score += 250;
+				ShareNum::score += 100;
 			}
 		}
 	}
@@ -235,9 +235,9 @@ void Notes::LCheckHitNotes() {
 			//Base::Add(new Hit(m_pos));
 			SOUND("Tap")->Play();
 			m_kill = true;
-			ShareNum::score += 250;
+			ShareNum::score += 100;
 			if (HitCountDown == 0) {
-				ShareNum::score += 250;
+				ShareNum::score += 100;
 			}
 		}
 	}
@@ -246,9 +246,9 @@ void Notes::LCheckHitNotes() {
 			//Base::Add(new Hit(m_pos));
 			SOUND("Tap")->Play();
 			m_kill = true;
-			ShareNum::score += 250;
+			ShareNum::score += 100;
 			if (HitCountDown == 0) {
-				ShareNum::score += 250;
+				ShareNum::score += 100;
 			}
 		}
 	}
@@ -377,14 +377,14 @@ void Notes::LNotesDelete() {
 void Notes::VecSet()
 {
 	//èIÇÌÇËÇÃç¿ïWê›íË
-	Qend = CVector2D(791, 147);
-	Wend = CVector2D(1140, 145);
-	Eend = CVector2D(580, 389);
-	Rend = CVector2D(1340, 395);
-	Aend = CVector2D(545, 707);
-	Send = CVector2D(1380, 708);
-	Dend = CVector2D(775, 923);
-	Fend = CVector2D(1152, 923);
+	Qend = CVector2D(1140, 145);
+	Wend = CVector2D(1340, 395);
+	Eend = CVector2D(1380, 708);
+	Rend = CVector2D(1152, 923);
+	Aend = CVector2D(791, 147);
+	Send = CVector2D(580, 389);;
+	Dend = CVector2D(545, 707);
+	Fend = CVector2D(775, 923);
 	//âÊñ ÇÃíÜâõÇÃç¿ïW
 	Center = CVector2D(1920 / 2, 1080 / 2);
 	Q_vec = (Qend - Center) / 60;

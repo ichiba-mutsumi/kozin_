@@ -179,35 +179,35 @@ void Play::ImageSet() {
 	//A
 	TapA = COPY_RESOURCE("TapA", CImage);
 	TapA.SetSize(361*0.2,363*0.2);
-	TapA.SetPos(490, 660);
+	TapA.SetPos(740,50);
 	//S
 	TapS = COPY_RESOURCE("TapS", CImage);
 	TapS.SetSize(361 * 0.2, 363 * 0.2);
-	TapS.SetPos(1370, 680);
+	TapS.SetPos(490, 300);
 	//D
 	TapD = COPY_RESOURCE("TapD", CImage);
 	TapD.SetSize(361 * 0.2, 363 * 0.2);
-	TapD.SetPos(740, 920);
+	TapD.SetPos(490, 660);
 	//E
 	TapE = COPY_RESOURCE("TapE", CImage);
 	TapE.SetSize(361 * 0.2, 363 * 0.2);
-	TapE.SetPos(490, 300);
+	TapE.SetPos(1370, 680);
 	//Q
 	TapQ = COPY_RESOURCE("TapQ", CImage);
 	TapQ.SetSize(361 * 0.2, 363 * 0.2);
-	TapQ.SetPos(740, 50);
+	TapQ.SetPos(1140, 45);
 	//W
 	TapW = COPY_RESOURCE("TapW", CImage);
 	TapW.SetSize(361 * 0.23, 363 * 0.23);
-	TapW.SetPos(1140, 45);
+	TapW.SetPos(1380, 300);
 	//R
 	TapR = COPY_RESOURCE("TapR", CImage);
 	TapR.SetSize(361 * 0.2, 363 * 0.2);
-	TapR.SetPos(1380, 300);
+	TapR.SetPos(1140, 920);
 	//F
 	TapF = COPY_RESOURCE("TapF", CImage);
 	TapF.SetSize(361 * 0.2, 363 * 0.2);
-	TapF.SetPos(1140, 920);
+	TapF.SetPos(740, 920);
 	//NotesBar = COPY_RESOURCE("NotesBar", CImage);
 	/*for (int i = 0; i < 4; i++) {
 		NotesBarBlue[i] = COPY_RESOURCE("NotesBarBlue", CImage);
@@ -1095,9 +1095,9 @@ void Play::NotesSet() {
 	case eNum_Gothic:
 		NotesCount = -117.75;
 		NotesPreSet(0);
-		NotesPreSet(0);
-		NotesPreSet(0);
-		NotesPreSet(0);
+		NotesPreSet(6);
+		NotesPreSet(6);
+		NotesPreSet(6);
 		NotesPreSet(0);
 		NotesPreSet(0);
 		NotesPreSet(0);
