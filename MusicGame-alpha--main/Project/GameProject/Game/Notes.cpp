@@ -149,7 +149,7 @@ void Notes::Draw() {
 }
 void Notes::Update() {
 			if (m_time == 0) {
-				HitCountDown = ((900 - 118) / m_speed) + 1;
+				HitCountDown = 60;
 			}
 			if (state == true) {
 				HitCountDown--;
@@ -165,7 +165,7 @@ void Notes::LCheckHitNotes() {
 		m_kill = true;
 	}*/
 	if (PUSH(CInput::eButton1)) {
-		if (-10 <= HitCountDown && HitCountDown <= 10 && m_pos.x == 5) {
+		if (-10 <= HitCountDown && HitCountDown <= 10 && NotesArea==eState_Q) {
 			//Base::Add(new Hit(m_pos));
 			SOUND("Tap")->Play();
 			m_kill = true;
@@ -176,7 +176,7 @@ void Notes::LCheckHitNotes() {
 		}
 	}
 	if (PUSH(CInput::eButton2)) {
-		if (-10 <= HitCountDown && HitCountDown <= 10 && m_pos.x == 245) {
+		if (-10 <= HitCountDown && HitCountDown <= 10 && NotesArea == eState_W) {
 			//Base::Add(new Hit(m_pos));
 			SOUND("Tap")->Play();
 			m_kill = true;
@@ -187,7 +187,7 @@ void Notes::LCheckHitNotes() {
 		}
 	}
 	if (PUSH(CInput::eButton3)) {
-		if (-10 <= HitCountDown && HitCountDown <= 10 && m_pos.x == 485) {
+		if (-10 <= HitCountDown && HitCountDown <= 10 && NotesArea == eState_E) {
 			//Base::Add(new Hit(m_pos));
 			SOUND("Tap")->Play();
 			m_kill = true;
@@ -198,7 +198,7 @@ void Notes::LCheckHitNotes() {
 		}
 	}
 	if (PUSH(CInput::eButton4)) {
-		if (-10 <= HitCountDown && HitCountDown <= 10 && m_pos.x == 725) {
+		if (-10 <= HitCountDown && HitCountDown <= 10 && NotesArea == eState_R) {
 			//Base::Add(new Hit(m_pos));
 			SOUND("Tap")->Play();
 			m_kill = true;
@@ -209,7 +209,7 @@ void Notes::LCheckHitNotes() {
 		}
 	}
 	if (PUSH(CInput::eButton5)) {
-		if (-10 <= HitCountDown && HitCountDown <= 10 && m_pos.x == 965) {
+		if (-10 <= HitCountDown && HitCountDown <= 10 && NotesArea == eState_A) {
 			//Base::Add(new Hit(m_pos));
 			SOUND("Tap")->Play();
 			m_kill = true;
@@ -220,7 +220,7 @@ void Notes::LCheckHitNotes() {
 		}
 	}
 	if (PUSH(CInput::eButton6)) {
-		if (-10 <= HitCountDown && HitCountDown <= 10 && m_pos.x == 1205) {
+		if (-10 <= HitCountDown && HitCountDown <= 10 && NotesArea == eState_S) {
 			//Base::Add(new Hit(m_pos));
 			SOUND("Tap")->Play();
 			m_kill = true;
@@ -231,7 +231,7 @@ void Notes::LCheckHitNotes() {
 		}
 	}
 	if (PUSH(CInput::eButton7)) {
-		if (-10 <= HitCountDown && HitCountDown <= 10 && m_pos.x == 1445) {
+		if (-10 <= HitCountDown && HitCountDown <= 10 && NotesArea == eState_D) {
 			//Base::Add(new Hit(m_pos));
 			SOUND("Tap")->Play();
 			m_kill = true;
@@ -242,7 +242,7 @@ void Notes::LCheckHitNotes() {
 		}
 	}
 	if (PUSH(CInput::eButton8)) {
-		if (-10 <= HitCountDown && HitCountDown <= 10 && m_pos.x == 1685) {
+		if (-10 <= HitCountDown && HitCountDown <= 10 && NotesArea == eState_F) {
 			//Base::Add(new Hit(m_pos));
 			SOUND("Tap")->Play();
 			m_kill = true;
@@ -369,7 +369,7 @@ void Notes::CountDownToDelete() {
 	}
 }
 void Notes::LNotesDelete() {
-	if (m_pos.y >= 1150) {
+	if (HitCountDown==-20) {
 		m_kill = true;
 	}
 }
@@ -377,13 +377,13 @@ void Notes::LNotesDelete() {
 void Notes::VecSet()
 {
 	//èIÇÌÇËÇÃç¿ïWê›íË
-	Qend = CVector2D(791, 144);
-	Wend = CVector2D(1149, 145);
-	Eend = CVector2D(565, 388);
-	Rend = CVector2D(1373, 392);
-	Aend = CVector2D(575, 705);
-	Send = CVector2D(1362, 706);
-	Dend = CVector2D(787, 922);
+	Qend = CVector2D(791, 147);
+	Wend = CVector2D(1140, 145);
+	Eend = CVector2D(580, 389);
+	Rend = CVector2D(1340, 395);
+	Aend = CVector2D(545, 707);
+	Send = CVector2D(1380, 708);
+	Dend = CVector2D(775, 923);
 	Fend = CVector2D(1152, 923);
 	//âÊñ ÇÃíÜâõÇÃç¿ïW
 	Center = CVector2D(1920 / 2, 1080 / 2);

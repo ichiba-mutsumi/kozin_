@@ -14,7 +14,7 @@ Title::~Title()
 
 void Title::Update()
 {
-	if (PUSH(CInput::eButton4)) {
+	if (PUSH(CInput::eButton10)) {
 		SetKill();
 	}
 }
@@ -23,5 +23,5 @@ void Title::Draw()
 {
 	m_img.Draw();
 	m_title_text.Draw(380, 256, 1, 1, 1, "music game");
-	title_text.Draw(200, 650, 1, 1, 1, "push A");
+	title_text.Draw(200, 650, 1, 1, 1, "push Enter");
 }

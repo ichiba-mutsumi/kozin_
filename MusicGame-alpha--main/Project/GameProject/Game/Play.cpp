@@ -1077,7 +1077,7 @@ void Play::NotesPreSet(int SetNum) {
 
 	switch (SoundNum) {
 	case eNum_Gothic:
-		NotesCount += 145.1;
+		NotesCount += 145.1;//ˆê¬ß‚Ì’·‚³
 		break;
 	case eNum_Tir:
 		NotesCount += 108.8;
