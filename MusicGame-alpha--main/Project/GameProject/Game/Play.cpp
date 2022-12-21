@@ -68,7 +68,7 @@ void Play::Update() {
 		if (CountDownToStart == 0) {
 			Gothic();
 		}
-		if (CountUpToEnd >= 300) {
+		if (CountUpToEnd >= 10500) {
 			//10500
 			m_kill = true;
 		}
@@ -149,9 +149,9 @@ void Play::Update() {
 }
 Play::~Play() {
 	std::ofstream Lfile("Score/LeanOn.txt", std::ios_base::app | std::ios_base::in);
-	std::ofstream Bfile("Score/Baby.txt", std::ios_base::app | std::ios_base::in);
-	std::ofstream Bofile("Score/Baby.txt", std::ios_base::app | std::ios_base::in);
-	std::ofstream Boofile("Score/Bones.txt", std::ios_base::app | std::ios_base::in);
+	std::ofstream Bfile("Score/Tir.txt", std::ios_base::app | std::ios_base::in);
+	std::ofstream Bofile("Score/Tutorial.txt", std::ios_base::app | std::ios_base::in);
+	std::ofstream Boofile("Score/Michikusa.txt", std::ios_base::app | std::ios_base::in);
 	switch (ShareNum::GameNum) {
 	case eNum_Gothic:
 		Lfile << ShareNum::score << std::endl;
