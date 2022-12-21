@@ -5,6 +5,12 @@
 class Notes :public Base {
 public:
 	enum {
+		etype_normal,
+		etype_double,
+		etype_kira,
+		etype_long,
+	};
+	enum {
 		eState_Q,
 		eState_W,
 		eState_E,
@@ -23,6 +29,7 @@ public:
 	int NotesRan;
 	int HitCountDown;
 	int ColorNum;
+	int Notestype;
 	double m_speed;
 	CImage m_img;
 	CImage Frame_img;
@@ -60,7 +67,7 @@ public:
 	CVector2D m_vec;
 	CVector2D Center;
 public:
-	Notes(int area, int time, int speed);
+	Notes(int area, int time,int notestype);
 	//Notes(int area, int time, int x, int y);
 	void Draw();
 	void Update();

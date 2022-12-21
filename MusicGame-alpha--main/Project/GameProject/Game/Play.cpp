@@ -68,7 +68,7 @@ void Play::Update() {
 		if (CountDownToStart == 0) {
 			Gothic();
 		}
-		if (CountUpToEnd >= 10500) {
+		if (CountUpToEnd >= 300) {
 			//10500
 			m_kill = true;
 		}
@@ -260,14 +260,14 @@ void Play::Michikusa() {
 void Play::NotesPreSet(int SetNum) {
 	switch (SetNum) {
 	case 0:
-		Base::Add(new Notes(0, OneNotes * 0 + NotesCount, 8));
-		Base::Add(new Notes(1, OneNotes * 0 + NotesCount, 8));
-		Base::Add(new Notes(2, OneNotes * 0 + NotesCount, 8));
-		Base::Add(new Notes(3, OneNotes * 0 + NotesCount, 8));
-		Base::Add(new Notes(4, OneNotes * 0 + NotesCount, 8));
-		Base::Add(new Notes(5, OneNotes * 0 + NotesCount, 8));
-		Base::Add(new Notes(6, OneNotes * 0 + NotesCount, 8));
-		Base::Add(new Notes(7, OneNotes * 0 + NotesCount, 8));
+		Base::Add(new Notes(0, OneNotes * 0 + NotesCount, 0));
+		Base::Add(new Notes(1, OneNotes * 0 + NotesCount, 0));
+		Base::Add(new Notes(2, OneNotes * 0 + NotesCount, 0));
+		Base::Add(new Notes(3, OneNotes * 0 + NotesCount, 0));
+		Base::Add(new Notes(4, OneNotes * 0 + NotesCount, 0));
+		Base::Add(new Notes(5, OneNotes * 0 + NotesCount, 0));
+		Base::Add(new Notes(6, OneNotes * 0 + NotesCount, 0));
+		Base::Add(new Notes(7, OneNotes * 0 + NotesCount, 0));
 		break;
 	case 1:
 		Base::Add(new Notes(0, OneNotes * 0 + NotesCount, 8));
@@ -1095,9 +1095,9 @@ void Play::NotesSet() {
 	case eNum_Gothic:
 		NotesCount = -117.75;
 		NotesPreSet(0);
-		NotesPreSet(6);
-		NotesPreSet(6);
-		NotesPreSet(6);
+		NotesPreSet(0);
+		NotesPreSet(0);
+		NotesPreSet(0);
 		NotesPreSet(0);
 		NotesPreSet(0);
 		NotesPreSet(0);

@@ -9,10 +9,10 @@ std::random_device rnd;
 std::default_random_engine eng(rnd());
 std::uniform_int_distribution<int> Ran(0, 4);
 //コンストラクタ
-Notes::Notes(int area, int time, int speed) :Base(eType_Notes) {
+Notes::Notes(int area, int time, int type) :Base(eType_Notes) {
 	ImageSet();
-	m_time = time + 180;
-	m_speed = speed;
+	m_time = time;
+	Notestype = type;
 	NotesArea = area;
 	VecSet();
 	if (m_time <= 0) {
@@ -20,44 +20,28 @@ Notes::Notes(int area, int time, int speed) :Base(eType_Notes) {
 	}
 	switch (area) {
 	case eState_Q:
-		LSpeedSet();
 		m_vec = Q_vec;
-		m_img = notes;
 		break;
 	case eState_W:
-		LSpeedSet();
 		m_vec = W_vec;
-		m_img = notes;
 		break;
 	case eState_E:
-		LSpeedSet();
 		m_vec = E_vec;
-		m_img = notes;
 		break;
 	case eState_R:
-		LSpeedSet();
 		m_vec = R_vec;
-		m_img = notes;
 		break;
 	case eState_A:
-		LSpeedSet();
-		m_vec = A_vec;
-		m_img = notes;
+		m_vec = A_vec;		
 		break;
 	case eState_S:
-		LSpeedSet();
 		m_vec = S_vec;
-		m_img = notes;
 		break;
 	case eState_D:
-		LSpeedSet();
 		m_vec = D_vec;
-		m_img = notes;
 		break;
 	case eState_F:
-		LSpeedSet();
 		m_vec = F_vec;
-		m_img = notes;
 		break;
 	
 		/*case eState_RightSide:
@@ -65,6 +49,20 @@ Notes::Notes(int area, int time, int speed) :Base(eType_Notes) {
 			RArea(0, 0);
 			m_img = CircleNotes;*/
 
+	}
+	switch(type){
+	case etype_normal:
+		m_img = notes;
+		break;
+	case etype_double:
+		m_img = doublenotes;
+		break;
+	case etype_kira:
+		m_img = criticalnotes;
+		break;
+	case etype_long:
+		m_img = notes_long;
+		break;
 	}
 
 }
