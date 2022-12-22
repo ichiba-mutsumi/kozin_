@@ -94,9 +94,9 @@ void Init(void)
 	//‰Šú‰»‚Ì–½—ß‚ð‘‚­
 	//ƒQ[ƒ€‹N“®Žž‚Éˆê“x‚¾‚¯ŒÄ‚Î‚ê‚é
 	//-----------------------------------------------------
-
-	//Base::Add(new Title());
-	/*
+	
+	/*Base::Add(new Title());
+	
 	ADD_RESOURCE("Lane", CImage::CreateImage("Image/Lane.png"));
 	ADD_RESOURCE("Notes",CImage::CreateImage("Image/Notes.png"));
 	ADD_RESOURCE("NotesBar", CImage::CreateImage("Image/NotesBar.png"));
@@ -134,10 +134,10 @@ void Init(void)
 	ADD_RESOURCE("tutorial", CImage::CreateImage("Image/snow.png"));
 	ADD_RESOURCE("wahuu", CImage::CreateImage("Image/wahuu.png"));
 	ADD_RESOURCE("score", CImage::CreateImage("Image/kira.png"));
-	SOUND("Gothic")->Load("Sound/PerituneMaterial_Gothic_Cute (online-audio-converter.com).wav");
-	SOUND("Tir")->Load("Sound/PerituneMaterial_Tir_sonas (online-audio-converter.com).wav");
-	SOUND("Tutorial")->Load("Sound/MusMus-BGM-077 (online-audio-converter.com).wav");
-	SOUND("Michikusa")->Load("Sound/PerituneMaterial_Michikusa (online-audio-converter.com).wav");
+	SOUND("Gothic")->Load("Sound/Gothic.wav");
+	SOUND("Tir")->Load("Sound/Tir.wav");
+	SOUND("Tutorial")->Load("Sound/Yuki.wav");
+	SOUND("Michikusa")->Load("Sound/Michikusa.wav");
 	SOUND("Tap")->Load("Sound/TapSound.wav", 10);
 	Base::Add(new Title());
 

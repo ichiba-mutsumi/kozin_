@@ -234,7 +234,6 @@ void Play::Gothic() {
 	Base::Add(new Score());
 	NotesSet();
 }
-
 void Play::Tir() {
 	SOUND("Tir")->Play();
 	OneNotes = 13.6;
@@ -286,8 +285,8 @@ void Play::NotesPreSet(int SetNum) {
 		Base::Add(new Notes(2, OneNotes * 5 + NotesCount, 8));
 		break;
 	case 5:
-		Base::Add(new Notes(0, OneNotes * 7.3 + NotesCount, 8));
-		Base::Add(new Notes(1, OneNotes * 7.3 + NotesCount, 8));
+		Base::Add(new Notes(0, OneNotes * 7.3 + NotesCount, 0));
+		Base::Add(new Notes(1, OneNotes * 7.3 + NotesCount, 0));
 		break;
 	case 6:
 
@@ -1111,7 +1110,7 @@ void Play::NotesSet() {
 		NotesPreSet(0);
 		NotesPreSet(0);
 		NotesPreSet(0);
-		NotesPreSet(0);
+		
 		break;
 	case eNum_Tir:
 		NotesCount = -54.4;
