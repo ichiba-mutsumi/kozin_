@@ -11,7 +11,7 @@ std::uniform_int_distribution<int> Ran(0, 4);
 //コンストラクタ
 Notes::Notes(int area, int time, int type) :Base(eType_Notes) {
 	ImageSet();
-	m_time = time;
+	m_time = time + 180;
 	Notestype = type;
 	NotesArea = area;
 	VecSet();
