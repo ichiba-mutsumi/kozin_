@@ -229,7 +229,7 @@ void Play::ImageSet() {
 }
 void Play::Gothic() {
 	SOUND("Gothic")->Play();
-	OneNotes = 18.125;
+	OneNotes = 35.75;
 	//Base::Add(new SoundBar(3));
 	Base::Add(new Score());
 	NotesSet();
@@ -243,7 +243,7 @@ void Play::Tir() {
 }
 void Play::Tutorial(){
 	SOUND("Tutorial")->Play();
-	OneNotes = 20.35;
+	OneNotes = 20.725;
 	//Base::Add(new SoundBar(0));
 	Base::Add(new Score());
 	NotesSet();
@@ -269,8 +269,8 @@ void Play::NotesPreSet(int SetNum) {
 		Base::Add(new Notes(7, OneNotes * 0 + NotesCount, 0));
 		break;
 	case 1:
-		Base::Add(new Notes(0, OneNotes * 0 + NotesCount, 0));
-		Base::Add(new Notes(2, OneNotes * 0 + NotesCount, 0));
+		Base::Add(new Notes(0, OneNotes * 1.5 + NotesCount, 1));
+		Base::Add(new Notes(7, OneNotes * 1.5 + NotesCount, 1));
 		break;
 	case 2:
 		Base::Add(new Notes(1, OneNotes * 1.9 + NotesCount, 0));
@@ -290,7 +290,7 @@ void Play::NotesPreSet(int SetNum) {
 		break;
 	case 6:
 
-		Base::Add(new Notes(0, OneNotes * 8.2 + NotesCount, 0));
+		Base::Add(new Notes(0, OneNotes * 8 + NotesCount, 2));
 		break;
 	case 7:
 		Base::Add(new Notes(3, OneNotes * 9.5 + NotesCount, 0));
@@ -331,43 +331,43 @@ void Play::NotesPreSet(int SetNum) {
 		break;
 	case 16:
 
-		Base::Add(new Notes(2, OneNotes * 9.6 + NotesCount, 9));
+		Base::Add(new Notes(2, OneNotes * 9.6 + NotesCount, 0));
 		break;
 	case 17:
 
-		Base::Add(new Notes(3, OneNotes * 4.6 + NotesCount, 9));
+		Base::Add(new Notes(3, OneNotes * 4.6 + NotesCount, 0));
 		break;
 	case 18:
-		Base::Add(new Notes(3, OneNotes * 7 + NotesCount, 8));
-		Base::Add(new Notes(2, OneNotes * 7.5 + NotesCount, 8));
-		Base::Add(new Notes(1, OneNotes * 8 + NotesCount, 8));
-		Base::Add(new Notes(0, OneNotes * 8.5 + NotesCount, 8));
+		Base::Add(new Notes(3, OneNotes * 7 + NotesCount, 0));
+		Base::Add(new Notes(2, OneNotes * 7.5 + NotesCount, 0));
+		Base::Add(new Notes(1, OneNotes * 8 + NotesCount, 0));
+		Base::Add(new Notes(0, OneNotes * 8.5 + NotesCount, 0));
 		break;
 	case 19:
-		Base::Add(new Notes(1, OneNotes * 0 + NotesCount, 8));
+		Base::Add(new Notes(1, OneNotes * 0 + NotesCount, 2));
 		break;
 	case 20:
-		Base::Add(new Notes(2, OneNotes * 0 + NotesCount, 8));
+		Base::Add(new Notes(2, OneNotes * 0 + NotesCount, 2));
 		break;
 	case 21:
-		Base::Add(new Notes(3, OneNotes * 0 + NotesCount, 8));
+		Base::Add(new Notes(3, OneNotes * 0 + NotesCount, 2));
 		break;
 	case 22:
-		Base::Add(new Notes(1, OneNotes * 0 + NotesCount, 8));
-		Base::Add(new Notes(1, OneNotes * 0.5 + NotesCount, 8));
-		Base::Add(new Notes(2, OneNotes * 1 + NotesCount, 8));
+		Base::Add(new Notes(1, OneNotes * 0 + NotesCount, 0));
+		Base::Add(new Notes(1, OneNotes * 0.5 + NotesCount, 0));
+		Base::Add(new Notes(2, OneNotes * 1 + NotesCount, 0));
 		break;
 	case 23:
-		Base::Add(new Notes(2, OneNotes * 0 + NotesCount, 8));
-		Base::Add(new Notes(3, OneNotes * 0.5 + NotesCount, 8));
-		Base::Add(new Notes(2, OneNotes * 1 + NotesCount, 8));
-		Base::Add(new Notes(3, OneNotes * 1.5 + NotesCount, 8));
+		Base::Add(new Notes(2, OneNotes * 0 + NotesCount, 0));
+		Base::Add(new Notes(3, OneNotes * 0.5 + NotesCount, 0));
+		Base::Add(new Notes(2, OneNotes * 1 + NotesCount, 0));
+		Base::Add(new Notes(3, OneNotes * 1.5 + NotesCount, 0));
 		break;
 	case 24:
-		Base::Add(new Notes(1, OneNotes * 0 + NotesCount, 8));
-		Base::Add(new Notes(3, OneNotes * 0 + NotesCount, 8));
-		Base::Add(new Notes(0, OneNotes * 1 + NotesCount, 8));
-		Base::Add(new Notes(1, OneNotes * 2 + NotesCount, 8));
+		Base::Add(new Notes(1, OneNotes * 0 + NotesCount, 2));
+		Base::Add(new Notes(3, OneNotes * 0 + NotesCount, 2));
+		Base::Add(new Notes(0, OneNotes * 1 + NotesCount, 2));
+		Base::Add(new Notes(1, OneNotes * 2 + NotesCount, 2));
 		break;
 	case 25:
 		Base::Add(new Notes(2, OneNotes * 1 + NotesCount, 6));
@@ -1092,7 +1092,7 @@ void Play::NotesPreSet(int SetNum) {
 void Play::NotesSet() {
 	switch (SoundNum) {
 	case eNum_Gothic:
-		NotesCount = -109.5;
+		NotesCount = -159.5;
 		NotesPreSet(0);
 		NotesPreSet(0);
 		NotesPreSet(0);
@@ -1114,6 +1114,13 @@ void Play::NotesSet() {
 		NotesPreSet(0);
 		NotesPreSet(0);
 		NotesPreSet(0);
+		NotesPreSet(0);
+		NotesPreSet(0);
+		NotesPreSet(0);
+		NotesPreSet(0);
+		NotesPreSet(6);
+		NotesPreSet(1);
+		NotesPreSet(24);
 		break;
 	case eNum_Tir:
 		NotesCount = -54.4;
