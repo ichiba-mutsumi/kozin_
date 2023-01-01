@@ -229,7 +229,7 @@ void Play::ImageSet() {
 }
 void Play::Gothic() {
 	SOUND("Gothic")->Play();
-	OneNotes = 20.75;
+	OneNotes = 19.75;
 	//Base::Add(new SoundBar(3));
 	Base::Add(new Score());
 	NotesSet();
@@ -258,7 +258,7 @@ void Play::Michikusa() {
 }
 void Play::NotesPreSet(int SetNum) {
 	switch (SetNum) {
-	case 0: //ç≈å„ÇÃêîéöÇOÅ`ÇR
+	case 0: //ç≈å„ÇÃêîéöÇOÅ`2
 		Base::Add(new Notes(0, OneNotes * 0 + NotesCount, 0));
 		Base::Add(new Notes(1, OneNotes * 0 + NotesCount, 0));
 		Base::Add(new Notes(2, OneNotes * 0 + NotesCount, 0));
@@ -273,10 +273,10 @@ void Play::NotesPreSet(int SetNum) {
 		Base::Add(new Notes(1, OneNotes * 0.5 + NotesCount, 1));
 		Base::Add(new Notes(2, OneNotes * 3 + NotesCount, 1));
 		Base::Add(new Notes(3, OneNotes * 3 + NotesCount, 1));
-		Base::Add(new Notes(4, OneNotes * 5.5 + NotesCount, 1));
-		Base::Add(new Notes(5, OneNotes * 5.5+ NotesCount, 1));
-		Base::Add(new Notes(6, OneNotes * 7.8 + NotesCount, 1));
-		Base::Add(new Notes(7, OneNotes * 7.8 + NotesCount, 1));
+		Base::Add(new Notes(4, OneNotes * 6.3 + NotesCount, 1));
+		Base::Add(new Notes(5, OneNotes * 6.3+ NotesCount, 1));
+		Base::Add(new Notes(6, OneNotes * 8.5 + NotesCount, 1));
+		Base::Add(new Notes(7, OneNotes * 8.5 + NotesCount, 1));
 		break;
 	case 2:
 		Base::Add(new Notes(1, OneNotes * 1.9 + NotesCount, 0));
@@ -291,20 +291,16 @@ void Play::NotesPreSet(int SetNum) {
 		Base::Add(new Notes(2, OneNotes * 5 + NotesCount, 0));
 		break;
 	case 5:
-		Base::Add(new Notes(4, OneNotes * 7.3 + NotesCount, 1));
-		Base::Add(new Notes(5, OneNotes * 7.3 + NotesCount, 1));
-		Base::Add(new Notes(6, OneNotes * 8 + NotesCount, 1));
-		Base::Add(new Notes(7, OneNotes * 8 + NotesCount, 1));
-		Base::Add(new Notes(0, OneNotes * 1 + NotesCount, 1));
-		Base::Add(new Notes(1, OneNotes * 7.3 + NotesCount, 1));
-		Base::Add(new Notes(0, OneNotes * 7.3 + NotesCount, 1));
-		Base::Add(new Notes(1, OneNotes * 7.3 + NotesCount, 1));
+		Base::Add(new Notes(0, OneNotes * 8.4 + NotesCount, 0));
+		Base::Add(new Notes(1, OneNotes * 8.9 + NotesCount, 0));
+		Base::Add(new Notes(2, OneNotes * 9.4 + NotesCount, 0));
+		Base::Add(new Notes(3, OneNotes * 9.8 + NotesCount, 0));
 		break;
 	case 6:
 
-		Base::Add(new Notes(0, OneNotes * 8 + NotesCount, 2));
-		Base::Add(new Notes(2, OneNotes * 8.3 + NotesCount, 2));
-		Base::Add(new Notes(6, OneNotes * 8.7 + NotesCount, 2));
+		Base::Add(new Notes(0, OneNotes * 11 + NotesCount, 2));
+		Base::Add(new Notes(2, OneNotes * 11.9 + NotesCount, 2));
+		Base::Add(new Notes(6, OneNotes * 12.7 + NotesCount, 2));
 		break;
 	case 7:
 		Base::Add(new Notes(3, OneNotes * 9.5 + NotesCount, 0));
@@ -1113,6 +1109,8 @@ void Play::NotesPreSet(int SetNum) {
 		Base::Add(new Notes(4, OneNotes * 0 + NotesCount, 1));
 		Base::Add(new Notes(0, OneNotes * 0 + NotesCount, 1));
 		break;
+	
+		
 	}
 
 	switch (SoundNum) {
@@ -1134,17 +1132,25 @@ void Play::NotesSet() {
 	switch (SoundNum) {
 	case eNum_Gothic:
 		NotesCount = -140.5;
-		NotesPreSet(110);
-		NotesPreSet(111);
-		NotesPreSet(112);
-		NotesPreSet(113);
+		NotesPreSet(19);
+		NotesPreSet(19);
+		NotesPreSet(19);
+		NotesPreSet(19);
+		NotesPreSet(19);
+		NotesPreSet(19);
+		NotesPreSet(19);
+		NotesPreSet(19);
+		NotesPreSet(19);
+		NotesPreSet(19);
+		NotesPreSet(6);
 		NotesPreSet(114);
 		NotesPreSet(115);
 		NotesPreSet(116);
 		NotesPreSet(117);
-		NotesPreSet(1);
-		NotesPreSet(5);
-		NotesPreSet(6);
+		NotesPreSet(110);
+		NotesPreSet(111);
+		NotesPreSet(112);
+		NotesPreSet(113);
 		break;
 	case eNum_Tir:
 		NotesCount = -128.5;
