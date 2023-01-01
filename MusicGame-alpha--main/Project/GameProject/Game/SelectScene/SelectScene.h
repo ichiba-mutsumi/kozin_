@@ -7,13 +7,13 @@ class SelectScene :public Base {
 	enum {
 		//ゲームタイトルのstateを作る
 		Gothic,
-		Tir,
+		Bell,
 		Tutorial,
 		Michikusa, 
 	};
 private:
 	CImage BackGround;
-	char game_title[10][100] = { "Gothic","Tir","Tutorial","Michikusa",/*,"ABC","ABC"*/};
+	char game_title[10][100] = { "Gothic","Bell","Tutorial","Michikusa",/*,"ABC","ABC"*/};
 	CFont title_text;
 	CFont select_title_text;
 	CFont PushEnter_Text;

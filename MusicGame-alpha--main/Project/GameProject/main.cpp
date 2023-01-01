@@ -118,7 +118,7 @@ void Init(void)
 	ADD_RESOURCE("SoundBar", CImage::CreateImage("Image/SoundBar.png"));
 	ADD_RESOURCE("Title", CImage::CreateImage("Image/maru.png"));
 	ADD_RESOURCE("gothic", CImage::CreateImage("Image/gothic.png"));
-	ADD_RESOURCE("Fantastical", CImage::CreateImage("Image/fantastical.png"));
+	ADD_RESOURCE("Chic", CImage::CreateImage("Image/chic.png"));
 	ADD_RESOURCE("fullcombo", CImage::CreateImage("Image/fullcomboo.png"));
 	ADD_RESOURCE("clear", CImage::CreateImage("Image/CLEAR.png"));
 	ADD_RESOURCE("gamen", CImage::CreateImage("Image/gamen.png"));
@@ -135,7 +135,7 @@ void Init(void)
 	ADD_RESOURCE("wahuu", CImage::CreateImage("Image/wahuu.png"));
 	ADD_RESOURCE("score", CImage::CreateImage("Image/kira.png"));
 	SOUND("Gothic")->Load("Sound/Gothic1.wav");
-	SOUND("Tir")->Load("Sound/Tir.wav");
+	SOUND("Bell")->Load("Sound/bell1.wav");
 	SOUND("Tutorial")->Load("Sound/Yuki.wav");
 	SOUND("Michikusa")->Load("Sound/Michikusa.wav");
 	SOUND("Tap")->Load("Sound/TapSound.wav", 10);

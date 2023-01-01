@@ -5,7 +5,7 @@ class Play :public Base {
 private:
 	enum {
 		eNum_Gothic,
-		eNum_Tir,
+		eNum_Bell,
 		eNum_Tutorial,
 		eNum_Michikusa,
 	};
@@ -39,7 +39,7 @@ public:
 	void Draw();
 	void Update();
 	void Gothic();
-	void Tir();
+	void Bell();
 	void Tutorial();
 	void Michikusa();
 	void NotesSet();//プリセットを配置している

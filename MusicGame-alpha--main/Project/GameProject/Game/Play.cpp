@@ -23,8 +23,8 @@ score_text("C:\\Windows\\Fonts\\msgothic.ttc", 64) {
 	case eNum_Gothic:
 		m_img = COPY_RESOURCE("gothic", CImage);
 		break;
-	case eNum_Tir:
-		m_img = COPY_RESOURCE("Fantastical", CImage);
+	case eNum_Bell:
+		m_img = COPY_RESOURCE("Chic", CImage);
 		break;
 	case eNum_Tutorial:
 		m_img = COPY_RESOURCE("tutorial", CImage);
@@ -73,12 +73,12 @@ void Play::Update() {
 			m_kill = true;
 		}
 		break;
-	case eNum_Tir:
+	case eNum_Bell:
 		if (CountDownToStart == 0) {
-			Tir();
+			Bell();
 		}
-		if (CountUpToEnd >= 9240) {
-			//9240
+		if (CountUpToEnd >= 4200) {
+			//4200
 			m_kill = true;
 		}
 		break;
@@ -156,7 +156,7 @@ Play::~Play() {
 	case eNum_Gothic:
 		Lfile << ShareNum::score << std::endl;
 		break;
-	case eNum_Tir:
+	case eNum_Bell:
 		Bfile << ShareNum::score << std::endl;
 		break;
 	case eNum_Tutorial:
@@ -234,9 +234,9 @@ void Play::Gothic() {
 	Base::Add(new Score());
 	NotesSet();
 }
-void Play::Tir() {
-	SOUND("Tir")->Play();
-	OneNotes = 20.5;
+void Play::Bell() {
+	SOUND("Bell")->Play();
+	OneNotes = 15.5;
 	//Base::Add(new SoundBar(1));
 	Base::Add(new Score());
 	NotesSet();
@@ -306,12 +306,13 @@ void Play::NotesPreSet(int SetNum) {
 		Base::Add(new Notes(3, OneNotes * 9.5 + NotesCount, 0));
 		break;
 	case 8:
-		Base::Add(new Notes(0, OneNotes * 2 + NotesCount, 0));
-		Base::Add(new Notes(2, OneNotes * 3 + NotesCount, 0));
+		Base::Add(new Notes(0, OneNotes * 0 + NotesCount, 1));
+		Base::Add(new Notes(1, OneNotes * 0 + NotesCount, 1));
+		
 		break;
 	case 9:
-		Base::Add(new Notes(0, OneNotes * 2 + NotesCount, 0));
-		Base::Add(new Notes(2, OneNotes * 3 + NotesCount, 0));
+		Base::Add(new Notes(2, OneNotes * 0 + NotesCount, 1));
+		Base::Add(new Notes(3, OneNotes * 0 + NotesCount, 1));
 		break;
 	case 10:
 		Base::Add(new Notes(0, OneNotes * 10 + NotesCount, 0));
@@ -320,12 +321,12 @@ void Play::NotesPreSet(int SetNum) {
 		Base::Add(new Notes(3, OneNotes * 11.5 + NotesCount, 0));
 		break;
 	case 11:
-		Base::Add(new Notes(3, OneNotes * 5 + NotesCount, 0));
-		Base::Add(new Notes(2, OneNotes * 6 + NotesCount, 0));
+		Base::Add(new Notes(6, OneNotes * 0 + NotesCount, 1));
+		Base::Add(new Notes(7, OneNotes * 0 + NotesCount, 1));
 		break;
 	case 12:
-		Base::Add(new Notes(3, OneNotes * 9 + NotesCount, 0));
-		Base::Add(new Notes(0, OneNotes * 10 + NotesCount, 0));
+		Base::Add(new Notes(4, OneNotes * 0 + NotesCount, 1));
+		Base::Add(new Notes(5, OneNotes * 0 + NotesCount, 1));
 		break;
 	case 13:
 		Base::Add(new Notes(1, OneNotes * 6 + NotesCount, 0));
@@ -382,13 +383,10 @@ void Play::NotesPreSet(int SetNum) {
 		Base::Add(new Notes(1, OneNotes * 2 + NotesCount, 0));
 		break;
 	case 26:
-		Base::Add(new Notes(1, OneNotes * 0 + NotesCount, 8));
-
-		Base::Add(new Notes(2, OneNotes * 2 + NotesCount, 8));
-
-		Base::Add(new Notes(1, OneNotes * 4 + NotesCount, 8));
-
-		Base::Add(new Notes(3, OneNotes * 6 + NotesCount, 8));
+		Base::Add(new Notes(6, OneNotes * 0 + NotesCount, 0));
+		Base::Add(new Notes(7, OneNotes * 0 + NotesCount, 0));
+		Base::Add(new Notes(3, OneNotes * 0 + NotesCount, 0));
+		Base::Add(new Notes(2, OneNotes * 0 + NotesCount, 0));
 		break;
 	case 27:
 		Base::Add(new Notes(4, OneNotes * 0 + NotesCount, 0));
@@ -1117,8 +1115,8 @@ void Play::NotesPreSet(int SetNum) {
 	case eNum_Gothic:
 		NotesCount += 56.8;//àÍè¨êﬂÇÃí∑Ç≥
 		break;
-	case eNum_Tir:
-		NotesCount += 56.8;
+	case eNum_Bell:
+		NotesCount += 50.2;
 		break;
 	case eNum_Tutorial:
 		NotesCount += 105.6;
@@ -1152,18 +1150,23 @@ void Play::NotesSet() {
 		NotesPreSet(112);
 		NotesPreSet(113);
 		break;
-	case eNum_Tir:
-		NotesCount = -128.5;
-		NotesPreSet(0);
-		NotesPreSet(0);
-		NotesPreSet(0);
-		NotesPreSet(0);
-		NotesPreSet(0);
-		NotesPreSet(0);
-		NotesPreSet(0);
-		NotesPreSet(0);
-		NotesPreSet(0);
-		NotesPreSet(0);
+	case eNum_Bell:
+		NotesCount = -165.5;
+		NotesPreSet(116);
+		NotesPreSet(117);
+		NotesPreSet(113);
+		NotesPreSet(112);
+		NotesPreSet(112);
+		NotesPreSet(113);
+		NotesPreSet(117);
+		NotesPreSet(116);
+		
+		
+		
+		NotesPreSet(8);
+		NotesPreSet(9);
+		NotesPreSet(11);
+		NotesPreSet(12);
 		break;
 	case eNum_Michikusa:
 		NotesCount = -26.5;

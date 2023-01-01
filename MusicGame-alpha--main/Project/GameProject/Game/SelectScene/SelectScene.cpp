@@ -51,8 +51,8 @@ void SelectScene::Update() {
 		case Gothic:
 			Base::Add(new Play(Gothic));
 			break;
-		case Tir:
-			Base::Add(new Play(Tir));
+		case Bell:
+			Base::Add(new Play(Bell));
 			break;
 		case Tutorial:
 			Base::Add(new Play(Tutorial));
@@ -68,7 +68,7 @@ void SelectScene::SoundPlay() {
 	case Gothic:
 		//SOUND("Gothic")->Play();
 		break;
-	case Tir:
+	case Bell:
 		//SOUND("Tir")->Play();
 		break;
 	case Tutorial:
@@ -82,7 +82,7 @@ void SelectScene::SoundPlay() {
 //Ø‚è‘Ö‚¦Žž‚É‰¹Šy‚ªŽ~‚Ü‚é‚Æ‚±‚ë
 void SelectScene::SoundStop() {
 	SOUND("Gothic")->Stop();
-	SOUND("Tir")->Stop();
+	SOUND("Bell")->Stop();
 	SOUND("Tutorial")->Stop();
 	SOUND("Michikusa")->Stop();
 }
