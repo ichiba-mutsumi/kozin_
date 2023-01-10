@@ -134,7 +134,7 @@ void Init(void)
 	ADD_RESOURCE("tutorial", CImage::CreateImage("Image/snow.png"));
 	ADD_RESOURCE("wahuu", CImage::CreateImage("Image/wahuu.png"));
 	ADD_RESOURCE("score", CImage::CreateImage("Image/kira.png"));
-	SOUND("Gothic")->Load("Sound/Gothic1.wav");
+	SOUND("Gothic")->Load("Sound/Gothic.wav");
 	SOUND("Bell")->Load("Sound/bell1.wav");
 	SOUND("Tutorial")->Load("Sound/Yuki.wav");
 	SOUND("Michikusa")->Load("Sound/Michikusa.wav");

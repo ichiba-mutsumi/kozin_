@@ -4,9 +4,10 @@
 class Ranking :public Base {
 public:
 	enum {
-		eState_LeanOn,
-		eState_Baby,
-		eState_Bones,
+		eState_Gothic,
+		eState_Bell,
+		eState_Tutorial,
+		eState_Michikusa,
 	};
 	int max;
 	int SoundNum;
@@ -22,8 +23,9 @@ public:
 	void Draw();
 	//数字画像の読み込み、切り取り、サイズセット
 	void ImageSet();
-	void LeanOn();
-	void Baby();
-	void Bones();
+	void Gothic();
+	void Bell();
+	void Tutorial();
+	void Michikusa();
 	void Update();
 };
