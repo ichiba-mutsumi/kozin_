@@ -22,6 +22,6 @@ void Title::Update()
 void Title::Draw()
 {
 	m_img.Draw();
-	m_title_text.Draw(380, 256, 1, 1, 1, "Amamai");
+	m_title_text.Draw(380, 256, 1, 1, 1, "otomai");
 	title_text.Draw(200, 650, 1, 1, 1, "push Enter");
 }
