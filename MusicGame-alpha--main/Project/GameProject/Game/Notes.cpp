@@ -158,96 +158,97 @@ void Notes::Update() {
 	Timer();
 }
 void Notes::LCheckHitNotes() {
-	/*if (HitCountDown==0) {
+	if (HitCountDown==0) {
 		SOUND("Tap")->Play();
+		ShareNum::score += 100;
 		m_kill = true;
-	}*/
+	}
 	if (PUSH(CInput::eButton1)) {
-		if (-10 <= HitCountDown && HitCountDown <= 10 && NotesArea==eState_Q) {
+		if (-9 <= HitCountDown && HitCountDown <= 9 && NotesArea==eState_Q) {
 			//Base::Add(new Hit(m_pos));
 			SOUND("Tap")->Play();
 			m_kill = true;
 			ShareNum::score += 100;
-			if (HitCountDown == 0) {
+			/*if (HitCountDown == 0) {
 				ShareNum::score += 100;
-			}
+			}*/
 		}
 	}
 	if (PUSH(CInput::eButton2)) {
-		if (-10 <= HitCountDown && HitCountDown <= 10 && NotesArea == eState_W) {
+		if (-9 <= HitCountDown && HitCountDown <= 9 && NotesArea == eState_W) {
 			//Base::Add(new Hit(m_pos));
 			SOUND("Tap")->Play();
 			m_kill = true;
 			ShareNum::score += 100;
-			if (HitCountDown == 0) {
+			/*if (HitCountDown == 0) {
 				ShareNum::score += 100;
-			}
+			}*/
 		}
 	}
 	if (PUSH(CInput::eButton3)) {
-		if (-10 <= HitCountDown && HitCountDown <= 10 && NotesArea == eState_E) {
+		if (-9 <= HitCountDown && HitCountDown <= 9 && NotesArea == eState_E) {
 			//Base::Add(new Hit(m_pos));
 			SOUND("Tap")->Play();
 			m_kill = true;
 			ShareNum::score += 100;
-			if (HitCountDown == 0) {
+			/*if (HitCountDown == 0) {
 				ShareNum::score += 100;
-			}
+			}*/
 		}
 	}
 	if (PUSH(CInput::eButton4)) {
-		if (-10 <= HitCountDown && HitCountDown <= 10 && NotesArea == eState_R) {
+		if (-9 <= HitCountDown && HitCountDown <= 9 && NotesArea == eState_R) {
 			//Base::Add(new Hit(m_pos));
 			SOUND("Tap")->Play();
 			m_kill = true;
 			ShareNum::score += 100;
-			if (HitCountDown == 0) {
+			/*if (HitCountDown == 0) {
 				ShareNum::score += 100;
-			}
+			}*/
 		}
 	}
 	if (PUSH(CInput::eButton5)) {
-		if (-10 <= HitCountDown && HitCountDown <= 10 && NotesArea == eState_A) {
+		if (-9 <= HitCountDown && HitCountDown <= 9 && NotesArea == eState_A) {
 			//Base::Add(new Hit(m_pos));
 			SOUND("Tap")->Play();
 			m_kill = true;
 			ShareNum::score += 100;
-			if (HitCountDown == 0) {
+			/*if (HitCountDown == 0) {
 				ShareNum::score += 100;
-			}
+			}*/
 		}
 	}
 	if (PUSH(CInput::eButton6)) {
-		if (-10 <= HitCountDown && HitCountDown <= 10 && NotesArea == eState_S) {
+		if (-9 <= HitCountDown && HitCountDown <= 9 && NotesArea == eState_S) {
 			//Base::Add(new Hit(m_pos));
 			SOUND("Tap")->Play();
 			m_kill = true;
 			ShareNum::score += 100;
-			if (HitCountDown == 0) {
+			/*if (HitCountDown == 0) {
 				ShareNum::score += 100;
-			}
+			}*/
 		}
 	}
 	if (PUSH(CInput::eButton7)) {
-		if (-10 <= HitCountDown && HitCountDown <= 10 && NotesArea == eState_D) {
+		if (-9 <= HitCountDown && HitCountDown <= 9 && NotesArea == eState_D) {
 			//Base::Add(new Hit(m_pos));
 			SOUND("Tap")->Play();
 			m_kill = true;
 			ShareNum::score += 100;
-			if (HitCountDown == 0) {
+			/*if (HitCountDown == 0) {
 				ShareNum::score += 100;
-			}
+			}*/
 		}
 	}
 	if (PUSH(CInput::eButton8)) {
-		if (-10 <= HitCountDown && HitCountDown <= 10 && NotesArea == eState_F) {
+		if (-9 <= HitCountDown && HitCountDown <= 9 && NotesArea == eState_F) {
 			//Base::Add(new Hit(m_pos));
 			SOUND("Tap")->Play();
 			m_kill = true;
 			ShareNum::score += 100;
-			if (HitCountDown == 0) {
+			/*if (HitCountDown == 0) {
 				ShareNum::score += 100;
-			}
+			}*/
 		}
 	}
 }
