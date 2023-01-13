@@ -160,10 +160,10 @@ Play::~Play() {
 		Bfile << ShareNum::score << std::endl;
 		break;
 	case eNum_Tutorial:
-		Bfile << ShareNum::score << std::endl;
+		Bofile << ShareNum::score << std::endl;
 		break;
 	case eNum_Michikusa:
-		Bofile << ShareNum::score << std::endl;
+		Boofile << ShareNum::score << std::endl;
 		break;
 	}
 	//video->Stop();
