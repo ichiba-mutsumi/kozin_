@@ -136,7 +136,7 @@ void Init(void)
 	ADD_RESOURCE("score", CImage::CreateImage("Image/kira.png"));
 	SOUND("Gothic")->Load("Sound/Gothic.wav");
 	SOUND("Bell")->Load("Sound/bell1.wav");
-	SOUND("Tutorial")->Load("Sound/Yuki.wav");
+	SOUND("Yuki")->Load("Sound/Yuki.wav");
 	SOUND("Michikusa")->Load("Sound/Michikusa.wav");
 	SOUND("Tap")->Load("Sound/TapSound.wav", 10);
 	Base::Add(new Title());

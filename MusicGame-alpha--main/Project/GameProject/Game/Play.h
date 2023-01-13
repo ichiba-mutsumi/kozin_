@@ -6,7 +6,7 @@ private:
 	enum {
 		eNum_Gothic,
 		eNum_Bell,
-		eNum_Tutorial,
+		eNum_Yuki,
 		eNum_Michikusa,
 	};
 	CImage m_img;
@@ -40,7 +40,7 @@ public:
 	void Update();
 	void Gothic();
 	void Bell();
-	void Tutorial();
+	void Yuki();
 	void Michikusa();
 	void NotesSet();//プリセットを配置している
 	void NotesPreSet(int SetNum);//一小節ごとのケース
