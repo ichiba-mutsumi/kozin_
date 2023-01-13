@@ -9,11 +9,11 @@ class SelectScene :public Base {
 		Gothic,
 		Bell,
 		Yuki,
-		Michikusa, 
+		Rosa, 
 	};
 private:
 	CImage BackGround;
-	char game_title[10][100] = { "Gothic","Bell","Yuki","Michikusa",/*,"ABC","ABC"*/};
+	char game_title[10][100] = { "Gothic","Bell","Yuki","Rosa",/*,"ABC","ABC"*/};
 	CFont title_text;
 	CFont select_title_text;
 	CFont PushEnter_Text;

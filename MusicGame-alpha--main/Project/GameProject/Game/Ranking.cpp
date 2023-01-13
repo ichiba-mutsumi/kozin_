@@ -13,11 +13,11 @@ Ranking::Ranking(int state) :Base(eType_Ranking)
 	case eState_Bell:
 		Bell();
 		break;
-	case eState_Tutorial:
-		Tutorial();
+	case eState_Yuki:
+		Yuki();
 		break;
-	case eState_Michikusa:
-		Michikusa();
+	case eState_Rosa:
+		Rosa();
 		break;
 	}
 	ImageSet();
@@ -95,7 +95,7 @@ void Ranking::Bell() {
 		}
 	}
 }
-void Ranking::Tutorial() {
+void Ranking::Yuki() {
 	std::fstream file("Score/Tutorial.txt", std::ios::in);
 	//データの読み取り
 	int i = 0;
@@ -120,8 +120,8 @@ void Ranking::Tutorial() {
 		}
 	}
 }
-void Ranking::Michikusa() {
-	std::fstream file("Score/Michikusa.txt", std::ios::in);
+void Ranking::Rosa() {
+	std::fstream file("Score/Rosa.txt", std::ios::in);
 	//データの読み取り
 	int i = 0;
 	for (i = 0; i < 10000; i++) {
@@ -153,11 +153,11 @@ void Ranking::Update() {
 	case eState_Bell:
 		Bell();
 		break;
-	case eState_Tutorial:
-		Tutorial();
+	case eState_Yuki:
+		Yuki();
 		break;
-	case eState_Michikusa:
-		Michikusa();
+	case eState_Rosa:
+		Rosa();
 		break;
 	}
 }

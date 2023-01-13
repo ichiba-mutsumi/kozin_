@@ -6,8 +6,8 @@ public:
 	enum {
 		eState_Gothic,
 		eState_Bell,
-		eState_Tutorial,
-		eState_Michikusa,
+		eState_Yuki,
+		eState_Rosa,
 	};
 	int max;
 	int SoundNum;
@@ -25,7 +25,7 @@ public:
 	void ImageSet();
 	void Gothic();
 	void Bell();
-	void Tutorial();
-	void Michikusa();
+	void Yuki();
+	void Rosa();
 	void Update();
 };

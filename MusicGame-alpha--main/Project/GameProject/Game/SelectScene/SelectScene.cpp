@@ -57,8 +57,8 @@ void SelectScene::Update() {
 		case Yuki:
 			Base::Add(new Play(Yuki));
 			break;
-		case Michikusa:
-			Base::Add(new Play(Michikusa));
+		case Rosa:
+			Base::Add(new Play(Rosa));
 			break;
 		}
 	}
@@ -72,10 +72,10 @@ void SelectScene::SoundPlay() {
 		//SOUND("Tir")->Play();
 		break;
 	case Yuki:
-		//SOUND("Tutorial")->Play();
+		//SOUND("Yuki")->Play();
 		break;
-	case Michikusa:
-		//SOUND("Michikusa")->Play();
+	case Rosa:
+		//SOUND("Rosa")->Play();
 		break;
 	}
 }

@@ -29,8 +29,8 @@ score_text("C:\\Windows\\Fonts\\msgothic.ttc", 64) {
 	case eNum_Yuki:
 		m_img = COPY_RESOURCE("tutorial", CImage);
 		break;
-	case eNum_Michikusa:
-		m_img = COPY_RESOURCE("wahuu", CImage);
+	case eNum_Rosa:
+		m_img = COPY_RESOURCE("Rosa", CImage);
 		break;
 	}
 	for (int i = 0; i < 8; i++) {
@@ -91,12 +91,12 @@ void Play::Update() {
 			m_kill = true;
 		}
 		break;
-	case eNum_Michikusa:
+	case eNum_Rosa:
 		if (CountDownToStart == 0) {
-			Michikusa();
+			Rosa();
 		}
-		if (CountUpToEnd >= 3780) {
-			//3780
+		if (CountUpToEnd >= 5400) {
+			//5400
 			m_kill = true;
 		}
 		break;
@@ -151,7 +151,7 @@ Play::~Play() {
 	std::ofstream Lfile("Score/Gothic.txt", std::ios_base::app | std::ios_base::in);
 	std::ofstream Bfile("Score/Bell.txt", std::ios_base::app | std::ios_base::in);
 	std::ofstream Bofile("Score/Tutorial.txt", std::ios_base::app | std::ios_base::in);
-	std::ofstream Boofile("Score/Michikusa.txt", std::ios_base::app | std::ios_base::in);
+	std::ofstream Boofile("Score/Rosa.txt", std::ios_base::app | std::ios_base::in);
 	switch (ShareNum::GameNum) {
 	case eNum_Gothic:
 		Lfile << ShareNum::score << std::endl;
@@ -162,7 +162,7 @@ Play::~Play() {
 	case eNum_Yuki:
 		Bofile << ShareNum::score << std::endl;
 		break;
-	case eNum_Michikusa:
+	case eNum_Rosa:
 		Boofile << ShareNum::score << std::endl;
 		break;
 	}
@@ -249,8 +249,8 @@ void Play::Yuki(){
 	NotesSet();
 
 }
-void Play::Michikusa() {
-	SOUND("Michikusa")->Play();
+void Play::Rosa() {
+	SOUND("Rosa")->Play();
 	OneNotes = 15.725;
 	//Base::Add(new SoundBar(2));
 	Base::Add(new Score());
@@ -744,21 +744,7 @@ void Play::NotesPreSet(int SetNum) {
 		
 		break;
 	case 16:
-		Base::Add(new Notes(4, OneNotes * 5 + NotesCount, 0));
-		Base::Add(new Notes(2, OneNotes * 7 + NotesCount, 0));
-		Base::Add(new Notes(3, OneNotes * 8 + NotesCount, 0));
-
-		Base::Add(new Notes(0, OneNotes * 9 + NotesCount, 0));
-		Base::Add(new Notes(6, OneNotes * 11 + NotesCount, 0));
-		Base::Add(new Notes(7, OneNotes * 12 + NotesCount, 0));
 		
-		Base::Add(new Notes(3, OneNotes * 14 + NotesCount, 0));
-		Base::Add(new Notes(5, OneNotes * 16 + NotesCount, 0));
-		Base::Add(new Notes(4, OneNotes * 17 + NotesCount, 0));
-		
-		Base::Add(new Notes(7, OneNotes * 19 + NotesCount, 0));
-		Base::Add(new Notes(1, OneNotes * 21 + NotesCount, 0));
-		Base::Add(new Notes(0, OneNotes * 22 + NotesCount, 0));
 		break;
 	/*case 17:
 
@@ -1537,7 +1523,7 @@ void Play::NotesPreSet(int SetNum) {
 	case eNum_Yuki:
 		NotesCount += 105.6;
 		break;
-	case eNum_Michikusa:
+	case eNum_Rosa:
 		NotesCount += 44.7;
 		break;
 	}
@@ -1553,7 +1539,7 @@ void Play::NotesSet() {
 		NotesCount = -165.5;
 		NotesPreSet(13);
 		break;
-	case eNum_Michikusa:
+	case eNum_Rosa:
 		NotesCount = -26.5;
 		NotesPreSet(16);
 		break;

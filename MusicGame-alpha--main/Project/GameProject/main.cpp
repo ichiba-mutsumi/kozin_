@@ -132,12 +132,12 @@ void Init(void)
 	ADD_RESOURCE("TapF", CImage::CreateImage("Image/FF.png"));
 	ADD_RESOURCE("select", CImage::CreateImage("Image/yozora.png"));
 	ADD_RESOURCE("tutorial", CImage::CreateImage("Image/snow.png"));
-	ADD_RESOURCE("wahuu", CImage::CreateImage("Image/wahuu.png"));
+	ADD_RESOURCE("Rosa", CImage::CreateImage("Image/Rosa.png"));
 	ADD_RESOURCE("score", CImage::CreateImage("Image/kira.png"));
 	SOUND("Gothic")->Load("Sound/Gothic.wav");
 	SOUND("Bell")->Load("Sound/bell1.wav");
 	SOUND("Yuki")->Load("Sound/Yuki.wav");
-	SOUND("Michikusa")->Load("Sound/Michikusa.wav");
+	SOUND("Rosa")->Load("Sound/Rosa.wav");
 	SOUND("Tap")->Load("Sound/TapSound.wav", 10);
 	Base::Add(new Title());
 

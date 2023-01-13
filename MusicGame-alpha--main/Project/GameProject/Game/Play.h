@@ -7,7 +7,7 @@ private:
 		eNum_Gothic,
 		eNum_Bell,
 		eNum_Yuki,
-		eNum_Michikusa,
+		eNum_Rosa,
 	};
 	CImage m_img;
 	CImage gamen;
@@ -41,7 +41,7 @@ public:
 	void Gothic();
 	void Bell();
 	void Yuki();
-	void Michikusa();
+	void Rosa();
 	void NotesSet();//プリセットを配置している
 	void NotesPreSet(int SetNum);//一小節ごとのケース
 };
