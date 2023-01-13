@@ -12,6 +12,7 @@
 Play::Play(int ChoiceSound) : Base(eType_Play),
 score_text("C:\\Windows\\Fonts\\msgothic.ttc", 64) {
 	std::cout << "“Ç‚Ýž‚Ý" << std::endl;
+	ShareNum::score = 0;
 	glClearColor(0, 0, 0, 0);
 	CountDownToStart = 190;
 	CountUpToEnd = 0;
@@ -820,7 +821,20 @@ void Play::NotesPreSet(int SetNum) {
 		Base::Add(new Notes(5, OneNotes * 120.5 + NotesCount, 0));
 		Base::Add(new Notes(5, OneNotes * 121 + NotesCount, 0));
 
+		Base::Add(new Notes(0, OneNotes * 125 + NotesCount, 0));
+		Base::Add(new Notes(1, OneNotes * 127 + NotesCount, 0));
+		Base::Add(new Notes(2, OneNotes * 131 + NotesCount, 0));
+		Base::Add(new Notes(3, OneNotes * 132 + NotesCount, 0));
+		Base::Add(new Notes(7, OneNotes * 133 + NotesCount, 0));
+		Base::Add(new Notes(7, OneNotes * 133.5 + NotesCount, 0));
+		Base::Add(new Notes(7, OneNotes * 134 + NotesCount, 0));
 
+		Base::Add(new Notes(0, OneNotes * 137 + NotesCount, 0));
+		Base::Add(new Notes(1, OneNotes * 139 + NotesCount, 0));
+		Base::Add(new Notes(2, OneNotes * 142 + NotesCount, 0));
+		Base::Add(new Notes(3, OneNotes * 144 + NotesCount, 0));
+		Base::Add(new Notes(2, OneNotes * 145 + NotesCount, 0));
+		Base::Add(new Notes(4, OneNotes * 148 + NotesCount, 0));
 
 		break;
 	/*case 17:
