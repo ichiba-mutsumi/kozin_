@@ -13,6 +13,7 @@
   <ItemGroup>
     <ClCompile Include="Base\Base.cpp" />
     <ClCompile Include="Game\FreeNotes.cpp" />
+    <ClCompile Include="Game\ModeSelect\SelectMode.cpp" />
     <ClCompile Include="Game\Notes.cpp" />
     <ClCompile Include="Game\Play.cpp" />
     <ClCompile Include="Game\Ranking.cpp" />
@@ -27,6 +28,7 @@
   <ItemGroup>
     <ClInclude Include="Base\Base.h" />
     <ClInclude Include="Game\FreeNotes.h" />
+    <ClInclude Include="Game\ModeSelect\SelectMode.h" />
     <ClInclude Include="Game\Notes.h" />
     <ClInclude Include="Game\Play.h" />
     <ClInclude Include="Game\Ranking.h" />

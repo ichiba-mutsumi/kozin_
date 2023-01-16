@@ -67,7 +67,7 @@ public:
 	CVector2D m_vec;
 	CVector2D Center;
 public:
-	Notes(int area, int time,int notestype);
+	Notes(int area, int time, int notestype);
 	//Notes(int area, int time, int x, int y);
 	void Draw();
 	void Update();
@@ -75,10 +75,6 @@ public:
 	void ImageSet();
 	void LSpeedSet();
 	void LCheckHitNotes();
-	void RSizeSet();
-	void RCheckHitNotes();
-	void RArea(int x, int y);
-	void CountDownToDelete();
 	void LNotesDelete();
 	void VecSet();
 };

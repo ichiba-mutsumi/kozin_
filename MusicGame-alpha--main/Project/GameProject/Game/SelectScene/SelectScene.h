@@ -9,20 +9,20 @@ class SelectScene :public Base {
 		Gothic,
 		Bell,
 		Yuki,
-		Rosa, 
+		Rosa,
 	};
 private:
 	CImage BackGround;
-	char game_title[10][100] = { "Gothic","Bell","Yuki","Rosa",/*,"ABC","ABC"*/};
+	char game_title[10][100] = { "Gothic","Bell","Yuki","Rosa",/*,"ABC","ABC"*/ };
 	CFont title_text;
 	CFont select_title_text;
 	CFont PushEnter_Text;
+	bool GameChoice = false;
+	int NextSceneCount = 10;
 public:
 	SelectScene();
 	~SelectScene();
 	void Draw();
 	void Update();
 	void ImageSet();
-	void SoundPlay();
-	void SoundStop();
 };

@@ -4,7 +4,6 @@
 #include <random>
 #define SCREEN_WIDTH 1920
 #define SCREEN_HEIGHT 1080
-
 std::random_device rnd;
 std::default_random_engine eng(rnd());
 std::uniform_int_distribution<int> Ran(0, 4);
@@ -32,7 +31,7 @@ Notes::Notes(int area, int time, int type) :Base(eType_Notes) {
 		m_vec = R_vec;
 		break;
 	case eState_A:
-		m_vec = A_vec;		
+		m_vec = A_vec;
 		break;
 	case eState_S:
 		m_vec = S_vec;
@@ -43,14 +42,14 @@ Notes::Notes(int area, int time, int type) :Base(eType_Notes) {
 	case eState_F:
 		m_vec = F_vec;
 		break;
-	
+
 		/*case eState_RightSide:
 			RNotesCount = 0;
 			RArea(0, 0);
 			m_img = CircleNotes;*/
 
 	}
-	switch(type){
+	switch (type) {
 	case etype_normal:
 		m_img = notes;
 		break;
@@ -146,29 +145,29 @@ void Notes::Draw() {
 	};
 }
 void Notes::Update() {
-			if (m_time == 0) {
-				HitCountDown = 60;
-			}
-			if (state == true) {
-				HitCountDown--;
-				LCheckHitNotes();
-				m_pos += m_vec;
-			}
+	if (m_time == 0) {
+		HitCountDown = 60;
+	}
+	if (state == true) {
+		HitCountDown--;
+		LCheckHitNotes();
+		m_pos += m_vec;
+	}
 	LNotesDelete();
 	Timer();
 }
 void Notes::LCheckHitNotes() {
-	if (HitCountDown==0) {
+	/*if (HitCountDown==0) {
 		SOUND("Tap")->Play();
-		ShareNum::score += 100;
+		ShareNum::AddScore(ShareNum::ModeNum);
 		m_kill = true;
-	}
+	}*/
 	if (PUSH(CInput::eButton1)) {
-		if (-9 <= HitCountDown && HitCountDown <= 9 && NotesArea==eState_Q) {
+		if (-9 <= HitCountDown && HitCountDown <= 9 && NotesArea == eState_Q) {
 			//Base::Add(new Hit(m_pos));
 			SOUND("Tap")->Play();
 			m_kill = true;
-			ShareNum::score += 100;
+			ShareNum::AddScore(ShareNum::ModeNum);
 			/*if (HitCountDown == 0) {
 				ShareNum::score += 100;
 			}*/
@@ -179,7 +178,7 @@ void Notes::LCheckHitNotes() {
 			//Base::Add(new Hit(m_pos));
 			SOUND("Tap")->Play();
 			m_kill = true;
-			ShareNum::score += 100;
+			ShareNum::AddScore(ShareNum::ModeNum);
 			/*if (HitCountDown == 0) {
 				ShareNum::score += 100;
 			}*/
@@ -190,7 +189,7 @@ void Notes::LCheckHitNotes() {
 			//Base::Add(new Hit(m_pos));
 			SOUND("Tap")->Play();
 			m_kill = true;
-			ShareNum::score += 100;
+			ShareNum::AddScore(ShareNum::ModeNum);
 			/*if (HitCountDown == 0) {
 				ShareNum::score += 100;
 			}*/
@@ -201,7 +200,7 @@ void Notes::LCheckHitNotes() {
 			//Base::Add(new Hit(m_pos));
 			SOUND("Tap")->Play();
 			m_kill = true;
-			ShareNum::score += 100;
+			ShareNum::AddScore(ShareNum::ModeNum);
 			/*if (HitCountDown == 0) {
 				ShareNum::score += 100;
 			}*/
@@ -212,7 +211,7 @@ void Notes::LCheckHitNotes() {
 			//Base::Add(new Hit(m_pos));
 			SOUND("Tap")->Play();
 			m_kill = true;
-			ShareNum::score += 100;
+			ShareNum::AddScore(ShareNum::ModeNum);
 			/*if (HitCountDown == 0) {
 				ShareNum::score += 100;
 			}*/
@@ -223,7 +222,7 @@ void Notes::LCheckHitNotes() {
 			//Base::Add(new Hit(m_pos));
 			SOUND("Tap")->Play();
 			m_kill = true;
-			ShareNum::score += 100;
+			ShareNum::AddScore(ShareNum::ModeNum);
 			/*if (HitCountDown == 0) {
 				ShareNum::score += 100;
 			}*/
@@ -234,7 +233,7 @@ void Notes::LCheckHitNotes() {
 			//Base::Add(new Hit(m_pos));
 			SOUND("Tap")->Play();
 			m_kill = true;
-			ShareNum::score += 100;
+			ShareNum::AddScore(ShareNum::ModeNum);
 			/*if (HitCountDown == 0) {
 				ShareNum::score += 100;
 			}*/
@@ -245,7 +244,7 @@ void Notes::LCheckHitNotes() {
 			//Base::Add(new Hit(m_pos));
 			SOUND("Tap")->Play();
 			m_kill = true;
-			ShareNum::score += 100;
+			ShareNum::AddScore(ShareNum::ModeNum);
 			/*if (HitCountDown == 0) {
 				ShareNum::score += 100;
 			}*/
@@ -327,52 +326,12 @@ void Notes::LSpeedSet() {
 		m_time += temp;
 	}
 }
-void Notes::RSizeSet() {
-	if (RNotesCount < 61) {
-		RNotesCount++;
-	}
-	m_img.SetSize(120, 120);
-	//Frame_img.SetSize(180 - RNotesCount, 180 - RNotesCount);
-	m_img.SetPos(m_pos);
-	//Frame_img.SetPos(m_pos.x - 30 + RNotesCount / 2, m_pos.y - 30 + RNotesCount / 2);
-}
-void Notes::RCheckHitNotes() {
-	CVector2D mouse_pos = CInput::GetMousePoint();
-	if (PUSH(CInput::eMouseL) && RNotesCount >= 45) {
-		if (std::pow((mouse_pos.x - m_pos.x - 60), 2.0) + std::pow((mouse_pos.y - m_pos.y - 60), 2.0) <= 3600) {
-			SOUND("Tap")->Play();
-			m_kill = true;
-			ShareNum::score += 350;
-			if (RNotesCount == 60) {
-				ShareNum::score += 650;
-			}
-		}
-	}
-	if (std::pow((mouse_pos.x - m_pos.x - 60), 2.0) + std::pow((mouse_pos.y - m_pos.y - 60), 2.0) <= 3600 && RNotesCount >= 45) {
-		m_img = criticalnotes;
-	}
-	else {
-		m_img = notes;
-	}
-}
-void Notes::RArea(int x, int y) {
-	m_pos.x = 1025 + x * 725 / 9;
-	m_pos.y = 172 + y * 728 / 9;
-}
-void Notes::CountDownToDelete() {
-	if (RNotesCount >= 60) {
-		RNotesCountToDelete--;
-		if (RNotesCountToDelete <= 0) {
-			m_kill = true;
-		}
-	}
-}
 void Notes::LNotesDelete() {
-	if (HitCountDown==-20) {
+	if (HitCountDown == -20) {
+		ShareNum::SubScore(ShareNum::ModeNum);
 		m_kill = true;
 	}
 }
-
 void Notes::VecSet()
 {
 	//I‚í‚è‚ÌÀ•WÝ’è

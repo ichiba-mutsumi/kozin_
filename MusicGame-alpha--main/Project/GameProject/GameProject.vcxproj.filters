@@ -35,6 +35,9 @@
     <ClCompile Include="Game\FreeNotes.cpp">
       <Filter>Game</Filter>
     </ClCompile>
+    <ClCompile Include="Game\ModeSelect\SelectMode.cpp">
+      <Filter>Game\ModeSelect</Filter>
+    </ClCompile>
   </ItemGroup>
   <ItemGroup>
     <Filter Include="Game">
@@ -48,6 +51,9 @@
     </Filter>
     <Filter Include="Game\SelectScene">
       <UniqueIdentifier>{71e95445-4e19-440f-b1c2-6d3133bea17b}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="Game\ModeSelect">
+      <UniqueIdentifier>{e4703744-e0bf-453b-a762-5c873d434c15}</UniqueIdentifier>
     </Filter>
   </ItemGroup>
   <ItemGroup>
@@ -83,6 +89,9 @@
     </ClInclude>
     <ClInclude Include="Game\FreeNotes.h">
       <Filter>Game</Filter>
+    </ClInclude>
+    <ClInclude Include="Game\ModeSelect\SelectMode.h">
+      <Filter>Game\ModeSelect</Filter>
     </ClInclude>
   </ItemGroup>
 </Project>

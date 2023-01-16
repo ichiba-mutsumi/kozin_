@@ -94,16 +94,16 @@ void Init(void)
 	//‰Šú‰»‚Ì–½—ß‚ğ‘‚­
 	//ƒQ[ƒ€‹N“®‚Éˆê“x‚¾‚¯ŒÄ‚Î‚ê‚é
 	//-----------------------------------------------------
-	
+
 	/*Base::Add(new Title());
-	
+
 	ADD_RESOURCE("Lane", CImage::CreateImage("Image/Lane.png"));
 	ADD_RESOURCE("Notes",CImage::CreateImage("Image/Notes.png"));
 	ADD_RESOURCE("NotesBar", CImage::CreateImage("Image/NotesBar.png"));
 
 	SOUND("LeanOn")->Load("Sound/LeanOn.wav");
 	SOUND("Baby")->Load("Sound/Baby.wav");
-	
+
 	SOUND("Bones")->Load("Sound/Bones.wav");
 	*/
 
@@ -134,6 +134,7 @@ void Init(void)
 	ADD_RESOURCE("tutorial", CImage::CreateImage("Image/snow.png"));
 	ADD_RESOURCE("Rosa", CImage::CreateImage("Image/Rosa.png"));
 	ADD_RESOURCE("score", CImage::CreateImage("Image/kira.png"));
+	ADD_RESOURCE("mode", CImage::CreateImage("Image/utyuu.png"));
 	SOUND("Gothic")->Load("Sound/Gothic.wav");
 	SOUND("Bell")->Load("Sound/bell1.wav");
 	SOUND("Yuki")->Load("Sound/Yuki.wav");

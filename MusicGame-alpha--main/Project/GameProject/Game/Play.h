@@ -4,6 +4,10 @@
 class Play :public Base {
 private:
 	enum {
+	eMode_Normal,
+	eMode_Challenge,
+};
+	enum {
 		eNum_Gothic,
 		eNum_Bell,
 		eNum_Yuki,

@@ -1,7 +1,9 @@
 #include "SelectScene.h"
+#include "../ModeSelect/SelectMode.h"
 #include "../Ranking.h"
 #include "../ShareNum.h"
 #include "../Play.h"
+#include <iostream>
 
 SelectScene::SelectScene() :Base(eType_Scene)
 , title_text("C:\\Windows\\Fonts\\msgothic.ttc", 64)
@@ -12,10 +14,8 @@ SelectScene::SelectScene() :Base(eType_Scene)
 	ShareNum::debug = false;
 	Base::Add(new Ranking(0));
 	ImageSet();
-	SoundPlay();
 }
 SelectScene::~SelectScene() {
-	SoundStop();
 }
 void SelectScene::Draw() {
 	BackGround.Draw();
@@ -34,57 +34,24 @@ void SelectScene::Update() {
 	if (PUSH(CInput::eUp)) {
 		if (ShareNum::GameNum > 0) {
 			ShareNum::GameNum--;
-			SoundStop();
-			SoundPlay();
 		}
 	}
 	if (PUSH(CInput::eDown)) {
 		if (ShareNum::GameNum < ShareNum::MaxGame - 1) {
 			ShareNum::GameNum++;
-			SoundStop();
-			SoundPlay();
 		}
 	}
 	if (PUSH(CInput::eButton10)) {
-		Base::KillAll();
-		switch (ShareNum::GameNum) {
-		case Gothic:
-			Base::Add(new Play(Gothic));
-			break;
-		case Bell:
-			Base::Add(new Play(Bell));
-			break;
-		case Yuki:
-			Base::Add(new Play(Yuki));
-			break;
-		case Rosa:
-			Base::Add(new Play(Rosa));
-			break;
+		std::cout << "select fin" << std::endl;
+		GameChoice = true;
+	}
+	if (GameChoice) {
+		NextSceneCount--;
+		if (NextSceneCount < 0) {
+			Base::KillAll();
+			Base::Add(new SelectMode());
 		}
 	}
-}
-void SelectScene::SoundPlay() {
-	switch (ShareNum::GameNum) {
-	case Gothic:
-		//SOUND("Gothic")->Play();
-		break;
-	case Bell:
-		//SOUND("Tir")->Play();
-		break;
-	case Yuki:
-		//SOUND("Yuki")->Play();
-		break;
-	case Rosa:
-		//SOUND("Rosa")->Play();
-		break;
-	}
-}
-//Ø‚è‘Ö‚¦Žž‚É‰¹Šy‚ªŽ~‚Ü‚é‚Æ‚±‚ë
-void SelectScene::SoundStop() {
-	SOUND("Gothic")->Stop();
-	SOUND("Bell")->Stop();
-	SOUND("Tutorial")->Stop();
-	SOUND("Michikusa")->Stop();
 }
 void SelectScene::ImageSet() {
 	BackGround = COPY_RESOURCE("select", CImage);
