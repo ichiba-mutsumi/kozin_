@@ -157,11 +157,11 @@ void Notes::Update() {
 	Timer();
 }
 void Notes::LCheckHitNotes() {
-	/*if (HitCountDown==0) {
+	if (HitCountDown==0) {
 		SOUND("Tap")->Play();
 		ShareNum::AddScore(ShareNum::ModeNum);
 		m_kill = true;
-	}*/
+	}
 	if (PUSH(CInput::eButton1)) {
 		if (-9 <= HitCountDown && HitCountDown <= 9 && NotesArea == eState_Q) {
 			//Base::Add(new Hit(m_pos));
